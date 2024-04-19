@@ -20,11 +20,12 @@ website:
       #   href: program.qmd
       - text: "Tutorials"
         menu:
-        # - text: "Introduction"
-        #   href: introduction.qmd
         - text: "R basics"
           href: r_basics.qmd
-   
+        - text: "Coding and reproducibility"
+          href: coding_and_reproducibility.qmd
+        - text: "Reearch compendiums"
+          href: research_compendiums.qmd
       - text: "Course prep"
         href: course_prep.qmd
       - text: "Code sharing"

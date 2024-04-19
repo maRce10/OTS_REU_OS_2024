@@ -12,6 +12,8 @@ format:
     css: styles.css
     link-external-icon: true
     link-external-newwindow: true  
+editor_options: 
+  chunk_output_type: console
 ---
 
  
@@ -49,26 +51,34 @@ update.packages(ask = FALSE)
 
 8)  Now in the R console in *RStudio*: Run the following code to install some R packages (remove the packages first if you have them installed already).
 
-```{r}
+```{r, eval = FALSE}
 
-# package to install other packages from github
-install.packages("remotes") 
-install.packages("rmarkdown") 
-install.packages("knitr")
-install.packages("kableExtra")
-install.packages("rmdformats")
-install.packages("revealjs")
-install.packages("rticles")
-install.packages("tufte")
-install.packages("ggplot2") 
-install.packages("viridis")
-install.packages("lmerTest")
-remotes::install_github("hadley/emo")
-remotes::install_github("benmarwick/rrtools")
+# install package to install packages
+install.packages("sketchy") 
 
+# load sketchy
+library(sketchy)
 
-# install from github
-remotes::install_github("maRce10/sketchy")
+# install packages
+load_packages(
+  packages = c(
+    "remotes",
+    "rmarkdown",
+    "knitr",
+    "kableExtra",
+    "rmdformats",
+    "revealjs",
+    "rticles",
+    "tufte",
+    "ggplot2",
+    "viridis",
+    "lmerTest",
+    github = "hadley/emo",
+    github = "benmarwick/rrtools",
+    github = "CrumpLab/vertical"
+  )
+)
+
 
 ```
 
@@ -76,9 +86,9 @@ remotes::install_github("maRce10/sketchy")
 
 9)  Create a github account (<https://github.com/signup>)
 
-10) Install *github desktop* (<https://docs.github.com/en/desktop/installing-and-authenticating-to-github-desktop/installing-github-desktop>)
+10) Install *Github Desktop* (<https://docs.github.com/en/desktop/installing-and-authenticating-to-github-desktop/installing-github-desktop>)
 
-11) On *github desktop* go in into your github account using github
+11) On *Github Desktop* log in into your github account using github
 
 ::: {.alert .alert-warning}
 **A few tips to make sure you will take full advantage of the course**:

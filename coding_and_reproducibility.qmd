@@ -1,0 +1,365 @@
+---
+title: <center><font size="7"><b>Coding and Reproducibility</b></font></center>
+toc: true
+toc-depth: 2
+toc-location: left
+number-sections: true
+highlight-style: pygments
+format:
+  html:
+    df-print: kable
+    code-fold: show
+    code-tools: true
+    css: styles.css
+    link-external-icon: true
+    link-external-newwindow: true  
+---
+
+```{r, echo = FALSE}
+
+# devtools::install_github("hadley/emo")
+library("emo")
+library("knitr")
+
+# options to customize chunk outputs
+knitr::opts_chunk$set(
+  tidy.opts = list(width.cutoff = 65), 
+  tidy = TRUE,
+  message = FALSE
+ )
+
+# this is a customized printing style data frames 
+# screws up tibble function
+tibble <- function(x, ...) { 
+  x <- kbl(x, digits=4, align= 'c', row.names = FALSE) 
+   x <- kable_styling(x, position ="center", full_width = FALSE,  bootstrap_options = c("striped", "hover", "condensed", "responsive")) 
+   asis_output(x)
+}
+
+registerS3method("knit_print", "data.frame", tibble)
+```
+
+
+```{r setting functions and parameters, echo=FALSE, message=FALSE}
+
+# remove all objects
+rm(list = ls())
+
+# unload all non-based packages
+out <- sapply(paste('package:', names(sessionInfo()$otherPkgs), sep = ""), function(x) try(detach(x, unload = FALSE, character.only = TRUE), silent = T))
+
+
+
+options("digits"=5)
+options("digits.secs"=3)
+
+# library(knitr)
+# library(kableExtra)
+# 
+# options(knitr.table.format = "html")
+# 
+# x <- c("RColorBrewer", "ggplot2")
+# 
+# aa <- lapply(x, function(y) {
+#   if(!y %in% installed.packages()[,"Package"])  {if(y != "warbleR") install.packages(y) else devtools::install_github("maRce10/warbleR")
+# }
+# try(require(y, character.only = T), silent = T)
+#   })
+# 
+# 
+# theme_set(theme_classic(base_size = 50))
+# 
+# cols <- brewer.pal(10,"Spectral")
+
+
+```
+ 
+&nbsp; 
+
+## Free Software and Code
+
+  - Free and open-source programs allow users to inspect, modify, and enhance their design by providing access to their source code.
+
+  - Open-source code is ideal for reproducible research because scripts can contain all the steps of the analysis (self-documentation).
+
+  - Code, in general, allows colleagues to see what we have done and rerun or even modify our analyses.
+
+  - Free tools can be used by anyone unlike commercial tools.
+
+  - Open-source code enables a detailed understanding of analysis tools.
+
+&nbsp; 
+
+### Why R?
+
+<center><img src="./images/whylearnr.jpeg" alt="Why R" height = "500" width = "750"></center>
+
+*www.traininginbangalore.com*
+
+&nbsp; 
+
+## Tools for Reproducible Programming
+
+&nbsp;
+
+### Literate Programming
+
+- Involves documenting in detail what the problem consists of, how it is solved, how and why a certain flow of analysis was adopted, how it was optimized (if it was optimized), and how it was implemented in the programming language.
+
+- Dynamic reports in R facilitate the use of literate programming to document data handling and statistical analysis (this file you are reading right now is a dynamic report created in R).
+
+- The main way R facilitates reproducible research is by using a document that is a combination of content and data analysis code.
+
+- We will discuss dynamic reports later as a tool to facilitate literate programming.
+
+### Reproducible Environments
+
+- Reproducibility is also about ensuring that someone else can reuse your code to get the same results.
+
+- For this, you need to provide more than just the code and the data.
+
+- Documenting and managing your project's dependencies correctly can be complicated. However, even simple documentation that helps others understand the setup you used can have a significant impact.
+
+- Ideally, you should document the exact versions of all packages and software you used and the operating system.
+
+### Session Information
+
+The simplest way to document the environment (R + packages and their versions) in which an analysis was done is by using the `sessionInfo` function:
+
+```{r session info example, echo=F}
+
+sessionInfo()
+
+```
+
+&nbsp; 
+
+However, this documentation does not necessarily make the analyses replicable since package versions often get updated and even some packages may not be available after a while.
+
+&nbsp; 
+
+### Packrat: Reproducible Package Management in R
+
+R packages (and their specific versions) used in an analysis can be difficult to replicate:
+
+- Have you ever had to use trial and error to figure out which R packages you need to install to make someone else's code work?
+
+- Have you ever updated a package to make your project's code work, only to find out that the updated package causes another project's code to stop working?
+
+With the `packrat` package, projects have several useful features in terms of reproducibility:
+
+- Isolation: Installing a new or updated package for a project will not affect your other projects and vice versa. That's because `packrat` gives each project its own private package library.
+
+- Portable: Easily move your projects from one computer to another, even on different platforms. `packrat` makes it easy to install the packages your project depends on.
+
+- Reproducible: `packrat` records the exact versions of the package it depends on and ensures that those exact versions are installed wherever you go.
+
+```{r, eval = F, echo = FALSE}  
+
+ However, defaults in some functions change and new functions are introduced regularly. If you wrote your code in a recent version of R and gave it to someone who hasn't updated recently, they may not be able to run your code. Code written for one version of a package may produce very different results with a newer version.
+
+
+
+&nbsp; 
+
+<div class="alert alert-info">
+
+### Exercise 1
+
+- XXXXX
+
+
+</div>
+
+&nbsp;
+
+```
+
+#### Using Packrat
+
+1. Of course, first, we need to install the `packrat` package in R:
+
+```{r, eval = FALSE}
+
+# install package
+install.packages("packrat")
+
+```
+&nbsp; 
+
+2. Now, let's create a new R project (in a new directory).
+
+3. After creating a project (or moving to an existing one) we can start monitoring and managing packages with `packrat` like this:
+
+```{r, eval = FALSE}
+
+# start packrat in project
+packrat::init(path = "/project/directory")
+
+```
+&nbsp; 
+
+If the working directory is set as the project directory, it is not necessary to define the 'path':
+
+```{r, eval = FALSE}
+
+# start packrat in project
+packrat::init()
+
+```
+&nbsp; 
+
+After this, the use of packages in this project will be managed by `packrat` (you will see some differences in what the R console prints when installing packages). So, we are already using `packrat`. A `packrat` project contains some additional files and directories. The `init()` function creates these files and directories if they do not already exist:
+
+- **packrat/packrat.lock**: lists the precise versions of the package that were used to satisfy the dependencies, including dependencies of dependencies (should never be edited manually!).
+- **packrat/packrat.opts**: Project-specific `packrat` options. These can be consulted and configured with `get_opts` and `set_opts`; see "packrat-options" for more information.
+- **packrat/lib/**: Private package library for this project.
+- **packrat/src/**: Source packages of all dependencies that have been reported to packrat.
+- **.Rprofile**: Tells R to use the private package library when started from the project directory.
+
+
+The only difference with other projects is that projects using `packrat` have their own package library. This is located in `/project/directory/packrat/lib`. For example, let's install a couple of new packages, they can be some you are familiar with or these ones we have here as an example:
+
+```{r, eval = FALSE}
+
+install.packages("fun")
+
+```
+&nbsp; 
+
+Every time we install one or more packages, it is necessary to update the tracking status of `packrat`. We do this as follows:
+
+```{r, eval = FALSE}
+# check current status
+packrat::status()
+
+# update packrat in project
+packrat::snapshot()
+
+```
+&nbsp; 
+
+With this package, we can play in R:
+
+```{r, eval = FALSE}
+# example of an irrelevant game X
+library(fun)
+
+if (.Platform$OS.type == "windows")
+         x11() else x11(type = "Xlib")
+
+mine_sweeper()
+
+```
+&nbsp; 
+
+Or take an Alzheimer's test:
+
+```{r, eval = FALSE}
+
+# another slightly less irrelevant game
+x = alzheimer_test()
+
+```
+&nbsp; 
+
+If we remove a package that we used in the project, we can reinstall it using `restore()`:
+
+```{r, eval = FALSE}
+# remove
+remove.packages("fun")
+
+# check current status
+packrat::status()
+
+# restore
+packrat::restore()
+
+```
+
+
+New packages can be installed:
+
+```{r, eval = FALSE}
+
+# install
+install.packages("cowsay")
+
+# load
+library(cowsay)
+
+# diagram
+say("Hello world!")
+
+# random echo
+say("rms")
+
+```
+
+```{r, echo = FALSE}
+
+# install
+# install.packages("cowsay")
+
+# load
+library(cowsay)
+
+
+```
+
+```{r, echo = FALSE, eval = TRUE}
+
+# random echo
+say("Hello world!")
+
+```
+
+
+
+```{r, echo = TRUE, eval = FALSE}
+
+# random echo
+say("rms")
+
+```
+&nbsp; 
+
+```{r, echo = FALSE, eval = TRUE}
+
+# random echo
+say("rms")
+
+```
+&nbsp; 
+
+
+...and they should be "referenced" in the same way:
+```{r, eval = FALSE}
+# check current status
+packrat::status()
+
+# update packrat in project
+packrat::snapshot()
+
+```
+&nbsp; 
+
+In this [GitHub repository](https://github.com/maRce10/ejemplo_packrat_repo), there is an R project with `packrat`. We can clone it just to see how it works without needing to install the packages:
+
+```{r eval = FALSE}
+
+git clone https://github.com/maRce10/ejemplo_packrat_repo.git
+
+
+```
+
+
+---
+
+<font size="5">Session Information</font>
+
+```{r session info, echo=F}
+
+sessionInfo()
+
+```
