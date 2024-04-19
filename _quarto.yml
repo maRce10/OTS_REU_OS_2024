@@ -28,7 +28,7 @@ website:
       - text: "Course prep"
         href: course_prep.qmd
       - text: "Code sharing"
-        href: code_redirect.html
+        href: https://codefile.io/f/inMsojTFoN
       - text: "Instructor"
         href: instructor.qmd
 
