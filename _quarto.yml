@@ -1,0 +1,41 @@
+project:
+  type: website
+  output-dir: docs
+  
+website:
+  page-footer: Copyright 2024 | <a href="https://marce10.github.io">Marcelo Araya-Salas</a>
+  title: "Reproducible Science Workshop, REU OTS 2024"
+  search: true
+  site-url: https://marce10.github.io/OTS_REU_OS_2024/
+  repo-url: https://github.com/maRce10/OTS_REU_OS_2024/
+  navbar:
+    right:
+      - icon: github
+        href: https://github.com/maRce10/OTS_REU_OS_2024/
+        aria-label: GitHub
+    left:
+      - href: index.qmd
+        text: Home
+      # - text: "Program"
+      #   href: program.qmd
+      - text: "Tutorials"
+        menu:
+        # - text: "Introduction"
+        #   href: introduction.qmd
+        - text: "R basics"
+          href: r_basics.qmd
+   
+      - text: "Course prep"
+        href: course_prep.qmd
+      - text: "Code sharing"
+        href: code_redirect.html
+      - text: "Instructor"
+        href: instructor.qmd
+
+format:
+  html:
+    theme: simplex
+    css: styles.css
+    toc: true
+    
+editor: visual
