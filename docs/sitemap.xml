@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://marce10.github.io/OTS_REU_OS_2024/index.html</loc>
-    <lastmod>2024-04-19T00:41:47.733Z</lastmod>
+    <lastmod>2024-04-20T03:06:47.937Z</lastmod>
   </url>
   <url>
     <loc>https://marce10.github.io/OTS_REU_OS_2024/r_basics.html</loc>
@@ -23,5 +23,9 @@
   <url>
     <loc>https://marce10.github.io/OTS_REU_OS_2024/research_compendiums.html</loc>
     <lastmod>2024-04-19T20:01:50.172Z</lastmod>
+  </url>
+  <url>
+    <loc>https://marce10.github.io/OTS_REU_OS_2024/intro_to_git_and_github.html</loc>
+    <lastmod>2024-04-19T21:09:52.000Z</lastmod>
   </url>
 </urlset>

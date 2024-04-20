@@ -26,6 +26,8 @@ website:
           href: coding_and_reproducibility.qmd
         - text: "Reearch compendiums"
           href: research_compendiums.qmd
+        - text: "Intro to git/github"
+          href: intro_to_git_and_github.qmd
       - text: "Course prep"
         href: course_prep.qmd
       - text: "Code sharing"
