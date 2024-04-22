@@ -16,8 +16,8 @@ website:
     left:
       - href: index.qmd
         text: Home
-      # - text: "Program"
-      #   href: program.qmd
+      - text: "Program"
+        href: program.qmd
       - text: "Tutorials"
         menu:
         - text: "R basics"

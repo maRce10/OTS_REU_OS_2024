@@ -62,7 +62,6 @@ library(sketchy)
 # install packages
 load_packages(
   packages = c(
-    "remotes",
     "rmarkdown",
     "knitr",
     "kableExtra",
@@ -72,10 +71,10 @@ load_packages(
     "tufte",
     "ggplot2",
     "viridis",
-    "lmerTest",
     github = "hadley/emo",
     github = "benmarwick/rrtools",
-    github = "CrumpLab/vertical"
+    github = "CrumpLab/vertical",
+    github = "crsh/papaja"
   )
 )
 

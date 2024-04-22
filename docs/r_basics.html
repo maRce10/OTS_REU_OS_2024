@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.4.551">
+<meta name="generator" content="quarto-1.4.549">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -126,6 +126,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <a class="nav-link" href="./index.html"> 
 <span class="menu-text">Home</span></a>
   </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./program.html"> 
+<span class="menu-text">Program</span></a>
+  </li>  
   <li class="nav-item dropdown ">
     <a class="nav-link dropdown-toggle" href="#" id="nav-menu-tutorials" role="button" data-bs-toggle="dropdown" aria-expanded="false">
  <span class="menu-text">Tutorials</span>
@@ -142,6 +146,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
         <li>
     <a class="dropdown-item" href="./research_compendiums.html">
  <span class="dropdown-text">Reearch compendiums</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./intro_to_git_and_github.html">
+ <span class="dropdown-text">Intro to git/github</span></a>
   </li>  
     </ul>
   </li>
@@ -186,7 +194,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#functions" id="toc-functions" class="nav-link" data-scroll-target="#functions"><span class="header-section-number">5</span> Functions</a></li>
   <li><a href="#style-matters" id="toc-style-matters" class="nav-link" data-scroll-target="#style-matters"><span class="header-section-number">6</span> Style matters</a></li>
   <li><a href="#r-documentation" id="toc-r-documentation" class="nav-link" data-scroll-target="#r-documentation"><span class="header-section-number">7</span> R documentation</a></li>
-  <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references"><span class="header-section-number">8</span> References</a></li>
   </ul>
 </nav>
 </nav>
@@ -1277,10 +1284,10 @@ Levels: a b</code></pre>
 <div class="sourceCode cell-code" id="cb120"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb120-1"><a href="#cb120-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sample</span>(bi, <span class="dv">10</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stdout">
-<pre><code> [1] "&lt;="                   "Sys.setlocale"        "intToUtf8"           
- [4] "rep.difftime"         "is.qr"                "suppressWarnings"    
- [7] "as.character.hexmode" "conflictRules"        ".row"                
-[10] "match"               </code></pre>
+<pre><code> [1] "as.data.frame.vector" "kappa"                ".standard_regexps"   
+ [4] ".Library.site"        "grouping"             "prop.table"          
+ [7] "as.difftime"          ".Script"              "array"               
+[10] "print.restart"       </code></pre>
 </div>
 </div>
 <p>&nbsp;</p>
@@ -1465,8 +1472,8 @@ c..x..in..y....match..              "x %in% y"  "match"                   </code
 <p>&nbsp;</p>
 <div class="cell">
 <div class="cell-output cell-output-stderr">
-<pre><code>Warning in 1:6 * 1:5: comprimento do objeto maior não é múltiplo do comprimento
-do objeto menor</code></pre>
+<pre><code>Warning in 1:6 * 1:5: longitud de objeto mayor no es múltiplo de la longitud de
+uno menor</code></pre>
 </div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1]  1  4  9 16 25  6</code></pre>
@@ -1478,8 +1485,8 @@ do objeto menor</code></pre>
 <div class="sourceCode cell-code" id="cb161"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb161-1"><a href="#cb161-1" aria-hidden="true" tabindex="-1"></a><span class="dv">1</span><span class="sc">:</span><span class="dv">6</span> <span class="sc">+</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">5</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stderr">
-<pre><code>Warning in 1:6 + 1:5: comprimento do objeto maior não é múltiplo do comprimento
-do objeto menor</code></pre>
+<pre><code>Warning in 1:6 + 1:5: longitud de objeto mayor no es múltiplo de la longitud de
+uno menor</code></pre>
 </div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1]  2  4  6  8 10  7</code></pre>
@@ -1701,8 +1708,8 @@ do objeto menor</code></pre>
 <p>&nbsp;</p>
 <hr>
 </section>
-<section id="references" class="level2" data-number="8">
-<h2 data-number="8" class="anchored" data-anchor-id="references"><span class="header-section-number">8</span> References</h2>
+<section id="references" class="level2 unnumbered unlisted">
+<h2 class="unnumbered unlisted anchored" data-anchor-id="references">References</h2>
 <ul>
 <li><a href="http://adv-r.had.co.nz/Data-structures.html">Advanced R, H Wickham</a></li>
 <li><a href="https://google.github.io/styleguide/Rguide.xml">Google’s R Style Guide</a><br>
@@ -1857,11 +1864,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     for (var i=0; i<links.length; i++) {
       const link = links[i];
       if (!isInternal(link.href)) {
-        // undo the damage that might have been done by quarto-nav.js in the case of
-        // links that we want to consider external
-        if (link.dataset.originalHref !== undefined) {
-          link.href = link.dataset.originalHref;
-        }
           // target, if specified
           link.setAttribute("target", "_blank");
           if (link.getAttribute("rel") === null) {
@@ -1905,11 +1907,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       try { href = new URL(href).hash; } catch {}
       const id = href.replace(/^#\/?/, "");
       const note = window.document.getElementById(id);
-      if (note) {
-        return note.innerHTML;
-      } else {
-        return "";
-      }
+      return note.innerHTML;
     });
   }
   const xrefs = window.document.querySelectorAll('a.quarto-xref');
@@ -3114,7 +3112,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb175-973"><a href="#cb175-973" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb175-974"><a href="#cb175-974" aria-hidden="true" tabindex="-1"></a>------------------------------------------------------------------------</span>
 <span id="cb175-975"><a href="#cb175-975" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb175-976"><a href="#cb175-976" aria-hidden="true" tabindex="-1"></a><span class="fu">## References</span></span>
+<span id="cb175-976"><a href="#cb175-976" aria-hidden="true" tabindex="-1"></a><span class="fu">## References {.unnumbered .unlisted}</span></span>
 <span id="cb175-977"><a href="#cb175-977" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb175-978"><a href="#cb175-978" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span><span class="co">[</span><span class="ot">Advanced R, H Wickham</span><span class="co">](http://adv-r.had.co.nz/Data-structures.html)</span></span>
 <span id="cb175-979"><a href="#cb175-979" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span><span class="co">[</span><span class="ot">Google's R Style Guide</span><span class="co">](https://google.github.io/styleguide/Rguide.xml)</span>\</span>
