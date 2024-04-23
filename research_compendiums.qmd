@@ -1,18 +1,5 @@
 ---
-title: <center><font size="7"><b>Research compendiums (in R)</b></font></center>
-toc: true
-toc-depth: 2
-toc-location: left
-number-sections: true
-highlight-style: pygments
-format:
-  html:
-    df-print: kable
-    code-fold: show
-    code-tools: true
-    css: styles.css
-    link-external-icon: true
-    link-external-newwindow: true  
+title: Research compendiums (in R)
 ---
 
 ```{r, echo = FALSE, warning=FALSE, message=FALSE}
@@ -54,6 +41,16 @@ tibble <- function(x, ...) {
 
 registerS3method("knit_print", "data.frame", tibble)
 ```
+
+
+::: {.alert .alert-info}
+# Objectives {.unnumbered .unlisted}
+
+-   Get familiar with tools for organizing project directories and data
+
+-   Get experience on using compendiums for research data analysis
+
+:::
 
  
 

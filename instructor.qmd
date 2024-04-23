@@ -1,17 +1,11 @@
 ---
-toc: true
-toc-depth: 3
-toc-location: left
+toc: false
+date: ""
 number-sections: true
 highlight-style: pygments
 format:
   html:
-    df-print: kable
-    code-fold: show
-    code-tools: true
-    css: styles.css
-    link-external-icon: true
-    link-external-newwindow: true  
+    code-tools: false
 ---
 
 <center><font size="6">Marcelo Araya-Salas</font></center>

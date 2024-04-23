@@ -39,10 +39,23 @@ website:
       - text: "Instructor"
         href: instructor.qmd
 
+toc: true
+toc-depth: 2
+toc-location: left
+toc-title: Contents
+number-sections: true
+code-line-numbers: false
+highlight-style: pygments
+code-overflow: wrap
+code-copy: true
+date: today
+lang: en
 format:
   html:
-    theme: simplex
     css: styles.css
     toc: true
-    
-editor: visual
+    df-print: kable
+    code-fold: show
+    code-tools: true
+    link-external-icon: false
+    link-external-newwindow: true

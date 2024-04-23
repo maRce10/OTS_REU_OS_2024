@@ -1,0 +1,785 @@
+---
+title: Dynamic Reports
+---
+
+```{r, echo = FALSE}
+
+# devtools::install_github("hadley/emo")
+library("emo")
+library("xaringanExtra")
+library("knitr")
+
+# options to customize chunk outputs
+knitr::opts_chunk$set(
+  class.source = "numberLines lineAnchors", # for code line numbers
+  tidy.opts = list(width.cutoff = 65), 
+  tidy = TRUE,
+  message = FALSE
+ )
+
+# this is a customized printing style data frames 
+# screws up tibble function
+tibble <- function(x, ...) { 
+  x <- kbl(x, digits=4, align= 'c', row.names = FALSE) 
+   x <- kable_styling(x, position ="center", full_width = FALSE,  bootstrap_options = c("striped", "hover", "condensed", "responsive")) 
+   asis_output(x)
+}
+
+registerS3method("knit_print", "data.frame", tibble)
+```
+
+::: {.alert .alert-info}
+## Objetives {.unnumbered .unlisted}
+
+-   Familiarize with the format for dynamic reports Rmarkdown/quarto
+
+-   Be able to document data management and analysis in R using Rmarkdown/quarto
+:::
+
+Packages to use in this manual:
+
+```{r}
+
+# vector with packages
+ptqs <- c("leaflet", "remotes", "hadley/emo", "maRce10/sketchy", "knitr", "rmarkdown", "kableExtra", "rmdformats", "revealjs", "rticles", "tufte")
+
+# loop to install/load packages
+installed <- sapply(ptqs, function(y) {
+  
+  ptq <- strsplit(y, "/")[[1]]
+  ptq <- ptq[length(ptq)]
+  
+  if (!ptq %in% installed.packages()[,"Package"])  {
+      if (grepl("/", y))  remotes::install_github(y, force = TRUE) else install.packages(y) 
+  }
+  
+  try(require(ptq, character.only = TRUE), silent = TRUE)
+})
+
+
+```
+
+ 
+
+------------------------------------------------------------------------
+
+## Reproducibility Crisis in Science
+
+Most procedures (including data analysis) in scientific studies cannot be replicated.
+
+```{r, echo=FALSE,out.width="70%", fig.align='center'}
+
+
+knitr::include_graphics("./images/nature-reproducibility-crisis.jpeg")
+
+```
+
+[*Baker. 2016. Nature*](https://www.nature.com/articles/533452a)
+
+Sharing data and analysis transparently and thoroughly documented, in formats that can be reproduced by other researchers, is one of the main tools for dealing with this problem.
+
+```{r, echo=FALSE,out.width="100%", fig.align='center'}
+
+knitr::include_graphics("./images/soluciones_reproducible.png")
+
+```
+
+*Gallagher et al. 2020. Nature Eco & Evo*
+
+Programmatic tools like R naturally tend to facilitate reproducibility since the code of an analysis can be easily recorded and shared. Many programming languages allow the generation of dynamic reports, which are fundamental for handling reproducible data and statistical analyses. Dynamic reports often contain all the necessary information for other researchers to replicate all the analysis steps that generated the results of scientific articles. Therefore, they are an indispensable tool for improving reproducibility in science.
+
+In R, the most popular tool for generating dynamic reports is Rmarkdown/quarto. Rmarkdown [can be described](http://rmarkdown.rstudio.com) as "*an electronic documentation format that facilitates the creation of documents, presentations, and dynamic reports from R*". [Quarto](https://quarto.org/) is *an open-source scientific and technical publishing system*. R Markdown and quarto are in escence very similar. They both use markdown language and both generate documents with R code blocks ("chunks") embedded between lines of text. When the document is processed, these blocks are evaluated (if the user desires) and the results are "printed" in the document according to certain conventions.
+
+ 
+
+### Advantages of Dynamic Reports with Rmarkdown/quarto:
+
+-   **R code can be embedded in the report**, so there is no need to maintain the report and R code separately.
+
+-   Including R code directly in a report provides an **intuitive structure** for reproducing the analyses.
+
+-   The text of the report is **written as normal text**, so no programming knowledge (i.e. R or HTML) is required to understand it.
+
+-   **The result is an HTML file** that includes images, code blocks with R commands, the results of these codes, and text. No additional files are needed, everything is embedded in the HTML file.
+
+-   Reports are **easy to share via email or publish online**.
+
+-   These reports **facilitate collaboration and improve reproducibility** (understanding the analyses is much easier when there is explanatory text, R code, code results, and graphics in the same file).
+
+-   They are **easily updated** to include new analyses and/or integrate new data.
+
+ 
+
+------------------------------------------------------------------------
+
+# Create R Markdown Documents
+
+We will use [Rstudio](www.rstudio.com) to create R Markdown documents. Start by selecting "R Markdown ..." in the dropdown menu that appears when you create a new file:
+
+```{r, echo=FALSE,out.width="70%", fig.align='center'}
+
+knitr::include_graphics("./images/image1.PNG")
+
+```
+
+<font size="3"> <i>Note: you may be prompted here to install several necessary packages for R Markdown to work.</i></font>
+
+ 
+
+A window will appear asking for a title and author for the new document (this is not so relevant at this point and can be easily modified later), as well as the format. Select 'HTML' as we are interested in converting it to a universally viewable format. You can change your output preferences from 'HTML' to 'PDF' or 'Word' at any time:
+
+```{r, echo=FALSE,out.width="70%", fig.align='center'}
+
+knitr::include_graphics("./images/image2.PNG")
+
+```
+
+ 
+
+This will take you to
+
+your first '.Rmd' file (or R Markdown). The new file already comes with a template with basic instructions:
+
+```{r, echo=FALSE,out.width="100%", fig.align='center'}
+
+knitr::include_graphics("./images/image3.PNG")
+
+```
+
+ 
+
+ 
+
+::: {.alert .alert-info}
+## Exercise 1
+
+Create a new R Markdown file, write some lines of text, and click "Knit" to see how your report will look.
+
+ 
+
+```{r, echo=FALSE,out.width="90%", fig.align='center'}
+
+knitr::include_graphics("./images/image4.PNG")
+
+```
+:::
+
+ 
+
+# Markdown Syntax
+
+Markdown (and by extension Rmarkdown/quarto) has its own syntactic rules. However, this language is relatively simple and easy to master:
+
+------------------------------------------------------------------------
+
+## Create Headers of Various Sizes
+
+Code:
+
+```{r, echo=FALSE,out.width="50%", fig.align='center'}
+
+knitr::include_graphics("./images/image5.PNG")
+
+```
+
+Result:
+
+# Header 1
+
+## Header 2
+
+### Header 3
+
+------------------------------------------------------------------------
+
+## Text Options
+
+ 
+
+Code:
+
+```{r, echo=FALSE,out.width="90%", fig.align='center'}
+
+knitr::include_graphics("./images/image6.PNG")
+
+```
+
+Result:
+
+Make text **bold**, *italic*, ~~strikethrough~~, or super^script^
+
+------------------------------------------------------------------------
+
+## Add an Image
+
+Code:
+
+```{r, echo=FALSE,out.width="50%", fig.align='center'}
+
+knitr::include_graphics("./images/add_image.png")
+
+```
+
+Result:
+
+```{r, echo=FALSE,out.width="40%", fig.align='center'}
+
+knitr::include_graphics("./images/rmarkdown_icon.png")
+
+```
+
+We can also add an image using the `include_graphics()` function from the knitr package.
+
+Code:
+
+```{r, eval = FALSE}
+
+include_graphics("./images/rmarkdown_icon.png")
+
+```
+
+Result:
+
+```{r, echo=FALSE,out.width="40%", fig.align='center'}
+
+knitr::include_graphics("./images/rmarkdown_icon.png")
+
+```
+
+Note that this option allows us to use the arguments of the code block dedicated to plotting, making it a more flexible option.
+
+------------------------------------------------------------------------
+
+## Create Links ('Hyperlinks')
+
+Code:
+
+```{r, echo=FALSE,out.width="70%", fig.align='center'}
+
+knitr::include_graphics("./images/image8.PNG")
+
+```
+
+Result:
+
+Create a link to [figshare](https://figshare.com)
+
+ 
+
+::: {.alert .alert-info}
+## Exercise 2
+
+ 
+
+2.1 Create some headers and sub-headers in your Rmarkdown/quarto document
+
+ 
+
+2.2 Add text with some words **in bold** and *in italics*
+
+ 
+
+2.3 Embed an image of your favorite organism (or a gif)
+
+ 
+
+2.4 Add a URL link
+:::
+
+ 
+
+## Embed Code
+
+To embed R code, we need to define an area where the code is located. This 'area' is known as a code block (or 'chunk') and is defined by:
+
+```{r, echo=FALSE,out.width="30%", fig.align='center'}
+
+knitr::include_graphics("./images/image9.PNG")
+
+```
+
+ 
+
+Note that the R box is gray, while the rest is white. Everything included in the segment is evaluated and displayed according to the specifications, although these can be modified.
+
+ 
+
+For example, we can add a new column to the example iris dataset:
+
+```{r, echo=FALSE,out.width="70%", fig.align='center'}
+
+knitr::include_graphics("./images/image10.PNG")
+
+```
+
+Result:
+
+```{r}
+
+data(iris)
+
+iris$random.var <- rnorm(n = nrow(iris))
+
+head(iris)
+
+```
+
+ 
+
+When your document is processed, the code segment is displayed in a gray box and the results of that code are displayed in a white box. What if you only want the output of your code to be displayed? Or that your code is displayed but not actually executed? There are arguments you can add to each of your blocks to specify these and other options:
+
+------------------------------------------------------------------------
+
+## Hide Code
+
+Add the argument `echo=FALSE`
+
+Code:
+
+```{r, echo=FALSE,out.width="90%", fig.align='center'}
+
+knitr::include_graphics("./images/image11.PNG")
+
+```
+
+Result:
+
+```{r, echo = FALSE}
+
+data(iris)
+
+iris$random.var <- rnorm(n = nrow(iris))
+
+head(iris)
+
+```
+
+ 
+
+You can see that the code is hidden but the results are displayed.
+
+[This guide](https://rstudio.com/wp-content/uploads/2015/03/rmarkdown-spanish.pdf) on code block options can be very useful:
+
+```{r, echo=FALSE,out.width="100%", fig.align='center'}
+
+knitr::include_graphics("./images/image12.PNG")
+
+```
+
+ 
+
+[This link](https://yihui.org/knitr/options/) details all the available arguments for customizing code blocks.
+
+ 
+
+## Embedding Graphics
+
+Graphics can be embedded in Rmarkdown/quarto documents simply by using plotting functions as you would in a normal R script.
+
+#### Code:
+
+```{r, echo=FALSE,out.width="90%", fig.align='center'}
+
+knitr::include_graphics("./images/image13.PNG")
+
+```
+
+ 
+
+#### Result:
+
+```{r, echo=FALSE}
+
+boxplot(iris$Sepal.Length ~ iris$Species, col = "#EE000080", 
+        ylab = "Sepal length (mm)", xlab = "Species")
+
+```
+
+ 
+
+::: {.alert .alert-info}
+## Exercise 3
+
+ 
+
+3.1 Use the `eval`, `collapse` arguments with different values (TRUE or FALSE) in a segment where you run `head(iris)`. How does it affect the result?
+
+ 
+
+3.2 Do the same with the `out.width`, `fig.width`, `dpi`, and `fig.height` arguments in a segment that creates a plot. How does it affect this time?
+:::
+
+ 
+
+## Embedding R Code in Text {#embedding-r-code-in-text}
+
+You may have noticed throughout this tutorial that I have small snippets of text that look like "code blocks". This is known as code embedding in text.
+
+This can be done in two ways:
+
+#### 1. Giving text the appearance of a code segment:
+
+------------------------------------------------------------------------
+
+#### Code:
+
+```{r, echo=FALSE,out.width="80%", fig.align='center'}
+
+knitr::include_graphics("./images/image14.png")
+
+```
+
+ 
+
+#### Result:
+
+The average sepal length is `mean(iris$Sepal.Length)`
+
+ 
+
+#### 2. Evaluating code in text
+
+#### Code:
+
+```{r, echo=FALSE,out.width="70%", fig.align='center'}
+
+knitr::include_graphics("./images/image15.png")
+
+```
+
+#### Result:
+
+The average sepal length for **setosa** is `r mean(iris$Sepal.Length[iris$Species == "setosa"])`.
+
+ 
+
+------------------------------------------------------------------------
+
+# Additional Resources for Customizing Rmarkdown/quarto Documents
+
+## Metadata (YAML)
+
+There are three basic components of an R Markdown document: the metadata, the text, and the code. The metadata is written between the pair of three hyphens ("- - -") usually at the beginning of the document. The syntax of the metadata is [YAML (YAML Ain't Markup Language)](https://en.wikipedia.org/wiki/YAML), so it is sometimes also called YAML metadata. Indentation is important in YAML, so you must add it to subfields (with respect to an upper field).
+
+This header shows the most commonly used options in YAML metadata:
+
+```{r, eval = FALSE}
+
+---
+title: "A descriptive and error-free title"
+author: "Marcelo Araya"
+date: "`r Sys.Date()`"
+output: # Various outputs shown for example only
+  html_document:
+    fig_caption: yes
+    number_sections: yes
+    toc: yes
+    toc_float: yes
+    df_print: paged
+---
+
+
+
+```
+
+[This link](https://bookdown.org/yihui/rmarkdown/html-document.html) explains in detail the options available in the YAML header of Rmarkdown/quarto files.
+
+ 
+
+## Emojis
+
+The [emo](https://github.com/hadley/emo) package allows adding emojis when evaluating code:
+
+```{r, results='asis'}
+
+emo::ji("costa_rica")
+
+```
+
+You can also embed it in text `r ji("costa_rica")`, as we saw [earlier](#embedding-r-code-in-text) `r ji("up_arrow")` (`ji("up_arrow")`)
+
+ 
+
+## Tables with knitr::kable
+
+The `knitr` package also provides a function to display tabular data in an orderly and 'clean' way in dynamic reports:
+
+```{r, eval = FALSE, echo=TRUE}
+
+knitr::kable(iris[1:10, ])
+
+```
+
+```{r, echo = FALSE}
+iris[1:10, ]
+
+
+```
+
+ 
+
+The [`kableExtra`](https://cran.r-project.org/web/packages/kableExtra/vignettes/awesome_table_in_html.html) package complements this function with many tools to customize the format of tables in dynamic reports in R.
+
+ 
+
+## Additional Options in knitr
+
+The `opts_knit` argument of `knitr` allows defining global options (applicable to all blocks unless redefined):
+
+```{r, eval = FALSE}
+
+opts_chunk$set(root.dir = "..", eval = TRUE, echo = FALSE)
+
+```
+
+ 
+
+## Presentations and Other Formatting Options
+
+Note in the window for creating a new Rmarkdown/quarto document the additional formatting options:
+
+```{r, echo=FALSE,out.width="70%", fig.align='center'}
+
+knitr::include_graphics("./images/image16.PNG")
+
+```
+
+ 
+
+Dynamic reports can be generated in other formats including presentations, PDFs, and Word documents.
+
+ 
+
+## Rmarkdown Templates
+
+The Rmarkdown package can generate results in HTML, PDF, MS Word, R package vignettes, Beamer presentations, and HTML5 documents. Additional formats (or 'variants' of these formats) are available in other R packages. Some of those packages are:
+
+-   rmdformats
+-   reveljs
+-   articles
+-   tufte
+
+Once these packages have been installed, the new formats will be available through the new Rmarkdown dialog:
+
+```{r, echo=FALSE,out.width="70%", fig.align='center'}
+
+knitr::include_graphics("./images/templates.png")
+
+```
+
+ 
+
+------------------------------------------------------------------------
+
+# Interactive Documents
+
+R Markdown documents can also generate interactive content. There are two types of interactive R Markdown documents: HTML Widgets and Shiny applications.
+
+ 
+
+## HTML Widgets
+
+HTML Widgets are implemented with the R package `htmlwidgets`, which connects JavaScript tools that create interactive applications, such as charts and tables. Several packages using HTML widgets have been developed, such as `dygraphs`, `DT`, and `leaflet`. This [site (https://www.htmlwidgets.org)](https://www.htmlwidgets.org) showcases a variety of available widgets as well as instructions on how to develop them.
+
+The following code uses the `leaflet` package to generate an interactive map:
+
+```{r out.width = '100%', echo = TRUE, as.is = TRUE}
+
+ll_map <- leaflet()
+
+ll_map <- addTiles(map = ll_map)
+
+ll_map <- setView( map = ll_map, lat = 5.527448, lng = -87.057245, zoom = 13)
+
+addPopups( map = ll_map, lat = 5.527448, lng = -87.057245, popup = 'Isla del Coco')
+
+```
+
+ 
+
+This is the code block that generated the map:
+
+```{r, echo=FALSE,out.width="90%", fig.align='center'}
+
+knitr::include_graphics("./images/leaflet.png")
+
+```
+
+ 
+
+Note the use of the `as.is = TRUE` argument in the code block options.
+
+ 
+
+## Shiny Applications
+
+The `shiny` package creates interactive web applications in R. To call `shiny` code from an R Markdown document, add 'runtime': shiny to the YAML metadata, as in this example:
+
+```{r, eval = FALSE}
+
+---
+title: "Shiny Document"
+output: html_document
+runtime: shiny
+---
+
+```
+
+ 
+
+The following code creates a shiny application within the Rmarkdown document:
+
+```{r, eval = FALSE}
+
+ui <- fluidPage(
+  
+  titlePanel("Example"),
+  
+  sidebarLayout(
+    sidebarPanel(
+      sliderInput(inputId = "bins",
+                  label = "Number of bins:",
+                  min = 1,
+                  max = 50,
+                  value = 30)
+      
+    ),
+    mainPanel(
+      plotOutput(outputId = "distPlot")
+    )
+  )
+)
+
+server <- function(input, output) {
+ 
+  output$distPlot <- renderPlot({
+    
+    x    <- faithful$waiting
+    bins <- seq(min(x), max(x), length.out = input$bins + 1)
+    
+    hist(x, breaks = bins, col = "#3E4A89FF", border = "white",
+         xlab = "Waiting time for next eruption",
+         main = "Histogram of waiting time")
+  })
+}
+
+# Create Shiny app
+shinyApp(ui = ui, server = server)
+
+```
+
+ 
+
+Note that this application does not work in static Rmarkdown documents. On the [shiny gallery](https://shiny.rstudio.com/gallery/#demos) site, you can find many examples of shiny applications. These applications are complex to include in self-contained files and therefore are not as user-friendly for dynamic reports as those we can generate with R markdown.
+
+ 
+
+# Publishing Reports Online with Rpubs
+
+The online platform [Rpubs](rpubs.com/) allows you to publish reports in HTML format. This option greatly simplifies sharing code, analysis, and results since you only need to send the URL. Furthermore, you can continue updating the reports, and the same URL will continue to contain the updated versions of the reports.
+
+To send our HTML reports to [Rpubs](rpubs.com/), we must first create an account on the site. After this, we simply have to use the "publish" link in the upper right corner of the reports:
+
+```{r, echo=FALSE,out.width="90%", fig.align='center'}
+
+knitr::include_graphics("./images/rpubs.PNG")
+
+```
+
+ 
+
+------------------------------------------------------------------------
+
+# Additional Tools for Organizing Data Analysis
+
+## RStudio Projects
+
+RStudio projects create folders where files related to a specific analysis (code and data) are saved and make this folder the default working directory when the project is opened. They can be created like this:
+
+```{r, echo=FALSE,out.width="50%", fig.align='center'}
+
+knitr::include_graphics("./images/rproj1.png")
+
+```
+
+Then a series of windows will appear where you can choose what type of project and its name:
+
+```{r, echo=FALSE,out.width="100%", fig.align='center'}
+
+knitr::include_graphics("./images/rproj2.png")
+
+```
+
+ 
+
+## Research Compendia
+
+Research compendia are pre-defined folder structures that allow for a logical and intuitive organization of the files used and generated in a data analysis of a research project. The \[sketchy
+
+\](https://marce10.github.io/sketchy/) package generates these compendia, allowing the user to choose from a range of common compendia in the scientific community. This example creates the basic compendium (one of the 14 that come with the package):
+
+```{r, error=TRUE}
+
+path <- tempdir()
+
+make_compendium(name = "project_x", path = path, format = "basic", Rproj = TRUE)
+
+```
+
+The package creates Rmarkdown files with templates for data analysis (folder "scripts") and manuscript writing (folder "manuscript"). Run `path` in the R console to see the directory where the compendium was created.
+
+ 
+
+::: {.alert .alert-info}
+## Exercise 4
+
+ 
+
+-   Create a dynamic report that includes an interactive map of Costa Rica using the `leaflet` package
+
+ 
+
+-   Reproduce one of the examples available on the dygraphs package site (<https://rstudio.github.io/dygraphs/>) and embed it in your dynamic report
+
+ 
+
+-   Install the `kableExtra` package and embed in your report the example code from the documentation of the `kable_styling()` function of that package
+
+ 
+
+-   Create an Rmarkdown presentation using the "Presentation" option in the creation window
+
+ 
+
+-   Generate a dynamic report in PDF format
+
+ 
+
+-   Create an Rstudio project to organize the contents of the course
+
+ 
+
+-   Create a research compendium with sketchy
+:::
+
+ 
+
+------------------------------------------------------------------------
+
+# References {.unnumbered .unlisted}
+
+-   [R Markdown: The Definitive Guide](https://bookdown.org/yihui/rmarkdown/)
+-   [Rmarkdown custom format](https://blog.rstudio.com/2016/03/21/r-markdown-custom-formats/)
+-   [Rmarkdown website](https://rmarkdown.rstudio.com/index.html)
+-   [Jacolien van Rij: R Lessons](http://www.jacolienvanrij.com/Tutorials/tutorialMarkdown.html)
+-   Vaidyanathan, Ramnath, Yihui Xie, JJ Allaire, Joe Cheng, and Kenton Russell. 2019. Htmlwidgets: HTML Widgets for R. https://github.com/ramnathv/htmlwidgets.
+
+------------------------------------------------------------------------
+
+# Session Information {.unnumbered .unlisted}
+
+```{r session info, echo=F}
+
+sessionInfo()
+
+```

@@ -1,39 +1,43 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://marce10.github.io/OTS_REU_OS_2024/index.html</loc>
-    <lastmod>2024-04-20T03:06:47.937Z</lastmod>
-  </url>
-  <url>
     <loc>https://marce10.github.io/OTS_REU_OS_2024/r_basics.html</loc>
-    <lastmod>2024-04-22T02:51:37.782Z</lastmod>
-  </url>
-  <url>
-    <loc>https://marce10.github.io/OTS_REU_OS_2024/course_prep.html</loc>
-    <lastmod>2024-04-22T23:53:54.858Z</lastmod>
-  </url>
-  <url>
-    <loc>https://marce10.github.io/OTS_REU_OS_2024/instructor.html</loc>
-    <lastmod>2023-05-17T19:59:14.000Z</lastmod>
-  </url>
-  <url>
-    <loc>https://marce10.github.io/OTS_REU_OS_2024/coding_and_reproducibility.html</loc>
-    <lastmod>2024-04-19T20:03:02.000Z</lastmod>
+    <lastmod>2024-04-23T04:40:22.222Z</lastmod>
   </url>
   <url>
     <loc>https://marce10.github.io/OTS_REU_OS_2024/research_compendiums.html</loc>
-    <lastmod>2024-04-20T15:29:55.318Z</lastmod>
+    <lastmod>2024-04-23T04:45:24.846Z</lastmod>
   </url>
   <url>
-    <loc>https://marce10.github.io/OTS_REU_OS_2024/intro_to_git_and_github.html</loc>
-    <lastmod>2024-04-19T21:09:52.000Z</lastmod>
+    <loc>https://marce10.github.io/OTS_REU_OS_2024/dynamic_reports.html</loc>
+    <lastmod>2024-04-23T04:30:42.335Z</lastmod>
+  </url>
+  <url>
+    <loc>https://marce10.github.io/OTS_REU_OS_2024/instructor.html</loc>
+    <lastmod>2024-04-23T04:29:31.369Z</lastmod>
+  </url>
+  <url>
+    <loc>https://marce10.github.io/OTS_REU_OS_2024/index.html</loc>
+    <lastmod>2024-04-23T04:45:34.022Z</lastmod>
+  </url>
+  <url>
+    <loc>https://marce10.github.io/OTS_REU_OS_2024/course_prep.html</loc>
+    <lastmod>2024-04-23T03:20:27.751Z</lastmod>
   </url>
   <url>
     <loc>https://marce10.github.io/OTS_REU_OS_2024/program.html</loc>
-    <lastmod>2024-04-22T18:05:27.720Z</lastmod>
+    <lastmod>2024-04-23T03:17:31.958Z</lastmod>
+  </url>
+  <url>
+    <loc>https://marce10.github.io/OTS_REU_OS_2024/intro_to_git_and_github.html</loc>
+    <lastmod>2024-04-23T04:28:53.280Z</lastmod>
   </url>
   <url>
     <loc>https://marce10.github.io/OTS_REU_OS_2024/reproducible_taxonomy.html</loc>
-    <lastmod>2024-04-23T02:06:47.890Z</lastmod>
+    <lastmod>2024-04-23T03:11:45.923Z</lastmod>
+  </url>
+  <url>
+    <loc>https://marce10.github.io/OTS_REU_OS_2024/coding_and_reproducibility.html</loc>
+    <lastmod>2024-04-23T04:43:05.590Z</lastmod>
   </url>
 </urlset>

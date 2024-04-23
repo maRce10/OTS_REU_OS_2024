@@ -1,20 +1,5 @@
 ---
-title: <center><font size="6"><b>Reproducibility in the use of taxonomic information</b></font></center>
-toc: true
-toc-depth: 2
-toc-location: left
-number-sections: true
-highlight-style: pygments
-format:
-  html:
-    df-print: kable
-    code-fold: show
-    code-tools: true
-    css: styles.css
-    link-external-icon: true
-    link-external-newwindow: true  
-editor_options: 
-  chunk_output_type: console
+title: Reproducibility in the use of taxonomic information
 ---
 
 ```{r, echo = FALSE}
@@ -498,6 +483,12 @@ checkNames4 <- checkSpeciesNames (speciesNames = "Chevrotain",
 checkNames4 
   
 ```
+
+--- 
+
+# References  {.unnumbered .unlisted}
+
+Chamberlain, S. A., & Szöcs, E. (2013). taxize: taxonomic search and retrieval in R. F1000Research, 2.
 
 ---
 

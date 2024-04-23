@@ -69,10 +69,9 @@ ul.task-list li input[type="checkbox"] {
 
 
 <link rel="stylesheet" href="styles.css">
-<link rel="stylesheet" href="styles.scss">
 </head>
 
-<body class="floating nav-fixed">
+<body class="floating nav-fixed fullcontent">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -119,7 +118,7 @@ ul.task-list li input[type="checkbox"] {
  <span class="dropdown-text">Intro to git/github</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./dynamic_reports.qmd">
+    <a class="dropdown-item" href="./dynamic_reports.html">
  <span class="dropdown-text">Dynamic reports</span></a>
   </li>  
         <li>
@@ -162,8 +161,7 @@ ul.task-list li input[type="checkbox"] {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-    </div>
+    
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
@@ -188,7 +186,7 @@ ul.task-list li input[type="checkbox"] {
 <img src="images/crisis.png" alt="acoustic measurements" width="400">
 </center>
 <p>&nbsp;</p>
-<p>Scientific production currently suffers from a lack of reproducibility (the ability to recreate a study based on published information), due to the poor documentation of the methods and analyses used, as well as the lack of access to the data generated. Biology has not escaped this crisis of scientific reproducibility, which affects the credibility of our community. Fortunately, in response to this crisis, a multitude of tools have been developed, in most cases freely available, to increase the transparency and accessibility of data supporting the conclusions of scientific studies. Making these tools available to the scientific community and encouraging their use early in the training of researchers is critical to solving the reproducibility crisis. These tools revolve around three main axes: 1) online repositories for sharing data and research products, 2) open access digital tools, and 3) the implementation of good data management and analysis practices**. These three axes represent the modules in which the course is organized. This course aims to deepen the use of tools (mostly digital) as well as good practices along each of the common stages of the each of the stages common to the development of research projects in biology.</p>
+<p>Scientific production currently suffers from a lack of reproducibility (the ability to recreate a study based on published information), due to the poor documentation of the methods and analyses used, as well as the lack of access to the data generated. Biology has not escaped this crisis of scientific reproducibility, which affects the credibility of our community. Fortunately, in response to this crisis, a multitude of tools have been developed, in most cases freely available, to increase the transparency and accessibility of data supporting the conclusions of scientific studies. Making these tools available to the scientific community and encouraging their use early in the training of researchers is critical to solving the reproducibility crisis. These tools revolve around three main axes: <strong>1) online repositories for sharing data and research products, 2) open access digital tools, and 3) the implementation of good data management and analysis practices</strong>. These three axes represent the modules in which the workshop is organized. This workshop aims to deepen the use of tools (mostly digital) as well as good practices along each of the common stages of the each of the stages common to the development of research projects in biology.</p>
 <section id="objetives" class="level3 unnumbered unlisted alert alert-info">
 <h3 class="unnumbered unlisted anchored" data-anchor-id="objetives">Objetives</h3>
 <ul>
@@ -297,8 +295,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
           if (link.getAttribute("rel") === null) {
             link.setAttribute("rel", "noopener");
           }
-          // default icon
-          link.classList.add("external");
       }
     }
   function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {

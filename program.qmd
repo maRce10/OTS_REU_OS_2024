@@ -1,17 +1,3 @@
----
-toc: true
-toc-depth: 3
-toc-location: left
-number-sections: true
-highlight-style: pygments
-format:
-  html:
-    df-print: kable
-    code-fold: show
-    css: styles.css
-    link-external-icon: true
-    link-external-newwindow: true    
----
 
 ::: {.alert .alert-success}
 ### Before the course starts {.unnumbered .unlisted}
@@ -112,6 +98,44 @@ format:
 #### Optional 
 
 -   Bryan, J. (2018). [Excuse me, do you have a moment to talk about version control?](https://peerj.com/preprints/3159.pdf). The American Statistician, 72(1), 20-27.
+
+:::
+
+---
+
+ 
+
+## Day 3 
+
+---
+
+### **Dynamic reports** <a href="dynamic_reports.qmd" class="btn btn-warning btn-xs" role="button">Tutorial</a>
+
+-   Sharing analysis with dynamic reports
+-   Rmarkdown and quarto formats
+-   Markdown syntax
+-   Rpubs
+
+### **Reproducible taxonomic information** <a href="reproducible_taxonomy.qmd" class="btn btn-warning btn-xs" role="button">Tutorial</a>
+
+-  Reproducibility taxonomic information
+-  Taxize package
+-  Curating taxonomic information
+
+
+::: {.alert .alert-warning}
+### Additional materials
+
+#### Readings
+
+- Chamberlain, S. A., & Szöcs, E. (2013). [taxize: taxonomic search and retrieval in R](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3901538/pdf/f1000research-2-2767.pdf). F1000Research, 2.
+
+- Fidler, F., Chee, Y. E., Wintle, B. C., Burgman, M. A., McCarthy, M. A., & Gordon, A. (2017). [Metaresearch for evaluating reproducibility in ecology and evolution](https://watermark.silverchair.com/biw159.pdf?token=AQECAHi208BE49Ooan9kkhW_Ercy7Dm3ZL_9Cf3qfKAc485ysgAAA1cwggNTBgkqhkiG9w0BBwagggNEMIIDQAIBADCCAzkGCSqGSIb3DQEHATAeBglghkgBZQMEAS4wEQQMuiQ3frpNY_oz2bZlAgEQgIIDCiU5IOncXj5IaCoXcRoQOuQVHi7t8xCemD5qekr32Oc57ChLc5RoSGKcuhX2l1D2D30cbZm7IpavrmqKL6wrSU8TMD24pTS4BoyEzm54bIsXX_TQOqOIsG-yYQQgTtPr88s60TvRmkHCnMRzXqIKuzMOUIqBiOB0GLFHTujpv8mMHCDLJ-8_1UUjkcC_AiOLptsAeEY4ILrn3T-DcxPNYlHXuZ0LZubD9zVilETwoKMSCG_bDRvit_HR1WamJeyO-W63-L_WQoHitDpH9fOldW5Y-OQm8JOXeYSP-uyDMEALx0cYFE1J8gX-wUbU6kkWZAAJ2Wk6HDW9E8D2BqD15vMLUo01ahWsaDvs0ol1B70qUrmMEQ2YFXrRmkqgUK0foa9NpJoVCv42u4_pBWats2s-yQaXmA-9k5ErDp337uiikEmlNFxvsE6yt7ABgp3lgiZtnoGzBt1R-fYaJn7yTwzPWix3ppyCaH0hayydWBB93uey5qKYfxSXpVCkj_cvrSUKz0CXiZ9nFdOV2Snz2yPJC-aPxkM4dCVqzGUeSy1q1G54sj6kVvsy_RzWEy7gotJz5x9PqbvR-l9Gx2glr4BNI-sAsKK3qhZshmwVyd6hlvN6gFMlYH9IAfm__a98cgfy40cmdJ48QBDfW_xTGiH0dpQuvAVuyiq6wLRGGK-V2w_9ZWjkZwrxtz93xMOWWwouL1Ml4DkmCFXay6jG-wu7hfuDvMR4sDEeSXegzeFEhatxQfNn-Zy14-o1A_eg2rwynpFwwmpsAhMpNND4lh-PGLJu-YRR-QEOnYU3Mf61wsIPqEW9JMVsMQVGL7AlXG_dMdrVahbarecm2wHaDbbxg-2BTUy3TVq0qorGEA18dmuXf-X-IouoxRAt5TO2UzAD8ecgyTOBnS9oo-bqlNC8W8cMD30AQEuoasmvPu5j2cFLgBLmKvrolbvjS3JDltgIrmfTS-R6yZDPvnJy9J93uWTnktGp7nMriYfeYmTUEusWxnKbIzwOiLhrnXq6N5z7kA_ERZDbgtE). BioScience, 67(3), 282-289.
+
+
+#### Optional 
+
+-   Ince, D. C., Hatton, L., & Graham-Cumming, J. (2012). [The case for open computer programs](https://climate.fas.harvard.edu/files/climate/files/nature10836.pdf). Nature, 482(7386), 485-488.
 
 :::
 

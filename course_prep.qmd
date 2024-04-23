@@ -1,19 +1,9 @@
 ---
-toc: true
-toc-depth: 3
-toc-location: left
-number-sections: true
-highlight-style: pygments
+toc: false
 format:
   html:
-    df-print: kable
-    code-fold: show
     code-tools: false
     css: styles.css
-    link-external-icon: true
-    link-external-newwindow: true  
-editor_options: 
-  chunk_output_type: console
 ---
 
  
@@ -65,6 +55,7 @@ load_packages(
     "rgbif",
     "rmarkdown",
     "knitr",
+    "cowsay",
     "kableExtra",
     "rmdformats",
     "revealjs",
