@@ -62,6 +62,7 @@ library(sketchy)
 # install packages
 load_packages(
   packages = c(
+    "rgbif",
     "rmarkdown",
     "knitr",
     "kableExtra",
@@ -71,6 +72,7 @@ load_packages(
     "tufte",
     "ggplot2",
     "viridis",
+    "taxize",
     github = "hadley/emo",
     github = "benmarwick/rrtools",
     github = "CrumpLab/vertical",
@@ -88,6 +90,8 @@ load_packages(
 10) Install *Github Desktop* (<https://docs.github.com/en/desktop/installing-and-authenticating-to-github-desktop/installing-github-desktop>)
 
 11) On *Github Desktop* log in into your github account using github
+
+12) Register yourself in *Rpubs* (https://rpubs.com/)
 
 ::: {.alert .alert-warning}
 **A few tips to make sure you will take full advantage of the course**:

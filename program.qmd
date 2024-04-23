@@ -23,7 +23,7 @@ format:
 
  
 
-## **Day 1**
+## Day 1
 
 ---
 
@@ -99,15 +99,19 @@ format:
 
 #### Readings
 
--   Bryan, J. (2018). [Excuse me, do you have a moment to talk about version control?](https://peerj.com/preprints/3159.pdf). The American Statistician, 72(1), 20-27.
+- Vuorre, M., & Curley, J. P. (2018). [Curating research assets: A tutorial on the Git version control system](https://journals.sagepub.com/doi/full/10.1177/2515245918754826). Advances in Methods and Practices in Psychological Science, 1(2), 219-236.
 
 #### Videos
 
--   [What is version control?](https://www.youtube.com/watch?v=Yc8sCSeMhi4)
+- [What is git?](https://www.youtube.com/watch?v=2ReR1YJrNOM)
+
+- [What is version control?](https://www.youtube.com/watch?v=Yc8sCSeMhi4)
+
+- [Git vs github](https://www.youtube.com/watch?v=xJXgvr8bPes)
 
 #### Optional 
 
-- Vuorre, M., & Curley, J. P. (2018). [Curating research assets: A tutorial on the Git version control system](https://journals.sagepub.com/doi/full/10.1177/2515245918754826). Advances in Methods and Practices in Psychological Science, 1(2), 219-236.
+-   Bryan, J. (2018). [Excuse me, do you have a moment to talk about version control?](https://peerj.com/preprints/3159.pdf). The American Statistician, 72(1), 20-27.
 
 :::
 

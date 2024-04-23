@@ -28,6 +28,10 @@ website:
           href: research_compendiums.qmd
         - text: "Intro to git/github"
           href: intro_to_git_and_github.qmd
+        - text: "Dynamic reports"
+          href: dynamic_reports.qmd
+        - text: "Reproducible taxonomy"
+          href: reproducible_taxonomy.qmd
       - text: "Course prep"
         href: course_prep.qmd
       - text: "Code sharing"
