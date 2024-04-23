@@ -54,6 +54,7 @@ load_packages(
   packages = c(
     "rgbif",
     "rmarkdown",
+    "packrat",
     "knitr",
     "cowsay",
     "kableExtra",

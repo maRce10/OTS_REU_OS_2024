@@ -26,51 +26,65 @@ tibble <- function(x, ...) {
 registerS3method("knit_print", "data.frame", tibble)
 ```
 
-
 # Introduction
+
 One aspect of scientific reproducibility that is specific to the biological sciences is how taxonomic information is obtained, used, and reported. In the discussion, we address the topics of using vouchers and the importance of adequately documenting the justification of taxonomic identifications. Here we will see a tool for obtaining and curating taxonomic information in a reproducible manner.
 
 We will use the R package ['taxize'](https://github.com/ropensci/taxize). By the way, the article describing the package was published in the journal [F1000Research](https://f1000research.com/articles/2-191/v2), one of the journals we saw at the beginning of the semester is completely open.
 
 <p align="center">
+
 ![](./images/Screenshot_taxize.png)
+
 <p align="center">
-<font size="2">[Chamberlain and Szöcs (2013)](https://f1000research.com/articles/2-191/v2). 
+
+<font size="2">[Chamberlain and Szöcs (2013)](https://f1000research.com/articles/2-191/v2).
+
 </p>
 
 # Why 'taxize'?
 
 There are online databases from which taxonomic information for various biological organisms can be obtained. However, there are advantages to performing these searches programmatically:
- 
- 1. it is more efficient if you have to search for many taxa
- 2. the search becomes a reproducible part of the workflow
- 
- The idea of taxize is to make the extraction and use of taxonomic information easy and reproducible.
- 
- <p align="center">
-![](./images/frogtoon.JPG)
+
+1.  it is more efficient if you have to search for many taxa
+2.  the search becomes a reproducible part of the workflow
+
+The idea of taxize is to make the extraction and use of taxonomic information easy and reproducible.
+
 <p align="center">
+
+![](./images/frogtoon.JPG)
+
+<p align="center">
+
 <font size="2"> Image: Rohan Chakravarty/[CC BY-NC-ND 3.0](https://creativecommons.org/licenses/by-nc-nd/3.0/).
+
 </p>
 
 # What does 'taxize' do?
- 'taxize' connects with several [taxonomic databases](https://f1000research.com/articles/2-191/v2#T1) and more can be gradually added. This information can be used to carry out common tasks in the research process. For example:
- 
+
+'taxize' connects with several [taxonomic databases](https://f1000research.com/articles/2-191/v2#T1) and more can be gradually added. This information can be used to carry out common tasks in the research process. For example:
+
 ## Resolves Taxonomic Names
+
 If we have a list of specimens, we may want to know if we are using updated names and if the names we have are spelled correctly. We can do this using the Global Names Resolver [(GNR)](http://resolver.globalnames.org/) application from the [Encyclopedia of Life](https://eol.org/), through taxize.
 
-As an example, let's look at occurrence data that I downloaded from [GBIF](https://www.gbif.org/). I downloaded records of birds from the genus *Ramphocelus* in Costa Rica, from the National Zoological Collection. Perhaps, I am working with or planning to work with these specimens. 
+As an example, let's look at occurrence data that I downloaded from [GBIF](https://www.gbif.org/). I downloaded records of birds from the genus *Ramphocelus* in Costa Rica, from the National Zoological Collection. Perhaps, I am working with or planning to work with these specimens.
 
 The data is here (https://doi.org/10.15468/dl.d8frtc)
 
 and this is an example of the bird:
-  
-<p align="center">
-![](./images/Ramphocelus.jpeg)
-<p align="center">
-<
 
-font size="2"> *Ramphocelus sanguinolentus*, La Fortuna, Costa Rica
+<p align="center">
+
+![](./images/Ramphocelus.jpeg)
+
+<p align="center">
+
+\<
+
+font size="2"\> *Ramphocelus sanguinolentus*, La Fortuna, Costa Rica
+
 </p>
 
 ```{r}
@@ -83,6 +97,7 @@ Ram.names
 ```
 
 Let's see which databases I can use to search for the names of my species
+
 ```{r, message=FALSE}
 library(taxize)
 require(kableExtra)
@@ -92,6 +107,7 @@ data.sources[,c(1,5,8,9)]
 ```
 
 Let's check if they are spelled correctly
+
 ```{r, eval = FALSE}
 name.res <- gnr_resolve(sci = Ram.names,data_source_ids = c(3:4))        
 name.res[,-1]
@@ -99,6 +115,7 @@ name.res[,-1]
 ```
 
 And what if they weren't?
+
 ```{r}
 Ram.names2 <- Ram.names
 Ram.names2[2] <- "Ramphocelus passerini"
@@ -110,12 +127,13 @@ name.res2[,-1]
 ## Identifies Synonyms
 
 Let's search for synonyms for these species
+
 ```{r, eval = FALSE}
 synonyms(sci_id = Ram.names, db = "itis") 
 ```
 
-To use some databases, it is necessary to obtain an 'API key'. This cannot be done automatically with 'taxize' but instructions on how to obtain and save the API key for use from R can be obtained.
-Let's look at a couple of examples:
+To use some databases, it is necessary to obtain an 'API key'. This cannot be done automatically with 'taxize' but instructions on how to obtain and save the API key for use from R can be obtained. Let's look at a couple of examples:
+
 ```{r, eval=FALSE}
 use_tropicos()
 use_iucn()
@@ -125,29 +143,33 @@ use_entrez()
 ?key_helpers()
 ?`taxize-authentication`
 ```
- 
+
+```{=html}
 <style>
 div.ejercicios { background-color:#F5F5DC; border-radius: 5px; padding: 5px}
 div.discu { background-color:#6699CC; border-radius: 5px; padding: 5px}
 </style>
-<div class = "ejercicios">
-
+```
+::: ejercicios
 ### Exercise 1
 
-1. Install the 'usethis' package with the command `install.packages("usethis")`
-2. Obtain the 'API key' for a database of your interest
-3. Add this 'API key' to your environment in R with the command `usethis::edit_r_environ()`
-4. Restart R and verify that you have the 'API key' using `getkey()`
-5. If everything went well, you're ready to use it.
-</div>
-&nbsp; 
+1.  Install the 'usethis' package with the command `install.packages("usethis")`
+2.  Obtain the 'API key' for a database of your interest
+3.  Add this 'API key' to your environment in R with the command `usethis::edit_r_environ()`
+4.  Restart R and verify that you have the 'API key' using `getkey()`
+5.  If everything went well, you're ready to use it.
+:::
+
+ 
 
 ```{r, include=FALSE}
 getkey(service = "entrez")
 ```
- 
+
 ## Extracts Taxonomic Classification
+
 We can obtain information about the higher taxonomic classification of our species. If your key is for 'tropicos' or 'entrez', you can use the respective databases (tropicos and ncbi). For example:
+
 ```{r, eval = FALSE}
 Ram.class <- classification(Ram.names, db = "ncbi")
 
@@ -156,6 +178,7 @@ Ram.class[[1]]
 ```
 
 and if we just want to know the family...
+
 ```{r}
 
 Ram.fam <- tax_name(sci = Ram.names, get = "family", db = "ncbi")
@@ -165,7 +188,9 @@ Ram.fam
 ```
 
 ## Gets Downstream Names
+
 Perhaps we want to know which or how many are the members of a certain taxonomic group. For example, how many species are in the genus *Ramphocelus*?
+
 ```{r, eval = FALSE}
 # separate the genus
 genus <- strsplit(Ram.names[1], " ")[[1]][1]
@@ -177,7 +202,8 @@ Ram.down[[1]]
 ```
 
 ## Gets Conservation Status Information
-If you have the 'API key' for IUCN, you can obtain information about conservation status. 
+
+If you have the 'API key' for IUCN, you can obtain information about conservation status.
 
 *NOTE: The authors of 'taxize' warn to use with caution as there may be errors*
 
@@ -188,18 +214,24 @@ get_iucn(Ram.names)
 ```
 
 # Examples of Applications in Reproducible Science
+
 Let's see some examples of how using tools like 'taxize' contributes to more reproducible research.
 
 ## Lists of Hosts in Thousands of Communities
+
 <p align="center">
+
 ![](./images/Zoonotic1.png)
+
 <p align="center">
+
 <font size="2"> Article by [Gibb et al. 2020, Nature](https://www.nature.com/articles/s41586-020-2562-8)
+
 </p>
 
 **From the methods section:**
-  
-"*We compiled animal host–pathogen associations from several source databases, to provide as comprehensive a dataset as possible of zoonotic host species and their pathogens: the Enhanced Infectious Diseases (EID2) database; the Global Mammal Parasite Database v.2.0 (GMPD2) which collates records of parasites of cetartiodactyls, carnivores and primates; a reservoir hosts database; a mammal–virus associations database; and a rodent zoonotic reservoirs database augmented with pathogen data from the Global Infectious Disease and Epidemiology Network (GIDEON) (Supplementary Table 8). <span style="color: #32CD32;">We harmonized species names across all databases, excluding instances in which either hosts or pathogens could not be classified to species level. To prevent erroneous matches due to misspelling or taxonomic revision, all host species synonyms were accessed from Catalogue Of Life using ‘taxize’ v.0.8.939</span>. Combined, the dataset contained 20,382 associations between 3,883 animal host species and 5,694 pathogen species.*"
+
+"*We compiled animal host--pathogen associations from several source databases, to provide as comprehensive a dataset as possible of zoonotic host species and their pathogens: the Enhanced Infectious Diseases (EID2) database; the Global Mammal Parasite Database v.2.0 (GMPD2) which collates records of parasites of cetartiodactyls, carnivores and primates; a reservoir hosts database; a mammal--virus associations database; and a rodent zoonotic reservoirs database augmented with pathogen data from the Global Infectious Disease and Epidemiology Network (GIDEON) (Supplementary Table 8). [We harmonized species names across all databases, excluding instances in which either hosts or pathogens could not be classified to species level. To prevent erroneous matches due to misspelling or taxonomic revision, all host species synonyms were accessed from Catalogue Of Life using 'taxize' v.0.8.939]{style="color: #32CD32;"}. Combined, the dataset contained 20,382 associations between 3,883 animal host species and 5,694 pathogen species.*"
 
 Let's see the code from the article and make a small modification to apply the function to our data.
 
@@ -310,6 +342,7 @@ findSyns3 = function(x){
 ```
 
 Earlier, we saw that there's a name synonymous with *Ramphocelus sanguinolentus*. What would the function by Gibb et al. do with that?
+
 ```{r}
 Ram.syn1 <- findSyns3("Phlogothraupis sanguinolenta")
 
@@ -318,6 +351,7 @@ Ram.syn1
 ```
 
 And with one that's misspelled?
+
 ```{r}
 Ram.syn2 <- findSyns3(Ram.names2[2])
 
@@ -328,22 +362,29 @@ Ram.syn2
 ## Camera trap data management
 
 <p align="center">
+
 ![](./images/camtrapR.png)
+
 <p align="center">
+
 <font size="2"> Article by [Niedballa et al. 2016,Methods Ecol. Evol.](https://besjournals.onlinelibrary.wiley.com/doi/pdf/10.1111/2041-210X.12600)
+
 </p>
 
 **From the methods section:**
 
-*"Users are free to use any species names (or abbreviations or codes) they wish. If scientific or common species names are used, <span style="color: #32CD32;">the function checkSpeciesNames can check them against the ITIS taxonomic database (www.itis.gov) and returns their matching counterparts (utilizing the R package taxize (Chamberlain & Szöcs 2013) internally)</span>, making sure species names and spelling are standardized and taxonomically sound, and thus making it easier to combine data sets from different studies. "*
+*"Users are free to use any species names (or abbreviations or codes) they wish. If scientific or common species names are used, [the function checkSpeciesNames can check them against the ITIS taxonomic database (www.itis.gov) and returns their matching counterparts (utilizing the R package taxize (Chamberlain & Szöcs 2013) internally)]{style="color: #32CD32;"}, making sure species names and spelling are standardized and taxonomically sound, and thus making it easier to combine data sets from different studies."*
 
 Let's see some examples from the camtrapR vignettes. We're not going to download the package because the CRAN version of 'camtrapR' is not compatible with the CRAN version of 'taxize'.
 
 <p align="center">
-![](./images/facepalm.jpg){width=50%}
+
+![](./images/facepalm.jpg){width="50%"}
+
 </p>
 
 Let's rewrite the current function updating the arguments of 'taxize'.
+
 ```{r}
 checkSpeciesNames <- function (speciesNames, searchtype, accepted = TRUE, ask = TRUE) 
 {
@@ -448,6 +489,7 @@ checkSpeciesNames <- function (speciesNames, searchtype, accepted = TRUE, ask = 
 Now, what can we do?
 
 ### Search information by common names
+
 ```{r}
 checkNames1 <- checkSpeciesNames(speciesNames = c("Bearded Pig", "Malayan Civet"),
                                   searchtype   = "common")
@@ -457,6 +499,7 @@ checkNames1%>%
 ```
 
 ### Search information by scientific names (including subspecies)
+
 ```{r}
 checkNames2 <- checkSpeciesNames (speciesNames = "Viverra tangalunga tangalunga",
                                   searchtype   = "scientific")
@@ -466,6 +509,7 @@ checkNames2%>%
 ```
 
 ### Search information with an incorrect name
+
 ```{r}
 checkNames3 <- checkSpeciesNames (speciesNames = "Felis bengalensis",
                                   searchtype   = "scientific",
@@ -475,6 +519,7 @@ checkNames3
 ```
 
 ### Search information with an ambiguous name
+
 ```{r, eval = FALSE}
 
 checkNames4 <- checkSpeciesNames (speciesNames = "Chevrotain",
@@ -484,13 +529,13 @@ checkNames4
   
 ```
 
---- 
+------------------------------------------------------------------------
 
-# References  {.unnumbered .unlisted}
+# References {.unnumbered .unlisted}
 
 Chamberlain, S. A., & Szöcs, E. (2013). taxize: taxonomic search and retrieval in R. F1000Research, 2.
 
----
+------------------------------------------------------------------------
 
 # Session Information {.unnumbered .unlisted}
 

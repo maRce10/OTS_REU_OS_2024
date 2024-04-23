@@ -67,7 +67,7 @@ options("digits.secs"=3)
 
 -   Understand how coding can help make research reproducible
 
--   Apply some programming practices that can improve 
+-   Learn programming practices that can improve 
 reproducibliity
 
 :::
@@ -123,9 +123,9 @@ reproducibliity
 
 ### Session Information
 
-The simplest way to document the environment (R + packages and their versions) in which an analysis was done is by using the `sessionInfo` function:
+The simplest way to document the environment (R + packages and their versions) in which an analysis was done is by using the `sessionInfo()` function:
 
-```{r session info example, echo=F}
+```{r session info example, echo=TRUE}
 
 sessionInfo()
 

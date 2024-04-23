@@ -809,7 +809,7 @@ Variables and functions:
 
  
 
-## Tips for Adding Comments
+## Commenting
 
 -   Comment your code
 -   Fully commented lines should start with \# and a space
@@ -825,20 +825,6 @@ hist(df$pct.spent,
      ylab   = "Frequency")
 ```
 
- 
-
-## General Layout and Ordering (Google Style)
-
--   Copyright statement comment (?)
--   Author comment
--   File description comment, including program purpose, inputs, and outputs
--   source() and library() statements
--   Function definitions
--   Executed statements, if applicable (e.g., print, plot)
-
-------------------------------------------------------------------------
-
- 
 
 # R Documentation
 
