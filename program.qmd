@@ -18,12 +18,6 @@
 -   Style matters
 -   R documentation
 
-### **Coding and reproducible research** <a href="coding_and_reproducibility.qmd" class="btn btn-warning btn-xs" role="button">Tutorial</a>
-
--   Free software and code
--   Why R?
--   Tools for reproducible programming
-
 ::: {.alert .alert-warning}
 ### Additional materials
 
@@ -44,29 +38,35 @@
 
  
 
-::: {.alert .alert-info}
-### Practice
-
-1.  On a scientific journal of your preference pick up 10 open access papers (or just 10 papers if you have access)
-
-2.  Skim each paper to check if they have attempted to make it reproducible and which research components have been shared (like data or code). If there are not open research papers in the 10 you pick up keep looking until you find one.
-
-3.  Try to access the supplementary materials containing the shared materials
-:::
-
-------------------------------------------------------------------------
-
- 
-
 ## Day 2
 
-------------------------------------------------------------------------
+---
 
 ### **Research compendiums** <a href="research_compendiums.qmd" class="btn btn-warning btn-xs" role="button">Tutorial</a>
 
 -   Folder structure formats
 -   R packages as templates for compendiums
 -   R Packages for Compendium Generation
+
+### **Coding and reproducible research** <a href="coding_and_reproducibility.qmd" class="btn btn-warning btn-xs" role="button">Tutorial</a>
+
+-   Free software and code
+-   Why R?
+-   Tools for reproducible programming
+
+
+::: {.alert .alert-info}
+### Practice
+
+1. On a scientific journal of your preference pick up 5 open access papers (or just 5 papers if you have access)
+
+2. Skim each paper to check if they have attempted to make it reproducible and which research components have been shared (like data or code). If there are not open research papers in the 10 you pick up keep looking until you find one.
+
+3. Try to access the supplementary materials containing the shared materials
+
+4. If they shared the code, take a look at how  well commented it is
+
+:::
 
 ### **Intro to git/gihub** <a href="intro_to_git_and_github.qmd" class="btn btn-warning btn-xs" role="button">Tutorial</a>
 

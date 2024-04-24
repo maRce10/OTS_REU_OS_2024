@@ -77,15 +77,15 @@ reproducibliity
 
 ## Free Software and Code
 
--   Free and open-source programs allow users to inspect, modify, and enhance their design by providing access to their source code.
+-   Free and open-source programs allow users to **inspect, modify, and enhance their design** by providing access to their source code.
 
--   Open-source code is ideal for reproducible research because scripts can contain all the steps of the analysis (self-documentation).
+-   Open-source code is ideal for reproducible research because **scripts can contain all the steps of the analysis** (self-documentation).
 
--   Code, in general, allows colleagues to see what we have done and rerun or even modify our analyses.
+-   Code, in general, **allows colleagues to see what we have done** and rerun or even modify our analyses.
 
--   Free tools can be used by anyone unlike commercial tools.
+-   **Free tools can be used by anyone** unlike commercial tools.
 
--   Open-source code enables a detailed understanding of analysis tools.
+-   Open-source code enables a **detailed understanding of the analyses**
 
  
 
@@ -103,13 +103,11 @@ reproducibliity
 
 ### Literate Programming
 
--   Involves documenting in detail what the problem consists of, how it is solved, how and why a certain flow of analysis was adopted, how it was optimized (if it was optimized), and how it was implemented in the programming language.
+- Involves **documenting in detail** what the problem consists of, how it is solved, how and why a certain flow of analysis was adopted, how it was optimized (if it was optimized), and how it was implemented in the programming language.
 
--   Dynamic reports in R facilitate the use of literate programming to document data handling and statistical analysis (this file you are reading right now is a dynamic report created in R).
+- **Dynamic reports in R facilitate the use of literate programming** to document data handling and statistical analysis (this file you are reading right now is a dynamic report created in R).
 
--   The main way R facilitates reproducible research is by using a document that is a combination of content and data analysis code.
-
--   We will discuss dynamic reports later as a tool to facilitate literate programming.
+-  The main way R facilitates reproducible research is by allowing users to **create a document that is a combination of content and data analysis code**.
 
 ### Reproducible Environments
 
@@ -152,6 +150,8 @@ With the `packrat` package, projects have several useful features in terms of re
 -   Portable: Easily move your projects from one computer to another, even on different platforms. `packrat` makes it easy to install the packages your project depends on.
 
 -   Reproducible: `packrat` records the exact versions of the package it depends on and ensures that those exact versions are installed wherever you go.
+
+Packrat is a package management system for R that helps you manage dependencies for your R projects. It ensures that your projects use the same package versions, making your code more reproducible.
 
 ```{r, eval = F, echo = FALSE}
 
@@ -357,6 +357,17 @@ git clone https://github.com/maRce10/ejemplo_packrat_repo.git
 
 
 ```
+
+If you or someone else wants to reproduce your project, they can use the `packrat::restore()` function to install the exact versions of the packages listed in the `packrat.lock` file.
+
+```{r, eval = FALSE}
+  packrat::restore()
+```
+
+This will ensure that the correct package versions are installed, maintaining consistency across different environments.
+
+
+
 
 ------------------------------------------------------------------------
 

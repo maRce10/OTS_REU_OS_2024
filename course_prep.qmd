@@ -14,7 +14,7 @@ knitr::opts_chunk$set(eval = FALSE)
 
 ```
 
-1)  Install or update R on the computer you will use during the course (<https://cran.r-project.org>). I assume that you already have it installed, but try to update it if you have a R version \< 4.0.0. You can find which R version you have by running this in the R console:
+1)  Install or update R on the computer you will use during the workshop (<https://cran.r-project.org>). I assume that you already have it installed, but try to update it if you have a R version \< 4.0.0. You can find which R version you have by running this in the R console:
 
 ```{r}
 
@@ -31,7 +31,7 @@ update.packages(ask = FALSE)
 
 3)  Install or update the *RStudio* interface (<https://www.rstudio.com/products/rstudio/download/>, choose the free version). Optional but advised.
 
-4)  Make a directory called "OTS_REU_OS_2024", this will be your working directory for the course.
+4)  Make a folder called "OTS_REU_OS_2024", this will be your working directory for the workshop (where you will keep all the stuff from this workshop).
 
 5)  Open *RStudio* and select the tab "Tools" then "Global Options" (last option). Select the "Code" option, then select the box for "Soft-wrap R source files".
 
@@ -86,11 +86,11 @@ load_packages(
 12) Register yourself in *Rpubs* (https://rpubs.com/)
 
 ::: {.alert .alert-warning}
-**A few tips to make sure you will take full advantage of the course**:
+**A few tips to make sure you will take full advantage of the workshop**:
 
 -   Ideally, read the materials ahead of time (I know! it's time consuming)
 -   Make sure you have anything you need before the start of the class
 -   Be ready a few minutes before the start of the class
--   Try to focus as much as possible in the course, close other programs or unnecessary internet browser tabs (i.e. instagram, twitter, etc). This will also make the computer more efficient (less likely to get slow)
+-   Try to focus as much as possible in the workshop, close other programs or unnecessary internet browser tabs (i.e. instagram, twitter, etc). This will also make the computer more efficient (less likely to get slow)
 -   Comment your code
 :::

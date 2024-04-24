@@ -4,10 +4,7 @@ title: Dynamic Reports
 
 ```{r, echo = FALSE}
 
-# devtools::install_github("hadley/emo")
-library("emo")
-library("xaringanExtra")
-library("knitr")
+library(knitr)
 
 # options to customize chunk outputs
 knitr::opts_chunk$set(
@@ -31,9 +28,11 @@ registerS3method("knit_print", "data.frame", tibble)
 ::: {.alert .alert-info}
 ## Objetives {.unnumbered .unlisted}
 
--   Familiarize with the format for dynamic reports Rmarkdown/quarto
+- Be able to document data management and analysis in R
 
--   Be able to document data management and analysis in R using Rmarkdown/quarto
+- Familiarize with the Rmarkdown/quarto format for dynamic reports
+
+
 :::
 
 Packages to use in this manual:
@@ -41,20 +40,23 @@ Packages to use in this manual:
 ```{r}
 
 # vector with packages
-ptqs <- c("leaflet", "remotes", "hadley/emo", "maRce10/sketchy", "knitr", "rmarkdown", "kableExtra", "rmdformats", "revealjs", "rticles", "tufte")
+pkgs <-
+  c(
+    "leaflet",
+    "remotes",
+    "hadley/emo",
+    "maRce10/sketchy",
+    "knitr",
+    "rmarkdown",
+    "kableExtra",
+    "rmdformats",
+    "revealjs",
+    "rticles",
+    "tufte"
+  )
 
 # loop to install/load packages
-installed <- sapply(ptqs, function(y) {
-  
-  ptq <- strsplit(y, "/")[[1]]
-  ptq <- ptq[length(ptq)]
-  
-  if (!ptq %in% installed.packages()[,"Package"])  {
-      if (grepl("/", y))  remotes::install_github(y, force = TRUE) else install.packages(y) 
-  }
-  
-  try(require(ptq, character.only = TRUE), silent = TRUE)
-})
+sketchy::load_packages(pkgs)
 
 
 ```
@@ -100,9 +102,9 @@ In R, the most popular tool for generating dynamic reports is Rmarkdown/quarto. 
 
 -   The text of the report is **written as normal text**, so no programming knowledge (i.e. R or HTML) is required to understand it.
 
--   **The result is an HTML file** that includes images, code blocks with R commands, the results of these codes, and text. No additional files are needed, everything is embedded in the HTML file.
+-   **The result is an HTML file** (or PDF) that includes images, code blocks with R commands, the results of these codes, and text. No additional files are needed, everything is embedded in the HTML file.
 
--   Reports are **easy to share via email or publish online**.
+-   Reports are **easy to share via email or publish online** (e.g. [www.rpubs.com](www.rpubs.com)).
 
 -   These reports **facilitate collaboration and improve reproducibility** (understanding the analyses is much easier when there is explanatory text, R code, code results, and graphics in the same file).
 
@@ -136,9 +138,7 @@ knitr::include_graphics("./images/image2.PNG")
 
  
 
-This will take you to
-
-your first '.Rmd' file (or R Markdown). The new file already comes with a template with basic instructions:
+This will take you to your first '.Rmd' or '.qmd' file (or R Markdown/quarto file). The new file already comes with a template with basic instructions:
 
 ```{r, echo=FALSE,out.width="100%", fig.align='center'}
 

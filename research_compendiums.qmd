@@ -31,7 +31,7 @@ knitr::opts_chunk$set(
   message = FALSE
  )
 
-# this is a customized printing style data frames 
+# this is a customized printing style for data frames 
 # screws up tibble function
 tibble <- function(x, ...) { 
   x <- kbl(x, digits=4, align= 'c', row.names = FALSE) 

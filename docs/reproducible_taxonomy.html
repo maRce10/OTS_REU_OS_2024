@@ -6,7 +6,7 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="dcterms.date" content="2024-04-22">
+<meta name="dcterms.date" content="2024-04-23">
 
 <title>Reproducible Science Workshop, REU OTS 2024 - Reproducibility in the use of taxonomic information</title>
 <style>
@@ -236,7 +236,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">April 22, 2024</p>
+      <p class="date">April 23, 2024</p>
     </div>
   </div>
   
@@ -253,10 +253,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>One aspect of scientific reproducibility that is specific to the biological sciences is how taxonomic information is obtained, used, and reported. In the discussion, we address the topics of using vouchers and the importance of adequately documenting the justification of taxonomic identifications. Here we will see a tool for obtaining and curating taxonomic information in a reproducible manner.</p>
 <p>We will use the R package <a href="https://github.com/ropensci/taxize">‘taxize’</a>. By the way, the article describing the package was published in the journal <a href="https://f1000research.com/articles/2-191/v2">F1000Research</a>, one of the journals we saw at the beginning of the semester is completely open.</p>
 <p align="center">
-<img src="./images/Screenshot_taxize.png" class="img-fluid">
-</p><p align="center">
-<font size="2"><a href="https://f1000research.com/articles/2-191/v2">Chamberlain and Szöcs (2013)</a>.
-</font></p><font size="2">
+</p><p><img src="./images/Screenshot_taxize.png" class="img-fluid"></p>
+<p align="center">
+</p><p><font size="2"><a href="https://f1000research.com/articles/2-191/v2">Chamberlain and Szöcs (2013)</a>.</font></p><font size="2">
+<p></p>
 </font></section><font size="2">
 <section id="why-taxize" class="level1" data-number="2">
 <h1 data-number="2"><span class="header-section-number">2</span> Why ‘taxize’?</h1>
@@ -267,10 +267,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </ol>
 <p>The idea of taxize is to make the extraction and use of taxonomic information easy and reproducible.</p>
 <p align="center">
-<img src="./images/frogtoon.JPG" class="img-fluid">
-</p><p align="center">
-<font size="2"> Image: Rohan Chakravarty/<a href="https://creativecommons.org/licenses/by-nc-nd/3.0/">CC BY-NC-ND 3.0</a>.
-</font></p><font size="2">
+</p><p><img src="./images/frogtoon.JPG" class="img-fluid"></p>
+<p align="center">
+</p><p><font size="2"> Image: Rohan Chakravarty/<a href="https://creativecommons.org/licenses/by-nc-nd/3.0/">CC BY-NC-ND 3.0</a>.</font></p><font size="2">
+<p></p>
 </font></section><font size="2">
 <section id="what-does-taxize-do" class="level1" data-number="3">
 <h1 data-number="3"><span class="header-section-number">3</span> What does ‘taxize’ do?</h1>
@@ -282,10 +282,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>The data is here (https://doi.org/10.15468/dl.d8frtc)</p>
 <p>and this is an example of the bird:</p>
 <p align="center">
-<img src="./images/Ramphocelus.jpeg" class="img-fluid">
-</p><p align="center">
+</p><p><img src="./images/Ramphocelus.jpeg" class="img-fluid"></p>
+<p align="center">
 </p><p>&lt;</p>
-font size=“2”&gt; <em>Ramphocelus sanguinolentus</em>, La Fortuna, Costa Rica
+<p>font size=“2”&gt; <em>Ramphocelus sanguinolentus</em>, La Fortuna, Costa Rica</p>
 <p></p>
 <div class="cell">
 <details open="" class="code-fold">
@@ -1213,10 +1213,10 @@ div.discu { background-color:#6699CC; border-radius: 5px; padding: 5px}
 <section id="lists-of-hosts-in-thousands-of-communities" class="level2" data-number="4.1">
 <h2 data-number="4.1" class="anchored" data-anchor-id="lists-of-hosts-in-thousands-of-communities"><span class="header-section-number">4.1</span> Lists of Hosts in Thousands of Communities</h2>
 <p align="center">
-<img src="./images/Zoonotic1.png" class="img-fluid">
-</p><p align="center">
-<font size="2"> Article by <a href="https://www.nature.com/articles/s41586-020-2562-8">Gibb et al.&nbsp;2020, Nature</a>
-</font></p><font size="2">
+</p><p><img src="./images/Zoonotic1.png" class="img-fluid"></p>
+<p align="center">
+</p><p><font size="2"> Article by <a href="https://www.nature.com/articles/s41586-020-2562-8">Gibb et al.&nbsp;2020, Nature</a></font></p><font size="2">
+<p></p>
 <p><strong>From the methods section:</strong></p>
 <p>“<em>We compiled animal host–pathogen associations from several source databases, to provide as comprehensive a dataset as possible of zoonotic host species and their pathogens: the Enhanced Infectious Diseases (EID2) database; the Global Mammal Parasite Database v.2.0 (GMPD2) which collates records of parasites of cetartiodactyls, carnivores and primates; a reservoir hosts database; a mammal–virus associations database; and a rodent zoonotic reservoirs database augmented with pathogen data from the Global Infectious Disease and Epidemiology Network (GIDEON) (Supplementary Table 8). <span style="color: #32CD32;">We harmonized species names across all databases, excluding instances in which either hosts or pathogens could not be classified to species level. To prevent erroneous matches due to misspelling or taxonomic revision, all host species synonyms were accessed from Catalogue Of Life using ‘taxize’ v.0.8.939</span>. Combined, the dataset contained 20,382 associations between 3,883 animal host species and 5,694 pathogen species.</em>”</p>
 <p>Let’s see the code from the article and make a small modification to apply the function to our data.</p>
@@ -1430,16 +1430,16 @@ div.discu { background-color:#6699CC; border-radius: 5px; padding: 5px}
 <section id="camera-trap-data-management" class="level2" data-number="4.2">
 <h2 data-number="4.2" class="anchored" data-anchor-id="camera-trap-data-management"><span class="header-section-number">4.2</span> Camera trap data management</h2>
 <p align="center">
-<img src="./images/camtrapR.png" class="img-fluid">
-</p><p align="center">
-<font size="2"> Article by <a href="https://besjournals.onlinelibrary.wiley.com/doi/pdf/10.1111/2041-210X.12600">Niedballa et al.&nbsp;2016,Methods Ecol. Evol.</a>
-</font></p><font size="2">
+</p><p><img src="./images/camtrapR.png" class="img-fluid"></p>
+<p align="center">
+</p><p><font size="2"> Article by <a href="https://besjournals.onlinelibrary.wiley.com/doi/pdf/10.1111/2041-210X.12600">Niedballa et al.&nbsp;2016,Methods Ecol. Evol.</a></font></p><font size="2">
+<p></p>
 <p><strong>From the methods section:</strong></p>
 <p><em>“Users are free to use any species names (or abbreviations or codes) they wish. If scientific or common species names are used, <span style="color: #32CD32;">the function checkSpeciesNames can check them against the ITIS taxonomic database (www.itis.gov) and returns their matching counterparts (utilizing the R package taxize (Chamberlain &amp; Szöcs 2013) internally)</span>, making sure species names and spelling are standardized and taxonomically sound, and thus making it easier to combine data sets from different studies.”</em></p>
 <p>Let’s see some examples from the camtrapR vignettes. We’re not going to download the package because the CRAN version of ‘camtrapR’ is not compatible with the CRAN version of ‘taxize’.</p>
 <p align="center">
-<img src="./images/facepalm.jpg" class="img-fluid" style="width:50.0%">
-</p>
+</p><p><img src="./images/facepalm.jpg" class="img-fluid" style="width:50.0%"></p>
+<p></p>
 <p>Let’s rewrite the current function updating the arguments of ‘taxize’.</p>
 <div class="cell">
 <details open="" class="code-fold">
@@ -1797,478 +1797,523 @@ loaded via a namespace (and not attached):
 <span id="cb28-26"><a href="#cb28-26" aria-hidden="true" tabindex="-1"></a><span class="in">registerS3method("knit_print", "data.frame", tibble)</span></span>
 <span id="cb28-27"><a href="#cb28-27" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
 <span id="cb28-28"><a href="#cb28-28" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb28-29"><a href="#cb28-29" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb28-30"><a href="#cb28-30" aria-hidden="true" tabindex="-1"></a><span class="fu"># Introduction</span></span>
+<span id="cb28-29"><a href="#cb28-29" aria-hidden="true" tabindex="-1"></a><span class="fu"># Introduction</span></span>
+<span id="cb28-30"><a href="#cb28-30" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb28-31"><a href="#cb28-31" aria-hidden="true" tabindex="-1"></a>One aspect of scientific reproducibility that is specific to the biological sciences is how taxonomic information is obtained, used, and reported. In the discussion, we address the topics of using vouchers and the importance of adequately documenting the justification of taxonomic identifications. Here we will see a tool for obtaining and curating taxonomic information in a reproducible manner.</span>
 <span id="cb28-32"><a href="#cb28-32" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb28-33"><a href="#cb28-33" aria-hidden="true" tabindex="-1"></a>We will use the R package <span class="co">[</span><span class="ot">'taxize'</span><span class="co">](https://github.com/ropensci/taxize)</span>. By the way, the article describing the package was published in the journal <span class="co">[</span><span class="ot">F1000Research</span><span class="co">](https://f1000research.com/articles/2-191/v2)</span>, one of the journals we saw at the beginning of the semester is completely open.</span>
 <span id="cb28-34"><a href="#cb28-34" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb28-35"><a href="#cb28-35" aria-hidden="true" tabindex="-1"></a>&lt;p align="center"&gt;</span>
-<span id="cb28-36"><a href="#cb28-36" aria-hidden="true" tabindex="-1"></a><span class="al">![](./images/Screenshot_taxize.png)</span></span>
-<span id="cb28-37"><a href="#cb28-37" aria-hidden="true" tabindex="-1"></a>&lt;p align="center"&gt;</span>
-<span id="cb28-38"><a href="#cb28-38" aria-hidden="true" tabindex="-1"></a>&lt;font size="2"&gt;<span class="co">[</span><span class="ot">Chamberlain and Szöcs (2013)</span><span class="co">](https://f1000research.com/articles/2-191/v2)</span>. </span>
-<span id="cb28-39"><a href="#cb28-39" aria-hidden="true" tabindex="-1"></a>&lt;/p&gt;</span>
+<span id="cb28-36"><a href="#cb28-36" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-37"><a href="#cb28-37" aria-hidden="true" tabindex="-1"></a><span class="al">![](./images/Screenshot_taxize.png)</span></span>
+<span id="cb28-38"><a href="#cb28-38" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-39"><a href="#cb28-39" aria-hidden="true" tabindex="-1"></a>&lt;p align="center"&gt;</span>
 <span id="cb28-40"><a href="#cb28-40" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb28-41"><a href="#cb28-41" aria-hidden="true" tabindex="-1"></a><span class="fu"># Why 'taxize'?</span></span>
+<span id="cb28-41"><a href="#cb28-41" aria-hidden="true" tabindex="-1"></a>&lt;font size="2"&gt;<span class="co">[</span><span class="ot">Chamberlain and Szöcs (2013)</span><span class="co">](https://f1000research.com/articles/2-191/v2)</span>.</span>
 <span id="cb28-42"><a href="#cb28-42" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb28-43"><a href="#cb28-43" aria-hidden="true" tabindex="-1"></a>There are online databases from which taxonomic information for various biological organisms can be obtained. However, there are advantages to performing these searches programmatically:</span>
-<span id="cb28-44"><a href="#cb28-44" aria-hidden="true" tabindex="-1"></a> </span>
-<span id="cb28-45"><a href="#cb28-45" aria-hidden="true" tabindex="-1"></a><span class="ss"> 1. </span>it is more efficient if you have to search for many taxa</span>
-<span id="cb28-46"><a href="#cb28-46" aria-hidden="true" tabindex="-1"></a><span class="ss"> 2. </span>the search becomes a reproducible part of the workflow</span>
-<span id="cb28-47"><a href="#cb28-47" aria-hidden="true" tabindex="-1"></a> </span>
-<span id="cb28-48"><a href="#cb28-48" aria-hidden="true" tabindex="-1"></a> The idea of taxize is to make the extraction and use of taxonomic information easy and reproducible.</span>
-<span id="cb28-49"><a href="#cb28-49" aria-hidden="true" tabindex="-1"></a> </span>
-<span id="cb28-50"><a href="#cb28-50" aria-hidden="true" tabindex="-1"></a> &lt;p align="center"&gt;</span>
-<span id="cb28-51"><a href="#cb28-51" aria-hidden="true" tabindex="-1"></a><span class="al">![](./images/frogtoon.JPG)</span></span>
-<span id="cb28-52"><a href="#cb28-52" aria-hidden="true" tabindex="-1"></a>&lt;p align="center"&gt;</span>
-<span id="cb28-53"><a href="#cb28-53" aria-hidden="true" tabindex="-1"></a>&lt;font size="2"&gt; Image: Rohan Chakravarty/<span class="co">[</span><span class="ot">CC BY-NC-ND 3.0</span><span class="co">](https://creativecommons.org/licenses/by-nc-nd/3.0/)</span>.</span>
-<span id="cb28-54"><a href="#cb28-54" aria-hidden="true" tabindex="-1"></a>&lt;/p&gt;</span>
+<span id="cb28-43"><a href="#cb28-43" aria-hidden="true" tabindex="-1"></a>&lt;/p&gt;</span>
+<span id="cb28-44"><a href="#cb28-44" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-45"><a href="#cb28-45" aria-hidden="true" tabindex="-1"></a><span class="fu"># Why 'taxize'?</span></span>
+<span id="cb28-46"><a href="#cb28-46" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-47"><a href="#cb28-47" aria-hidden="true" tabindex="-1"></a>There are online databases from which taxonomic information for various biological organisms can be obtained. However, there are advantages to performing these searches programmatically:</span>
+<span id="cb28-48"><a href="#cb28-48" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-49"><a href="#cb28-49" aria-hidden="true" tabindex="-1"></a><span class="ss">1.  </span>it is more efficient if you have to search for many taxa</span>
+<span id="cb28-50"><a href="#cb28-50" aria-hidden="true" tabindex="-1"></a><span class="ss">2.  </span>the search becomes a reproducible part of the workflow</span>
+<span id="cb28-51"><a href="#cb28-51" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-52"><a href="#cb28-52" aria-hidden="true" tabindex="-1"></a>The idea of taxize is to make the extraction and use of taxonomic information easy and reproducible.</span>
+<span id="cb28-53"><a href="#cb28-53" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-54"><a href="#cb28-54" aria-hidden="true" tabindex="-1"></a>&lt;p align="center"&gt;</span>
 <span id="cb28-55"><a href="#cb28-55" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb28-56"><a href="#cb28-56" aria-hidden="true" tabindex="-1"></a><span class="fu"># What does 'taxize' do?</span></span>
-<span id="cb28-57"><a href="#cb28-57" aria-hidden="true" tabindex="-1"></a> 'taxize' connects with several <span class="co">[</span><span class="ot">taxonomic databases</span><span class="co">](https://f1000research.com/articles/2-191/v2#T1)</span> and more can be gradually added. This information can be used to carry out common tasks in the research process. For example:</span>
-<span id="cb28-58"><a href="#cb28-58" aria-hidden="true" tabindex="-1"></a> </span>
-<span id="cb28-59"><a href="#cb28-59" aria-hidden="true" tabindex="-1"></a><span class="fu">## Resolves Taxonomic Names</span></span>
-<span id="cb28-60"><a href="#cb28-60" aria-hidden="true" tabindex="-1"></a>If we have a list of specimens, we may want to know if we are using updated names and if the names we have are spelled correctly. We can do this using the Global Names Resolver <span class="co">[</span><span class="ot">(GNR)</span><span class="co">](http://resolver.globalnames.org/)</span> application from the <span class="co">[</span><span class="ot">Encyclopedia of Life</span><span class="co">](https://eol.org/)</span>, through taxize.</span>
+<span id="cb28-56"><a href="#cb28-56" aria-hidden="true" tabindex="-1"></a><span class="al">![](./images/frogtoon.JPG)</span></span>
+<span id="cb28-57"><a href="#cb28-57" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-58"><a href="#cb28-58" aria-hidden="true" tabindex="-1"></a>&lt;p align="center"&gt;</span>
+<span id="cb28-59"><a href="#cb28-59" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-60"><a href="#cb28-60" aria-hidden="true" tabindex="-1"></a>&lt;font size="2"&gt; Image: Rohan Chakravarty/<span class="co">[</span><span class="ot">CC BY-NC-ND 3.0</span><span class="co">](https://creativecommons.org/licenses/by-nc-nd/3.0/)</span>.</span>
 <span id="cb28-61"><a href="#cb28-61" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb28-62"><a href="#cb28-62" aria-hidden="true" tabindex="-1"></a>As an example, let's look at occurrence data that I downloaded from <span class="co">[</span><span class="ot">GBIF</span><span class="co">](https://www.gbif.org/)</span>. I downloaded records of birds from the genus *Ramphocelus* in Costa Rica, from the National Zoological Collection. Perhaps, I am working with or planning to work with these specimens. </span>
+<span id="cb28-62"><a href="#cb28-62" aria-hidden="true" tabindex="-1"></a>&lt;/p&gt;</span>
 <span id="cb28-63"><a href="#cb28-63" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb28-64"><a href="#cb28-64" aria-hidden="true" tabindex="-1"></a>The data is here (https://doi.org/10.15468/dl.d8frtc)</span>
+<span id="cb28-64"><a href="#cb28-64" aria-hidden="true" tabindex="-1"></a><span class="fu"># What does 'taxize' do?</span></span>
 <span id="cb28-65"><a href="#cb28-65" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb28-66"><a href="#cb28-66" aria-hidden="true" tabindex="-1"></a>and this is an example of the bird:</span>
-<span id="cb28-67"><a href="#cb28-67" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb28-68"><a href="#cb28-68" aria-hidden="true" tabindex="-1"></a>&lt;p align="center"&gt;</span>
-<span id="cb28-69"><a href="#cb28-69" aria-hidden="true" tabindex="-1"></a><span class="al">![](./images/Ramphocelus.jpeg)</span></span>
-<span id="cb28-70"><a href="#cb28-70" aria-hidden="true" tabindex="-1"></a>&lt;p align="center"&gt;</span>
-<span id="cb28-71"><a href="#cb28-71" aria-hidden="true" tabindex="-1"></a>&lt;</span>
-<span id="cb28-72"><a href="#cb28-72" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb28-73"><a href="#cb28-73" aria-hidden="true" tabindex="-1"></a>font size="2"&gt; *Ramphocelus sanguinolentus*, La Fortuna, Costa Rica</span>
-<span id="cb28-74"><a href="#cb28-74" aria-hidden="true" tabindex="-1"></a>&lt;/p&gt;</span>
+<span id="cb28-66"><a href="#cb28-66" aria-hidden="true" tabindex="-1"></a>'taxize' connects with several <span class="co">[</span><span class="ot">taxonomic databases</span><span class="co">](https://f1000research.com/articles/2-191/v2#T1)</span> and more can be gradually added. This information can be used to carry out common tasks in the research process. For example:</span>
+<span id="cb28-67"><a href="#cb28-67" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-68"><a href="#cb28-68" aria-hidden="true" tabindex="-1"></a><span class="fu">## Resolves Taxonomic Names</span></span>
+<span id="cb28-69"><a href="#cb28-69" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-70"><a href="#cb28-70" aria-hidden="true" tabindex="-1"></a>If we have a list of specimens, we may want to know if we are using updated names and if the names we have are spelled correctly. We can do this using the Global Names Resolver <span class="co">[</span><span class="ot">(GNR)</span><span class="co">](http://resolver.globalnames.org/)</span> application from the <span class="co">[</span><span class="ot">Encyclopedia of Life</span><span class="co">](https://eol.org/)</span>, through taxize.</span>
+<span id="cb28-71"><a href="#cb28-71" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-72"><a href="#cb28-72" aria-hidden="true" tabindex="-1"></a>As an example, let's look at occurrence data that I downloaded from <span class="co">[</span><span class="ot">GBIF</span><span class="co">](https://www.gbif.org/)</span>. I downloaded records of birds from the genus *Ramphocelus* in Costa Rica, from the National Zoological Collection. Perhaps, I am working with or planning to work with these specimens.</span>
+<span id="cb28-73"><a href="#cb28-73" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-74"><a href="#cb28-74" aria-hidden="true" tabindex="-1"></a>The data is here (https://doi.org/10.15468/dl.d8frtc)</span>
 <span id="cb28-75"><a href="#cb28-75" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb28-78"><a href="#cb28-78" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb28-79"><a href="#cb28-79" aria-hidden="true" tabindex="-1"></a><span class="co"># read the data</span></span>
-<span id="cb28-80"><a href="#cb28-80" aria-hidden="true" tabindex="-1"></a>dat <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="at">file =</span> <span class="st">"./additional_files/0098054-200613084148143.csv"</span>, <span class="at">header =</span> T, <span class="at">sep =</span> <span class="st">"</span><span class="sc">\t</span><span class="st">"</span>)</span>
+<span id="cb28-76"><a href="#cb28-76" aria-hidden="true" tabindex="-1"></a>and this is an example of the bird:</span>
+<span id="cb28-77"><a href="#cb28-77" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-78"><a href="#cb28-78" aria-hidden="true" tabindex="-1"></a>&lt;p align="center"&gt;</span>
+<span id="cb28-79"><a href="#cb28-79" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-80"><a href="#cb28-80" aria-hidden="true" tabindex="-1"></a><span class="al">![](./images/Ramphocelus.jpeg)</span></span>
 <span id="cb28-81"><a href="#cb28-81" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb28-82"><a href="#cb28-82" aria-hidden="true" tabindex="-1"></a><span class="co"># what are the species in CR?</span></span>
-<span id="cb28-83"><a href="#cb28-83" aria-hidden="true" tabindex="-1"></a>Ram.names <span class="ot">&lt;-</span> <span class="fu">levels</span>(dat<span class="sc">$</span>species)</span>
-<span id="cb28-84"><a href="#cb28-84" aria-hidden="true" tabindex="-1"></a>Ram.names</span>
-<span id="cb28-85"><a href="#cb28-85" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb28-86"><a href="#cb28-86" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb28-87"><a href="#cb28-87" aria-hidden="true" tabindex="-1"></a>Let's see which databases I can use to search for the names of my species</span>
-<span id="cb28-88"><a href="#cb28-88" aria-hidden="true" tabindex="-1"></a><span class="in">```{r, message=FALSE}</span></span>
-<span id="cb28-89"><a href="#cb28-89" aria-hidden="true" tabindex="-1"></a><span class="in">library(taxize)</span></span>
-<span id="cb28-90"><a href="#cb28-90" aria-hidden="true" tabindex="-1"></a><span class="in">require(kableExtra)</span></span>
-<span id="cb28-91"><a href="#cb28-91" aria-hidden="true" tabindex="-1"></a><span class="in">data.sources &lt;- gnr_datasources() </span></span>
-<span id="cb28-92"><a href="#cb28-92" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb28-93"><a href="#cb28-93" aria-hidden="true" tabindex="-1"></a><span class="in">data.sources[,c(1,5,8,9)]</span></span>
-<span id="cb28-94"><a href="#cb28-94" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb28-82"><a href="#cb28-82" aria-hidden="true" tabindex="-1"></a>&lt;p align="center"&gt;</span>
+<span id="cb28-83"><a href="#cb28-83" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-84"><a href="#cb28-84" aria-hidden="true" tabindex="-1"></a><span class="sc">\&lt;</span></span>
+<span id="cb28-85"><a href="#cb28-85" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-86"><a href="#cb28-86" aria-hidden="true" tabindex="-1"></a>font size="2"<span class="sc">\&gt;</span> *Ramphocelus sanguinolentus*, La Fortuna, Costa Rica</span>
+<span id="cb28-87"><a href="#cb28-87" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-88"><a href="#cb28-88" aria-hidden="true" tabindex="-1"></a>&lt;/p&gt;</span>
+<span id="cb28-89"><a href="#cb28-89" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-92"><a href="#cb28-92" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb28-93"><a href="#cb28-93" aria-hidden="true" tabindex="-1"></a><span class="co"># read the data</span></span>
+<span id="cb28-94"><a href="#cb28-94" aria-hidden="true" tabindex="-1"></a>dat <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="at">file =</span> <span class="st">"./additional_files/0098054-200613084148143.csv"</span>, <span class="at">header =</span> T, <span class="at">sep =</span> <span class="st">"</span><span class="sc">\t</span><span class="st">"</span>)</span>
 <span id="cb28-95"><a href="#cb28-95" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb28-96"><a href="#cb28-96" aria-hidden="true" tabindex="-1"></a>Let's check if they are spelled correctly</span>
-<span id="cb28-97"><a href="#cb28-97" aria-hidden="true" tabindex="-1"></a><span class="in">```{r, eval = FALSE}</span></span>
-<span id="cb28-98"><a href="#cb28-98" aria-hidden="true" tabindex="-1"></a><span class="in">name.res &lt;- gnr_resolve(sci = Ram.names,data_source_ids = c(3:4))        </span></span>
-<span id="cb28-99"><a href="#cb28-99" aria-hidden="true" tabindex="-1"></a><span class="in">name.res[,-1]</span></span>
+<span id="cb28-96"><a href="#cb28-96" aria-hidden="true" tabindex="-1"></a><span class="co"># what are the species in CR?</span></span>
+<span id="cb28-97"><a href="#cb28-97" aria-hidden="true" tabindex="-1"></a>Ram.names <span class="ot">&lt;-</span> <span class="fu">levels</span>(dat<span class="sc">$</span>species)</span>
+<span id="cb28-98"><a href="#cb28-98" aria-hidden="true" tabindex="-1"></a>Ram.names</span>
+<span id="cb28-99"><a href="#cb28-99" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
 <span id="cb28-100"><a href="#cb28-100" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb28-101"><a href="#cb28-101" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb28-101"><a href="#cb28-101" aria-hidden="true" tabindex="-1"></a>Let's see which databases I can use to search for the names of my species</span>
 <span id="cb28-102"><a href="#cb28-102" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb28-103"><a href="#cb28-103" aria-hidden="true" tabindex="-1"></a>And what if they weren't?</span>
-<span id="cb28-106"><a href="#cb28-106" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb28-107"><a href="#cb28-107" aria-hidden="true" tabindex="-1"></a>Ram.names2 <span class="ot">&lt;-</span> Ram.names</span>
-<span id="cb28-108"><a href="#cb28-108" aria-hidden="true" tabindex="-1"></a>Ram.names2[<span class="dv">2</span>] <span class="ot">&lt;-</span> <span class="st">"Ramphocelus passerini"</span></span>
-<span id="cb28-109"><a href="#cb28-109" aria-hidden="true" tabindex="-1"></a>name.res2 <span class="ot">&lt;-</span> <span class="fu">gnr_resolve</span>(<span class="at">sci =</span> Ram.names2,<span class="at">data_source_ids =</span> <span class="fu">c</span>(<span class="dv">3</span><span class="sc">:</span><span class="dv">4</span>))        </span>
-<span id="cb28-110"><a href="#cb28-110" aria-hidden="true" tabindex="-1"></a>name.res2[,<span class="sc">-</span><span class="dv">1</span>]</span>
-<span id="cb28-111"><a href="#cb28-111" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb28-112"><a href="#cb28-112" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb28-113"><a href="#cb28-113" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb28-114"><a href="#cb28-114" aria-hidden="true" tabindex="-1"></a><span class="fu">## Identifies Synonyms</span></span>
-<span id="cb28-115"><a href="#cb28-115" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb28-116"><a href="#cb28-116" aria-hidden="true" tabindex="-1"></a>Let's search for synonyms for these species</span>
-<span id="cb28-117"><a href="#cb28-117" aria-hidden="true" tabindex="-1"></a><span class="in">```{r, eval = FALSE}</span></span>
-<span id="cb28-118"><a href="#cb28-118" aria-hidden="true" tabindex="-1"></a><span class="in">synonyms(sci_id = Ram.names, db = "itis") </span></span>
-<span id="cb28-119"><a href="#cb28-119" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb28-103"><a href="#cb28-103" aria-hidden="true" tabindex="-1"></a><span class="in">```{r, message=FALSE}</span></span>
+<span id="cb28-104"><a href="#cb28-104" aria-hidden="true" tabindex="-1"></a><span class="in">library(taxize)</span></span>
+<span id="cb28-105"><a href="#cb28-105" aria-hidden="true" tabindex="-1"></a><span class="in">require(kableExtra)</span></span>
+<span id="cb28-106"><a href="#cb28-106" aria-hidden="true" tabindex="-1"></a><span class="in">data.sources &lt;- gnr_datasources() </span></span>
+<span id="cb28-107"><a href="#cb28-107" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-108"><a href="#cb28-108" aria-hidden="true" tabindex="-1"></a><span class="in">data.sources[,c(1,5,8,9)]</span></span>
+<span id="cb28-109"><a href="#cb28-109" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb28-110"><a href="#cb28-110" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-111"><a href="#cb28-111" aria-hidden="true" tabindex="-1"></a>Let's check if they are spelled correctly</span>
+<span id="cb28-112"><a href="#cb28-112" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-113"><a href="#cb28-113" aria-hidden="true" tabindex="-1"></a><span class="in">```{r, eval = FALSE}</span></span>
+<span id="cb28-114"><a href="#cb28-114" aria-hidden="true" tabindex="-1"></a><span class="in">name.res &lt;- gnr_resolve(sci = Ram.names,data_source_ids = c(3:4))        </span></span>
+<span id="cb28-115"><a href="#cb28-115" aria-hidden="true" tabindex="-1"></a><span class="in">name.res[,-1]</span></span>
+<span id="cb28-116"><a href="#cb28-116" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-117"><a href="#cb28-117" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb28-118"><a href="#cb28-118" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-119"><a href="#cb28-119" aria-hidden="true" tabindex="-1"></a>And what if they weren't?</span>
 <span id="cb28-120"><a href="#cb28-120" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb28-121"><a href="#cb28-121" aria-hidden="true" tabindex="-1"></a>To use some databases, it is necessary to obtain an 'API key'. This cannot be done automatically with 'taxize' but instructions on how to obtain and save the API key for use from R can be obtained.</span>
-<span id="cb28-122"><a href="#cb28-122" aria-hidden="true" tabindex="-1"></a>Let's look at a couple of examples:</span>
-<span id="cb28-123"><a href="#cb28-123" aria-hidden="true" tabindex="-1"></a><span class="in">```{r, eval=FALSE}</span></span>
-<span id="cb28-124"><a href="#cb28-124" aria-hidden="true" tabindex="-1"></a><span class="in">use_tropicos()</span></span>
-<span id="cb28-125"><a href="#cb28-125" aria-hidden="true" tabindex="-1"></a><span class="in">use_iucn()</span></span>
-<span id="cb28-126"><a href="#cb28-126" aria-hidden="true" tabindex="-1"></a><span class="in">use_entrez()</span></span>
-<span id="cb28-127"><a href="#cb28-127" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb28-128"><a href="#cb28-128" aria-hidden="true" tabindex="-1"></a><span class="in"># for more information</span></span>
-<span id="cb28-129"><a href="#cb28-129" aria-hidden="true" tabindex="-1"></a><span class="in">?key_helpers()</span></span>
-<span id="cb28-130"><a href="#cb28-130" aria-hidden="true" tabindex="-1"></a><span class="in">?`taxize-authentication`</span></span>
-<span id="cb28-131"><a href="#cb28-131" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb28-132"><a href="#cb28-132" aria-hidden="true" tabindex="-1"></a> </span>
-<span id="cb28-133"><a href="#cb28-133" aria-hidden="true" tabindex="-1"></a>&lt;style&gt;</span>
-<span id="cb28-134"><a href="#cb28-134" aria-hidden="true" tabindex="-1"></a>div<span class="fu">.ejercicios</span> { <span class="kw">background-color</span><span class="ch">:</span><span class="cn">#F5F5DC</span><span class="op">;</span> <span class="kw">border-radius</span><span class="ch">:</span> <span class="dv">5</span><span class="dt">px</span><span class="op">;</span> <span class="kw">padding</span><span class="ch">:</span> <span class="dv">5</span><span class="dt">px</span>}</span>
-<span id="cb28-135"><a href="#cb28-135" aria-hidden="true" tabindex="-1"></a>div<span class="fu">.discu</span> { <span class="kw">background-color</span><span class="ch">:</span><span class="cn">#6699CC</span><span class="op">;</span> <span class="kw">border-radius</span><span class="ch">:</span> <span class="dv">5</span><span class="dt">px</span><span class="op">;</span> <span class="kw">padding</span><span class="ch">:</span> <span class="dv">5</span><span class="dt">px</span>}</span>
-<span id="cb28-136"><a href="#cb28-136" aria-hidden="true" tabindex="-1"></a>&lt;/style&gt;</span>
-<span id="cb28-137"><a href="#cb28-137" aria-hidden="true" tabindex="-1"></a>&lt;div class = "ejercicios"&gt;</span>
+<span id="cb28-123"><a href="#cb28-123" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb28-124"><a href="#cb28-124" aria-hidden="true" tabindex="-1"></a>Ram.names2 <span class="ot">&lt;-</span> Ram.names</span>
+<span id="cb28-125"><a href="#cb28-125" aria-hidden="true" tabindex="-1"></a>Ram.names2[<span class="dv">2</span>] <span class="ot">&lt;-</span> <span class="st">"Ramphocelus passerini"</span></span>
+<span id="cb28-126"><a href="#cb28-126" aria-hidden="true" tabindex="-1"></a>name.res2 <span class="ot">&lt;-</span> <span class="fu">gnr_resolve</span>(<span class="at">sci =</span> Ram.names2,<span class="at">data_source_ids =</span> <span class="fu">c</span>(<span class="dv">3</span><span class="sc">:</span><span class="dv">4</span>))        </span>
+<span id="cb28-127"><a href="#cb28-127" aria-hidden="true" tabindex="-1"></a>name.res2[,<span class="sc">-</span><span class="dv">1</span>]</span>
+<span id="cb28-128"><a href="#cb28-128" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-129"><a href="#cb28-129" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb28-130"><a href="#cb28-130" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-131"><a href="#cb28-131" aria-hidden="true" tabindex="-1"></a><span class="fu">## Identifies Synonyms</span></span>
+<span id="cb28-132"><a href="#cb28-132" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-133"><a href="#cb28-133" aria-hidden="true" tabindex="-1"></a>Let's search for synonyms for these species</span>
+<span id="cb28-134"><a href="#cb28-134" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-135"><a href="#cb28-135" aria-hidden="true" tabindex="-1"></a><span class="in">```{r, eval = FALSE}</span></span>
+<span id="cb28-136"><a href="#cb28-136" aria-hidden="true" tabindex="-1"></a><span class="in">synonyms(sci_id = Ram.names, db = "itis") </span></span>
+<span id="cb28-137"><a href="#cb28-137" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
 <span id="cb28-138"><a href="#cb28-138" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb28-139"><a href="#cb28-139" aria-hidden="true" tabindex="-1"></a><span class="fu">### Exercise 1</span></span>
+<span id="cb28-139"><a href="#cb28-139" aria-hidden="true" tabindex="-1"></a>To use some databases, it is necessary to obtain an 'API key'. This cannot be done automatically with 'taxize' but instructions on how to obtain and save the API key for use from R can be obtained. Let's look at a couple of examples:</span>
 <span id="cb28-140"><a href="#cb28-140" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb28-141"><a href="#cb28-141" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>Install the 'usethis' package with the command <span class="in">`install.packages("usethis")`</span></span>
-<span id="cb28-142"><a href="#cb28-142" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>Obtain the 'API key' for a database of your interest</span>
-<span id="cb28-143"><a href="#cb28-143" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>Add this 'API key' to your environment in R with the command <span class="in">`usethis::edit_r_environ()`</span></span>
-<span id="cb28-144"><a href="#cb28-144" aria-hidden="true" tabindex="-1"></a><span class="ss">4. </span>Restart R and verify that you have the 'API key' using <span class="in">`getkey()`</span></span>
-<span id="cb28-145"><a href="#cb28-145" aria-hidden="true" tabindex="-1"></a><span class="ss">5. </span>If everything went well, you're ready to use it.</span>
-<span id="cb28-146"><a href="#cb28-146" aria-hidden="true" tabindex="-1"></a>&lt;/div&gt;</span>
-<span id="cb28-147"><a href="#cb28-147" aria-hidden="true" tabindex="-1"></a><span class="dv">&amp;nbsp;</span> </span>
-<span id="cb28-148"><a href="#cb28-148" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb28-149"><a href="#cb28-149" aria-hidden="true" tabindex="-1"></a><span class="in">```{r, include=FALSE}</span></span>
-<span id="cb28-150"><a href="#cb28-150" aria-hidden="true" tabindex="-1"></a><span class="in">getkey(service = "entrez")</span></span>
-<span id="cb28-151"><a href="#cb28-151" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb28-152"><a href="#cb28-152" aria-hidden="true" tabindex="-1"></a> </span>
-<span id="cb28-153"><a href="#cb28-153" aria-hidden="true" tabindex="-1"></a><span class="fu">## Extracts Taxonomic Classification</span></span>
-<span id="cb28-154"><a href="#cb28-154" aria-hidden="true" tabindex="-1"></a>We can obtain information about the higher taxonomic classification of our species. If your key is for 'tropicos' or 'entrez', you can use the respective databases (tropicos and ncbi). For example:</span>
-<span id="cb28-155"><a href="#cb28-155" aria-hidden="true" tabindex="-1"></a><span class="in">```{r, eval = FALSE}</span></span>
-<span id="cb28-156"><a href="#cb28-156" aria-hidden="true" tabindex="-1"></a><span class="in">Ram.class &lt;- classification(Ram.names, db = "ncbi")</span></span>
-<span id="cb28-157"><a href="#cb28-157" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb28-158"><a href="#cb28-158" aria-hidden="true" tabindex="-1"></a><span class="in">Ram.class[[1]]</span></span>
+<span id="cb28-141"><a href="#cb28-141" aria-hidden="true" tabindex="-1"></a><span class="in">```{r, eval=FALSE}</span></span>
+<span id="cb28-142"><a href="#cb28-142" aria-hidden="true" tabindex="-1"></a><span class="in">use_tropicos()</span></span>
+<span id="cb28-143"><a href="#cb28-143" aria-hidden="true" tabindex="-1"></a><span class="in">use_iucn()</span></span>
+<span id="cb28-144"><a href="#cb28-144" aria-hidden="true" tabindex="-1"></a><span class="in">use_entrez()</span></span>
+<span id="cb28-145"><a href="#cb28-145" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-146"><a href="#cb28-146" aria-hidden="true" tabindex="-1"></a><span class="in"># for more information</span></span>
+<span id="cb28-147"><a href="#cb28-147" aria-hidden="true" tabindex="-1"></a><span class="in">?key_helpers()</span></span>
+<span id="cb28-148"><a href="#cb28-148" aria-hidden="true" tabindex="-1"></a><span class="in">?`taxize-authentication`</span></span>
+<span id="cb28-149"><a href="#cb28-149" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb28-150"><a href="#cb28-150" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-151"><a href="#cb28-151" aria-hidden="true" tabindex="-1"></a><span class="in">```{=html}</span></span>
+<span id="cb28-152"><a href="#cb28-152" aria-hidden="true" tabindex="-1"></a><span class="in">&lt;style&gt;</span></span>
+<span id="cb28-153"><a href="#cb28-153" aria-hidden="true" tabindex="-1"></a><span class="in">div.ejercicios { background-color:#F5F5DC; border-radius: 5px; padding: 5px}</span></span>
+<span id="cb28-154"><a href="#cb28-154" aria-hidden="true" tabindex="-1"></a><span class="in">div.discu { background-color:#6699CC; border-radius: 5px; padding: 5px}</span></span>
+<span id="cb28-155"><a href="#cb28-155" aria-hidden="true" tabindex="-1"></a><span class="in">&lt;/style&gt;</span></span>
+<span id="cb28-156"><a href="#cb28-156" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb28-157"><a href="#cb28-157" aria-hidden="true" tabindex="-1"></a>::: ejercicios</span>
+<span id="cb28-158"><a href="#cb28-158" aria-hidden="true" tabindex="-1"></a><span class="fu">### Exercise 1</span></span>
 <span id="cb28-159"><a href="#cb28-159" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb28-160"><a href="#cb28-160" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb28-161"><a href="#cb28-161" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb28-162"><a href="#cb28-162" aria-hidden="true" tabindex="-1"></a>and if we just want to know the family...</span>
-<span id="cb28-165"><a href="#cb28-165" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb28-166"><a href="#cb28-166" aria-hidden="true" tabindex="-1"></a>Ram.fam <span class="ot">&lt;-</span> <span class="fu">tax_name</span>(<span class="at">sci =</span> Ram.names, <span class="at">get =</span> <span class="st">"family"</span>, <span class="at">db =</span> <span class="st">"ncbi"</span>)</span>
-<span id="cb28-167"><a href="#cb28-167" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb28-168"><a href="#cb28-168" aria-hidden="true" tabindex="-1"></a>Ram.fam</span>
-<span id="cb28-169"><a href="#cb28-169" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb28-170"><a href="#cb28-170" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb28-171"><a href="#cb28-171" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb28-172"><a href="#cb28-172" aria-hidden="true" tabindex="-1"></a><span class="fu">## Gets Downstream Names</span></span>
-<span id="cb28-173"><a href="#cb28-173" aria-hidden="true" tabindex="-1"></a>Perhaps we want to know which or how many are the members of a certain taxonomic group. For example, how many species are in the genus *Ramphocelus*?</span>
-<span id="cb28-174"><a href="#cb28-174" aria-hidden="true" tabindex="-1"></a><span class="in">```{r, eval = FALSE}</span></span>
-<span id="cb28-175"><a href="#cb28-175" aria-hidden="true" tabindex="-1"></a><span class="in"># separate the genus</span></span>
-<span id="cb28-176"><a href="#cb28-176" aria-hidden="true" tabindex="-1"></a><span class="in">genus &lt;- strsplit(Ram.names[1], " ")[[1]][1]</span></span>
-<span id="cb28-177"><a href="#cb28-177" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb28-178"><a href="#cb28-178" aria-hidden="true" tabindex="-1"></a><span class="in"># get the species</span></span>
-<span id="cb28-179"><a href="#cb28-179" aria-hidden="true" tabindex="-1"></a><span class="in">Ram.down &lt;- downstream(sci_id = genus, downto = "species", db = "ncbi")</span></span>
-<span id="cb28-180"><a href="#cb28-180" aria-hidden="true" tabindex="-1"></a><span class="in">Ram.down[[1]]</span></span>
+<span id="cb28-160"><a href="#cb28-160" aria-hidden="true" tabindex="-1"></a><span class="ss">1.  </span>Install the 'usethis' package with the command <span class="in">`install.packages("usethis")`</span></span>
+<span id="cb28-161"><a href="#cb28-161" aria-hidden="true" tabindex="-1"></a><span class="ss">2.  </span>Obtain the 'API key' for a database of your interest</span>
+<span id="cb28-162"><a href="#cb28-162" aria-hidden="true" tabindex="-1"></a><span class="ss">3.  </span>Add this 'API key' to your environment in R with the command <span class="in">`usethis::edit_r_environ()`</span></span>
+<span id="cb28-163"><a href="#cb28-163" aria-hidden="true" tabindex="-1"></a><span class="ss">4.  </span>Restart R and verify that you have the 'API key' using <span class="in">`getkey()`</span></span>
+<span id="cb28-164"><a href="#cb28-164" aria-hidden="true" tabindex="-1"></a><span class="ss">5.  </span>If everything went well, you're ready to use it.</span>
+<span id="cb28-165"><a href="#cb28-165" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb28-166"><a href="#cb28-166" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-167"><a href="#cb28-167" aria-hidden="true" tabindex="-1"></a>&nbsp;</span>
+<span id="cb28-168"><a href="#cb28-168" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-169"><a href="#cb28-169" aria-hidden="true" tabindex="-1"></a><span class="in">```{r, include=FALSE}</span></span>
+<span id="cb28-170"><a href="#cb28-170" aria-hidden="true" tabindex="-1"></a><span class="in">getkey(service = "entrez")</span></span>
+<span id="cb28-171"><a href="#cb28-171" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb28-172"><a href="#cb28-172" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-173"><a href="#cb28-173" aria-hidden="true" tabindex="-1"></a><span class="fu">## Extracts Taxonomic Classification</span></span>
+<span id="cb28-174"><a href="#cb28-174" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-175"><a href="#cb28-175" aria-hidden="true" tabindex="-1"></a>We can obtain information about the higher taxonomic classification of our species. If your key is for 'tropicos' or 'entrez', you can use the respective databases (tropicos and ncbi). For example:</span>
+<span id="cb28-176"><a href="#cb28-176" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-177"><a href="#cb28-177" aria-hidden="true" tabindex="-1"></a><span class="in">```{r, eval = FALSE}</span></span>
+<span id="cb28-178"><a href="#cb28-178" aria-hidden="true" tabindex="-1"></a><span class="in">Ram.class &lt;- classification(Ram.names, db = "ncbi")</span></span>
+<span id="cb28-179"><a href="#cb28-179" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-180"><a href="#cb28-180" aria-hidden="true" tabindex="-1"></a><span class="in">Ram.class[[1]]</span></span>
 <span id="cb28-181"><a href="#cb28-181" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb28-182"><a href="#cb28-182" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
 <span id="cb28-183"><a href="#cb28-183" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb28-184"><a href="#cb28-184" aria-hidden="true" tabindex="-1"></a><span class="fu">## Gets Conservation Status Information</span></span>
-<span id="cb28-185"><a href="#cb28-185" aria-hidden="true" tabindex="-1"></a>If you have the 'API key' for IUCN, you can obtain information about conservation status. </span>
-<span id="cb28-186"><a href="#cb28-186" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb28-187"><a href="#cb28-187" aria-hidden="true" tabindex="-1"></a>*NOTE: The authors of 'taxize' warn to use with caution as there may be errors*</span>
-<span id="cb28-188"><a href="#cb28-188" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb28-189"><a href="#cb28-189" aria-hidden="true" tabindex="-1"></a><span class="in">```{r, eval=F}</span></span>
-<span id="cb28-190"><a href="#cb28-190" aria-hidden="true" tabindex="-1"></a><span class="in">Ram.sum &lt;- iucn_summary(Ram.names)</span></span>
-<span id="cb28-191"><a href="#cb28-191" aria-hidden="true" tabindex="-1"></a><span class="in">iucn_status(Ram.sum)</span></span>
-<span id="cb28-192"><a href="#cb28-192" aria-hidden="true" tabindex="-1"></a><span class="in">get_iucn(Ram.names)</span></span>
+<span id="cb28-184"><a href="#cb28-184" aria-hidden="true" tabindex="-1"></a>and if we just want to know the family...</span>
+<span id="cb28-185"><a href="#cb28-185" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-188"><a href="#cb28-188" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb28-189"><a href="#cb28-189" aria-hidden="true" tabindex="-1"></a>Ram.fam <span class="ot">&lt;-</span> <span class="fu">tax_name</span>(<span class="at">sci =</span> Ram.names, <span class="at">get =</span> <span class="st">"family"</span>, <span class="at">db =</span> <span class="st">"ncbi"</span>)</span>
+<span id="cb28-190"><a href="#cb28-190" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-191"><a href="#cb28-191" aria-hidden="true" tabindex="-1"></a>Ram.fam</span>
+<span id="cb28-192"><a href="#cb28-192" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb28-193"><a href="#cb28-193" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
 <span id="cb28-194"><a href="#cb28-194" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb28-195"><a href="#cb28-195" aria-hidden="true" tabindex="-1"></a><span class="fu"># Examples of Applications in Reproducible Science</span></span>
-<span id="cb28-196"><a href="#cb28-196" aria-hidden="true" tabindex="-1"></a>Let's see some examples of how using tools like 'taxize' contributes to more reproducible research.</span>
-<span id="cb28-197"><a href="#cb28-197" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb28-198"><a href="#cb28-198" aria-hidden="true" tabindex="-1"></a><span class="fu">## Lists of Hosts in Thousands of Communities</span></span>
-<span id="cb28-199"><a href="#cb28-199" aria-hidden="true" tabindex="-1"></a>&lt;p align="center"&gt;</span>
-<span id="cb28-200"><a href="#cb28-200" aria-hidden="true" tabindex="-1"></a><span class="al">![](./images/Zoonotic1.png)</span></span>
-<span id="cb28-201"><a href="#cb28-201" aria-hidden="true" tabindex="-1"></a>&lt;p align="center"&gt;</span>
-<span id="cb28-202"><a href="#cb28-202" aria-hidden="true" tabindex="-1"></a>&lt;font size="2"&gt; Article by <span class="co">[</span><span class="ot">Gibb et al. 2020, Nature</span><span class="co">](https://www.nature.com/articles/s41586-020-2562-8)</span></span>
-<span id="cb28-203"><a href="#cb28-203" aria-hidden="true" tabindex="-1"></a>&lt;/p&gt;</span>
-<span id="cb28-204"><a href="#cb28-204" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb28-205"><a href="#cb28-205" aria-hidden="true" tabindex="-1"></a>**From the methods section:**</span>
-<span id="cb28-206"><a href="#cb28-206" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb28-207"><a href="#cb28-207" aria-hidden="true" tabindex="-1"></a>"*We compiled animal host–pathogen associations from several source databases, to provide as comprehensive a dataset as possible of zoonotic host species and their pathogens: the Enhanced Infectious Diseases (EID2) database; the Global Mammal Parasite Database v.2.0 (GMPD2) which collates records of parasites of cetartiodactyls, carnivores and primates; a reservoir hosts database; a mammal–virus associations database; and a rodent zoonotic reservoirs database augmented with pathogen data from the Global Infectious Disease and Epidemiology Network (GIDEON) (Supplementary Table 8). &lt;span style="color: #32CD32;"&gt;We harmonized species names across all databases, excluding instances in which either hosts or pathogens could not be classified to species level. To prevent erroneous matches due to misspelling or taxonomic revision, all host species synonyms were accessed from Catalogue Of Life using ‘taxize’ v.0.8.939&lt;/span&gt;. Combined, the dataset contained 20,382 associations between 3,883 animal host species and 5,694 pathogen species.*"</span>
+<span id="cb28-195"><a href="#cb28-195" aria-hidden="true" tabindex="-1"></a><span class="fu">## Gets Downstream Names</span></span>
+<span id="cb28-196"><a href="#cb28-196" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-197"><a href="#cb28-197" aria-hidden="true" tabindex="-1"></a>Perhaps we want to know which or how many are the members of a certain taxonomic group. For example, how many species are in the genus *Ramphocelus*?</span>
+<span id="cb28-198"><a href="#cb28-198" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-199"><a href="#cb28-199" aria-hidden="true" tabindex="-1"></a><span class="in">```{r, eval = FALSE}</span></span>
+<span id="cb28-200"><a href="#cb28-200" aria-hidden="true" tabindex="-1"></a><span class="in"># separate the genus</span></span>
+<span id="cb28-201"><a href="#cb28-201" aria-hidden="true" tabindex="-1"></a><span class="in">genus &lt;- strsplit(Ram.names[1], " ")[[1]][1]</span></span>
+<span id="cb28-202"><a href="#cb28-202" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-203"><a href="#cb28-203" aria-hidden="true" tabindex="-1"></a><span class="in"># get the species</span></span>
+<span id="cb28-204"><a href="#cb28-204" aria-hidden="true" tabindex="-1"></a><span class="in">Ram.down &lt;- downstream(sci_id = genus, downto = "species", db = "ncbi")</span></span>
+<span id="cb28-205"><a href="#cb28-205" aria-hidden="true" tabindex="-1"></a><span class="in">Ram.down[[1]]</span></span>
+<span id="cb28-206"><a href="#cb28-206" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-207"><a href="#cb28-207" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
 <span id="cb28-208"><a href="#cb28-208" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb28-209"><a href="#cb28-209" aria-hidden="true" tabindex="-1"></a>Let's see the code from the article and make a small modification to apply the function to our data.</span>
+<span id="cb28-209"><a href="#cb28-209" aria-hidden="true" tabindex="-1"></a><span class="fu">## Gets Conservation Status Information</span></span>
 <span id="cb28-210"><a href="#cb28-210" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb28-211"><a href="#cb28-211" aria-hidden="true" tabindex="-1"></a><span class="in">```{r, message=FALSE}</span></span>
-<span id="cb28-212"><a href="#cb28-212" aria-hidden="true" tabindex="-1"></a><span class="in"># taxize/GBIFr</span></span>
-<span id="cb28-213"><a href="#cb28-213" aria-hidden="true" tabindex="-1"></a><span class="in">require(taxize)</span></span>
-<span id="cb28-214"><a href="#cb28-214" aria-hidden="true" tabindex="-1"></a><span class="in">require(rgbif)</span></span>
-<span id="cb28-215"><a href="#cb28-215" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb28-216"><a href="#cb28-216" aria-hidden="true" tabindex="-1"></a><span class="in"># function to find and resolve taxonomic synonyms based on Encyclopedia of Life</span></span>
-<span id="cb28-217"><a href="#cb28-217" aria-hidden="true" tabindex="-1"></a><span class="in">findSyns2 &lt;- function(x){</span></span>
-<span id="cb28-218"><a href="#cb28-218" aria-hidden="true" tabindex="-1"></a><span class="in">  </span></span>
-<span id="cb28-219"><a href="#cb28-219" aria-hidden="true" tabindex="-1"></a><span class="in">  # get specific species name</span></span>
-<span id="cb28-220"><a href="#cb28-220" aria-hidden="true" tabindex="-1"></a><span class="in">  #taxname = hosts_vec[x]</span></span>
-<span id="cb28-221"><a href="#cb28-221" aria-hidden="true" tabindex="-1"></a><span class="in">  # a small change to use the function with our data</span></span>
-<span id="cb28-222"><a href="#cb28-222" aria-hidden="true" tabindex="-1"></a><span class="in">  taxname = x</span></span>
-<span id="cb28-223"><a href="#cb28-223" aria-hidden="true" tabindex="-1"></a><span class="in">  # print progress</span></span>
-<span id="cb28-224"><a href="#cb28-224" aria-hidden="true" tabindex="-1"></a><span class="in">  print(paste("Processing:", taxname, sep=" "))</span></span>
-<span id="cb28-225"><a href="#cb28-225" aria-hidden="true" tabindex="-1"></a><span class="in">  </span></span>
-<span id="cb28-226"><a href="#cb28-226" aria-hidden="true" tabindex="-1"></a><span class="in">  # phyla</span></span>
-<span id="cb28-227"><a href="#cb28-227" aria-hidden="true" tabindex="-1"></a><span class="in">  phyla = c("Chordata","Arthropoda","Gastropoda", "Mollusca")</span></span>
-<span id="cb28-228"><a href="#cb28-228" aria-hidden="true" tabindex="-1"></a><span class="in">  </span></span>
-<span id="cb28-229"><a href="#cb28-229" aria-hidden="true" tabindex="-1"></a><span class="in">  # (1) resolve misspellings</span></span>
-<span id="cb28-230"><a href="#cb28-230" aria-hidden="true" tabindex="-1"></a><span class="in">  taxname_resolved = gnr_resolve(taxname, with_canonical_ranks = TRUE)$matched_name2[1]</span></span>
-<span id="cb28-231"><a href="#cb28-231" aria-hidden="true" tabindex="-1"></a><span class="in">  if(!is.null(taxname_resolved)){ if(length(strsplit(taxname_resolved, " ", fixed=TRUE)[[1]]) == 2 ){ taxa = taxname_resolved }}</span></span>
-<span id="cb28-232"><a href="#cb28-232" aria-hidden="true" tabindex="-1"></a><span class="in">  if(!is.null(taxname_resolved)){ if(length(strsplit(taxname_resolved, " ", fixed=TRUE)[[1]]) &gt; 2 ){ taxa = paste(strsplit(taxname_resolved, " ", fixed=TRUE)[[1]][1:2], collapse=" ")} }</span></span>
-<span id="cb28-233"><a href="#cb28-233" aria-hidden="true" tabindex="-1"></a><span class="in">  </span></span>
-<span id="cb28-234"><a href="#cb28-234" aria-hidden="true" tabindex="-1"></a><span class="in">  # if taxa == NA, return list with nothing defined </span></span>
-<span id="cb28-235"><a href="#cb28-235" aria-hidden="true" tabindex="-1"></a><span class="in">  if(is.na(taxa)){   if(class(syns)[1] == 'simpleError'){ return(data.frame(Original=taxname, Submitted=taxname_resolved, Accepted_name=NA, Selected_family=NA, Selected_order=NA, Selected_class=NA, Synonyms=NA))} }</span></span>
-<span id="cb28-236"><a href="#cb28-236" aria-hidden="true" tabindex="-1"></a><span class="in">  </span></span>
-<span id="cb28-237"><a href="#cb28-237" aria-hidden="true" tabindex="-1"></a><span class="in">  # (2) remove sub-species categorizations and set 'genus' and 'species' variables</span></span>
-<span id="cb28-238"><a href="#cb28-238" aria-hidden="true" tabindex="-1"></a><span class="in">  genus = NULL</span></span>
-<span id="cb28-239"><a href="#cb28-239" aria-hidden="true" tabindex="-1"></a><span class="in">  if(length(strsplit(taxa, " ", fixed=TRUE)[[1]]) %in% c(2,3)){ genus = strsplit(taxa," ",fixed=TRUE)[[1]][1]; species = strsplit(taxa," ",fixed=TRUE)[[1]][2] }</span></span>
-<span id="cb28-240"><a href="#cb28-240" aria-hidden="true" tabindex="-1"></a><span class="in">  if(length(strsplit(taxa, "_", fixed=TRUE)[[1]]) %in% c(2,3)){ genus = strsplit(taxa,"_",fixed=TRUE)[[1]][1]; species = strsplit(taxa,"_",fixed=TRUE)[[1]][2] }</span></span>
-<span id="cb28-241"><a href="#cb28-241" aria-hidden="true" tabindex="-1"></a><span class="in">  if(length(strsplit(taxa, " ", fixed=TRUE)[[1]]) &gt;3 | length(strsplit(taxa, "_" , fixed=TRUE)[[1]][1]) &gt; 3){ return("name error") }</span></span>
-<span id="cb28-242"><a href="#cb28-242" aria-hidden="true" tabindex="-1"></a><span class="in">  if(is.null(genus)){ genus = taxa; species = NA }</span></span>
-<span id="cb28-243"><a href="#cb28-243" aria-hidden="true" tabindex="-1"></a><span class="in">  </span></span>
-<span id="cb28-244"><a href="#cb28-244" aria-hidden="true" tabindex="-1"></a><span class="in">  # (3) use genus to lookup family, order, class</span></span>
-<span id="cb28-245"><a href="#cb28-245" aria-hidden="true" tabindex="-1"></a><span class="in">  syns = tryCatch( name_lookup(genus)$data, error = function(e) e)</span></span>
-<span id="cb28-246"><a href="#cb28-246" aria-hidden="true" tabindex="-1"></a><span class="in">  if(class(syns)[1] == 'simpleError'){ return(data.frame(Original=taxname, Submitted=taxa, Accepted_name=NA, Selected_family=NA, Selected_order=NA, Selected_class=NA, Synonyms=NA))}</span></span>
-<span id="cb28-247"><a href="#cb28-247" aria-hidden="true" tabindex="-1"></a><span class="in">  </span></span>
-<span id="cb28-248"><a href="#cb28-248" aria-hidden="true" tabindex="-1"></a><span class="in">  # for cases where the lookup does not find a phylum within the specified range</span></span>
-<span id="cb28-249"><a href="#cb28-249" aria-hidden="true" tabindex="-1"></a><span class="in">  if(all(! syns$phylum %in% phyla)){</span></span>
-<span id="cb28-250"><a href="#cb28-250" aria-hidden="true" tabindex="-1"></a><span class="in">    fam1 = syns$family[ !is.na(syns$family) &amp; !is.na(syns$phylum) ]</span></span>
-<span id="cb28-251"><a href="#cb28-251" aria-hidden="true" tabindex="-1"></a><span class="in">    order1 = syns$order[ !is.na(syns$family) &amp; !is.na(syns$phylum) ]</span></span>
-<span id="cb28-252"><a href="#cb28-252" aria-hidden="true" tabindex="-1"></a><span class="in">    class1 = syns$class[ !is.na(syns$family) &amp; !is.na(syns$phylum) ]</span></span>
-<span id="cb28-253"><a href="#cb28-253" aria-hidden="true" tabindex="-1"></a><span class="in">    datfam = data.frame(fam1=fam1, order=1:length(fam1), order1=order1, class1=class1)</span></span>
-<span id="cb28-254"><a href="#cb28-254" aria-hidden="true" tabindex="-1"></a><span class="in">    # select highest frequency fam/class/order combo</span></span>
-<span id="cb28-255"><a href="#cb28-255" aria-hidden="true" tabindex="-1"></a><span class="in">    fam2 = as.data.frame( table(datfam[ , c(1,3,4)]) )</span></span>
-<span id="cb28-256"><a href="#cb28-256" aria-hidden="true" tabindex="-1"></a><span class="in">    family2 = as.vector(fam2[ fam2$Freq==max(fam2$Freq, na.rm=TRUE), "fam1"] ) </span></span>
-<span id="cb28-257"><a href="#cb28-257" aria-hidden="true" tabindex="-1"></a><span class="in">    order2 = as.vector(fam2[ fam2$Freq==max(fam2$Freq, na.rm=TRUE), "order1"] )</span></span>
-<span id="cb28-258"><a href="#cb28-258" aria-hidden="true" tabindex="-1"></a><span class="in">    class2 = as.vector(fam2[ fam2$Freq==max(fam2$Freq, na.rm=TRUE), "class1"] )</span></span>
-<span id="cb28-259"><a href="#cb28-259" aria-hidden="true" tabindex="-1"></a><span class="in">    if(length(fam2) &gt; 1){</span></span>
-<span id="cb28-260"><a href="#cb28-260" aria-hidden="true" tabindex="-1"></a><span class="in">      datfam2 = datfam[datfam$fam1 %in% family2, ]</span></span>
-<span id="cb28-261"><a href="#cb28-261" aria-hidden="true" tabindex="-1"></a><span class="in">      family2 = as.vector(datfam2[datfam2$order == min(datfam2$order, na.rm=TRUE), "fam1"])</span></span>
-<span id="cb28-262"><a href="#cb28-262" aria-hidden="true" tabindex="-1"></a><span class="in">      order2 = as.vector(datfam2[datfam2$order == min(datfam2$order, na.rm=TRUE), "order1"])</span></span>
-<span id="cb28-263"><a href="#cb28-263" aria-hidden="true" tabindex="-1"></a><span class="in">      class2 = as.vector(datfam2[datfam2$order == min(datfam2$order, na.rm=TRUE), "class1"])</span></span>
-<span id="cb28-264"><a href="#cb28-264" aria-hidden="true" tabindex="-1"></a><span class="in">    }</span></span>
-<span id="cb28-265"><a href="#cb28-265" aria-hidden="true" tabindex="-1"></a><span class="in">  } else {  # for everything else</span></span>
-<span id="cb28-266"><a href="#cb28-266" aria-hidden="true" tabindex="-1"></a><span class="in">    fam1 = syns$family[ !is.na(syns$family) &amp; !is.na(syns$phylum) &amp; (syns$phylum %in% phyla) ]</span></span>
-<span id="cb28-267"><a href="#cb28-267" aria-hidden="true" tabindex="-1"></a><span class="in">    order1 = syns$order[ !is.na(syns$family) &amp; !is.na(syns$phylum) &amp; (syns$phylum %in% phyla) ]</span></span>
-<span id="cb28-268"><a href="#cb28-268" aria-hidden="true" tabindex="-1"></a><span class="in">    class1 = syns$class[ !is.na(syns$family) &amp; !is.na(syns$phylum) &amp; (syns$phylum %in% phyla) ]</span></span>
-<span id="cb28-269"><a href="#cb28-269" aria-hidden="true" tabindex="-1"></a><span class="in">    datfam = data.frame(fam1=fam1, order=1:length(fam1), order1 = order1, class1=class1)</span></span>
-<span id="cb28-270"><a href="#cb28-270" aria-hidden="true" tabindex="-1"></a><span class="in">    # select highest frequency fam/class/order combo</span></span>
-<span id="cb28-271"><a href="#cb28-271" aria-hidden="true" tabindex="-1"></a><span class="in">    fam2 = as.data.frame( table(datfam[ , c(1,3,4)]) )</span></span>
-<span id="cb28-272"><a href="#cb28-272" aria-hidden="true" tabindex="-1"></a><span class="in">    family2 = as.vector(fam2[ fam2$Freq==max(fam2$Freq, na.rm=TRUE), "fam1"] ) </span></span>
-<span id="cb28-273"><a href="#cb28-273" aria-hidden="true" tabindex="-1"></a><span class="in">    order2 = as.vector(fam2[ fam2$Freq==max(fam2$Freq, na.rm=TRUE), "order1"] )</span></span>
-<span id="cb28-274"><a href="#cb28-274" aria-hidden="true" tabindex="-1"></a><span class="in">    class2 = as.vector(fam2[ fam2$Freq==max(fam2$Freq, na.rm=TRUE), "class1"] )</span></span>
-<span id="cb28-275"><a href="#cb28-275" aria-hidden="true" tabindex="-1"></a><span class="in">    # select highest in list if more than one max</span></span>
-<span id="cb28-276"><a href="#cb28-276" aria-hidden="true" tabindex="-1"></a><span class="in">    if(length(family2) &gt; 1){</span></span>
-<span id="cb28-277"><a href="#cb28-277" aria-hidden="true" tabindex="-1"></a><span class="in">      datfam2 = datfam[datfam$fam1 %in% family2, ]</span></span>
-<span id="cb28-278"><a href="#cb28-278" aria-hidden="true" tabindex="-1"></a><span class="in">      family2 = as.vector(datfam2[datfam2$order == min(datfam2$order, na.rm=TRUE), "fam1"])</span></span>
-<span id="cb28-279"><a href="#cb28-279" aria-hidden="true" tabindex="-1"></a><span class="in">      order2 = as.vector(datfam2[datfam2$order == min(datfam2$order, na.rm</span></span>
-<span id="cb28-280"><a href="#cb28-280" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb28-281"><a href="#cb28-281" aria-hidden="true" tabindex="-1"></a><span class="in">=TRUE), "order1"])</span></span>
-<span id="cb28-282"><a href="#cb28-282" aria-hidden="true" tabindex="-1"></a><span class="in">      class2 = as.vector(datfam2[datfam2$order == min(datfam2$order, na.rm=TRUE), "class1"])</span></span>
-<span id="cb28-283"><a href="#cb28-283" aria-hidden="true" tabindex="-1"></a><span class="in">    } </span></span>
-<span id="cb28-284"><a href="#cb28-284" aria-hidden="true" tabindex="-1"></a><span class="in">  }</span></span>
-<span id="cb28-285"><a href="#cb28-285" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb28-286"><a href="#cb28-286" aria-hidden="true" tabindex="-1"></a><span class="in">  # (4) search for species synonyms in ITIS</span></span>
-<span id="cb28-287"><a href="#cb28-287" aria-hidden="true" tabindex="-1"></a><span class="in">  syns = tryCatch(suppressMessages(synonyms(taxa, db='itis')), error=function(e) e)</span></span>
-<span id="cb28-288"><a href="#cb28-288" aria-hidden="true" tabindex="-1"></a><span class="in">  if(class(syns)[1] == 'simpleError'){ return(data.frame(Original=taxname, Submitted=taxa, Accepted_name="failed", Selected_family=family2, Selected_order=order2, Selected_class=class2, Synonyms="failed"))}</span></span>
-<span id="cb28-289"><a href="#cb28-289" aria-hidden="true" tabindex="-1"></a><span class="in">  syns = as.data.frame(syns[[1]])</span></span>
-<span id="cb28-290"><a href="#cb28-290" aria-hidden="true" tabindex="-1"></a><span class="in">  </span></span>
-<span id="cb28-291"><a href="#cb28-291" aria-hidden="true" tabindex="-1"></a><span class="in">  # get info</span></span>
-<span id="cb28-292"><a href="#cb28-292" aria-hidden="true" tabindex="-1"></a><span class="in">  original = taxa</span></span>
-<span id="cb28-293"><a href="#cb28-293" aria-hidden="true" tabindex="-1"></a><span class="in">  accepted_name = taxa # save accepted name as original searched name</span></span>
-<span id="cb28-294"><a href="#cb28-294" aria-hidden="true" tabindex="-1"></a><span class="in">  if("acc_name" %in% names(syns)){ accepted_name = syns$acc_name } # unless search shows that this is not the accepted name</span></span>
-<span id="cb28-295"><a href="#cb28-295" aria-hidden="true" tabindex="-1"></a><span class="in">   if("syn_name" %in% names(syns)){ synonyms = unique(syns$syn_name) </span></span>
-<span id="cb28-296"><a href="#cb28-296" aria-hidden="true" tabindex="-1"></a><span class="in">  } else{ synonyms = NA }</span></span>
-<span id="cb28-297"><a href="#cb28-297" aria-hidden="true" tabindex="-1"></a><span class="in">  </span></span>
-<span id="cb28-298"><a href="#cb28-298" aria-hidden="true" tabindex="-1"></a><span class="in">  # combine into list and add synonyms </span></span>
-<span id="cb28-299"><a href="#cb28-299" aria-hidden="true" tabindex="-1"></a><span class="in">  result = data.frame(Original=taxname, </span></span>
-<span id="cb28-300"><a href="#cb28-300" aria-hidden="true" tabindex="-1"></a><span class="in">                      Submitted=taxa,</span></span>
-<span id="cb28-301"><a href="#cb28-301" aria-hidden="true" tabindex="-1"></a><span class="in">                      Accepted_name=accepted_name,</span></span>
-<span id="cb28-302"><a href="#cb28-302" aria-hidden="true" tabindex="-1"></a><span class="in">                      Selected_family=family2,</span></span>
-<span id="cb28-303"><a href="#cb28-303" aria-hidden="true" tabindex="-1"></a><span class="in">                      Selected_order=order2,</span></span>
-<span id="cb28-304"><a href="#cb28-304" aria-hidden="true" tabindex="-1"></a><span class="in">                      Selected_class=class2)</span></span>
-<span id="cb28-305"><a href="#cb28-305" aria-hidden="true" tabindex="-1"></a><span class="in">  result = do.call("rbind", replicate(length(synonyms), result[1, ], simplify = FALSE))</span></span>
-<span id="cb28-306"><a href="#cb28-306" aria-hidden="true" tabindex="-1"></a><span class="in">  result$Synonyms = synonyms</span></span>
-<span id="cb28-307"><a href="#cb28-307" aria-hidden="true" tabindex="-1"></a><span class="in">  return(result)</span></span>
-<span id="cb28-308"><a href="#cb28-308" aria-hidden="true" tabindex="-1"></a><span class="in">}</span></span>
-<span id="cb28-309"><a href="#cb28-309" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb28-310"><a href="#cb28-310" aria-hidden="true" tabindex="-1"></a><span class="in"># nest function within a tryCatch call in case of any errors</span></span>
-<span id="cb28-311"><a href="#cb28-311" aria-hidden="true" tabindex="-1"></a><span class="in">findSyns3 = function(x){</span></span>
-<span id="cb28-312"><a href="#cb28-312" aria-hidden="true" tabindex="-1"></a><span class="in">  result = tryCatch(findSyns2(x), error=function(e) NULL)</span></span>
-<span id="cb28-313"><a href="#cb28-313" aria-hidden="true" tabindex="-1"></a><span class="in">  return(result)</span></span>
-<span id="cb28-314"><a href="#cb28-314" aria-hidden="true" tabindex="-1"></a><span class="in">}</span></span>
-<span id="cb28-315"><a href="#cb28-315" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb28-316"><a href="#cb28-316" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb28-317"><a href="#cb28-317" aria-hidden="true" tabindex="-1"></a>Earlier, we saw that there's a name synonymous with *Ramphocelus sanguinolentus*. What would the function by Gibb et al. do with that?</span>
-<span id="cb28-320"><a href="#cb28-320" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb28-321"><a href="#cb28-321" aria-hidden="true" tabindex="-1"></a>Ram.syn1 <span class="ot">&lt;-</span> <span class="fu">findSyns3</span>(<span class="st">"Phlogothraupis sanguinolenta"</span>)</span>
-<span id="cb28-322"><a href="#cb28-322" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb28-323"><a href="#cb28-323" aria-hidden="true" tabindex="-1"></a>Ram.syn1</span>
-<span id="cb28-324"><a href="#cb28-324" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb28-325"><a href="#cb28-325" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb28-326"><a href="#cb28-326" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb28-327"><a href="#cb28-327" aria-hidden="true" tabindex="-1"></a>And with one that's misspelled?</span>
-<span id="cb28-330"><a href="#cb28-330" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb28-331"><a href="#cb28-331" aria-hidden="true" tabindex="-1"></a>Ram.syn2 <span class="ot">&lt;-</span> <span class="fu">findSyns3</span>(Ram.names2[<span class="dv">2</span>])</span>
-<span id="cb28-332"><a href="#cb28-332" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb28-333"><a href="#cb28-333" aria-hidden="true" tabindex="-1"></a>Ram.syn2</span>
-<span id="cb28-334"><a href="#cb28-334" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb28-335"><a href="#cb28-335" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb28-336"><a href="#cb28-336" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb28-337"><a href="#cb28-337" aria-hidden="true" tabindex="-1"></a><span class="fu">## Camera trap data management</span></span>
-<span id="cb28-338"><a href="#cb28-338" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb28-339"><a href="#cb28-339" aria-hidden="true" tabindex="-1"></a>&lt;p align="center"&gt;</span>
-<span id="cb28-340"><a href="#cb28-340" aria-hidden="true" tabindex="-1"></a><span class="al">![](./images/camtrapR.png)</span></span>
-<span id="cb28-341"><a href="#cb28-341" aria-hidden="true" tabindex="-1"></a>&lt;p align="center"&gt;</span>
-<span id="cb28-342"><a href="#cb28-342" aria-hidden="true" tabindex="-1"></a>&lt;font size="2"&gt; Article by <span class="co">[</span><span class="ot">Niedballa et al. 2016,Methods Ecol. Evol.</span><span class="co">](https://besjournals.onlinelibrary.wiley.com/doi/pdf/10.1111/2041-210X.12600)</span></span>
-<span id="cb28-343"><a href="#cb28-343" aria-hidden="true" tabindex="-1"></a>&lt;/p&gt;</span>
-<span id="cb28-344"><a href="#cb28-344" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb28-345"><a href="#cb28-345" aria-hidden="true" tabindex="-1"></a>**From the methods section:**</span>
-<span id="cb28-346"><a href="#cb28-346" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb28-347"><a href="#cb28-347" aria-hidden="true" tabindex="-1"></a>*"Users are free to use any species names (or abbreviations or codes) they wish. If scientific or common species names are used, &lt;span style="color: #32CD32;"&gt;the function checkSpeciesNames can check them against the ITIS taxonomic database (www.itis.gov) and returns their matching counterparts (utilizing the R package taxize (Chamberlain &amp; Szöcs 2013) internally)&lt;/span&gt;, making sure species names and spelling are standardized and taxonomically sound, and thus making it easier to combine data sets from different studies. "*</span>
+<span id="cb28-211"><a href="#cb28-211" aria-hidden="true" tabindex="-1"></a>If you have the 'API key' for IUCN, you can obtain information about conservation status.</span>
+<span id="cb28-212"><a href="#cb28-212" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-213"><a href="#cb28-213" aria-hidden="true" tabindex="-1"></a>*NOTE: The authors of 'taxize' warn to use with caution as there may be errors*</span>
+<span id="cb28-214"><a href="#cb28-214" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-215"><a href="#cb28-215" aria-hidden="true" tabindex="-1"></a><span class="in">```{r, eval=F}</span></span>
+<span id="cb28-216"><a href="#cb28-216" aria-hidden="true" tabindex="-1"></a><span class="in">Ram.sum &lt;- iucn_summary(Ram.names)</span></span>
+<span id="cb28-217"><a href="#cb28-217" aria-hidden="true" tabindex="-1"></a><span class="in">iucn_status(Ram.sum)</span></span>
+<span id="cb28-218"><a href="#cb28-218" aria-hidden="true" tabindex="-1"></a><span class="in">get_iucn(Ram.names)</span></span>
+<span id="cb28-219"><a href="#cb28-219" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb28-220"><a href="#cb28-220" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-221"><a href="#cb28-221" aria-hidden="true" tabindex="-1"></a><span class="fu"># Examples of Applications in Reproducible Science</span></span>
+<span id="cb28-222"><a href="#cb28-222" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-223"><a href="#cb28-223" aria-hidden="true" tabindex="-1"></a>Let's see some examples of how using tools like 'taxize' contributes to more reproducible research.</span>
+<span id="cb28-224"><a href="#cb28-224" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-225"><a href="#cb28-225" aria-hidden="true" tabindex="-1"></a><span class="fu">## Lists of Hosts in Thousands of Communities</span></span>
+<span id="cb28-226"><a href="#cb28-226" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-227"><a href="#cb28-227" aria-hidden="true" tabindex="-1"></a>&lt;p align="center"&gt;</span>
+<span id="cb28-228"><a href="#cb28-228" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-229"><a href="#cb28-229" aria-hidden="true" tabindex="-1"></a><span class="al">![](./images/Zoonotic1.png)</span></span>
+<span id="cb28-230"><a href="#cb28-230" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-231"><a href="#cb28-231" aria-hidden="true" tabindex="-1"></a>&lt;p align="center"&gt;</span>
+<span id="cb28-232"><a href="#cb28-232" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-233"><a href="#cb28-233" aria-hidden="true" tabindex="-1"></a>&lt;font size="2"&gt; Article by <span class="co">[</span><span class="ot">Gibb et al. 2020, Nature</span><span class="co">](https://www.nature.com/articles/s41586-020-2562-8)</span></span>
+<span id="cb28-234"><a href="#cb28-234" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-235"><a href="#cb28-235" aria-hidden="true" tabindex="-1"></a>&lt;/p&gt;</span>
+<span id="cb28-236"><a href="#cb28-236" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-237"><a href="#cb28-237" aria-hidden="true" tabindex="-1"></a>**From the methods section:**</span>
+<span id="cb28-238"><a href="#cb28-238" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-239"><a href="#cb28-239" aria-hidden="true" tabindex="-1"></a>"*We compiled animal host--pathogen associations from several source databases, to provide as comprehensive a dataset as possible of zoonotic host species and their pathogens: the Enhanced Infectious Diseases (EID2) database; the Global Mammal Parasite Database v.2.0 (GMPD2) which collates records of parasites of cetartiodactyls, carnivores and primates; a reservoir hosts database; a mammal--virus associations database; and a rodent zoonotic reservoirs database augmented with pathogen data from the Global Infectious Disease and Epidemiology Network (GIDEON) (Supplementary Table 8). [We harmonized species names across all databases, excluding instances in which either hosts or pathogens could not be classified to species level. To prevent erroneous matches due to misspelling or taxonomic revision, all host species synonyms were accessed from Catalogue Of Life using 'taxize' v.0.8.939]{style="color: #32CD32;"}. Combined, the dataset contained 20,382 associations between 3,883 animal host species and 5,694 pathogen species.*"</span>
+<span id="cb28-240"><a href="#cb28-240" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-241"><a href="#cb28-241" aria-hidden="true" tabindex="-1"></a>Let's see the code from the article and make a small modification to apply the function to our data.</span>
+<span id="cb28-242"><a href="#cb28-242" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-243"><a href="#cb28-243" aria-hidden="true" tabindex="-1"></a><span class="in">```{r, message=FALSE}</span></span>
+<span id="cb28-244"><a href="#cb28-244" aria-hidden="true" tabindex="-1"></a><span class="in"># taxize/GBIFr</span></span>
+<span id="cb28-245"><a href="#cb28-245" aria-hidden="true" tabindex="-1"></a><span class="in">require(taxize)</span></span>
+<span id="cb28-246"><a href="#cb28-246" aria-hidden="true" tabindex="-1"></a><span class="in">require(rgbif)</span></span>
+<span id="cb28-247"><a href="#cb28-247" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-248"><a href="#cb28-248" aria-hidden="true" tabindex="-1"></a><span class="in"># function to find and resolve taxonomic synonyms based on Encyclopedia of Life</span></span>
+<span id="cb28-249"><a href="#cb28-249" aria-hidden="true" tabindex="-1"></a><span class="in">findSyns2 &lt;- function(x){</span></span>
+<span id="cb28-250"><a href="#cb28-250" aria-hidden="true" tabindex="-1"></a><span class="in">  </span></span>
+<span id="cb28-251"><a href="#cb28-251" aria-hidden="true" tabindex="-1"></a><span class="in">  # get specific species name</span></span>
+<span id="cb28-252"><a href="#cb28-252" aria-hidden="true" tabindex="-1"></a><span class="in">  #taxname = hosts_vec[x]</span></span>
+<span id="cb28-253"><a href="#cb28-253" aria-hidden="true" tabindex="-1"></a><span class="in">  # a small change to use the function with our data</span></span>
+<span id="cb28-254"><a href="#cb28-254" aria-hidden="true" tabindex="-1"></a><span class="in">  taxname = x</span></span>
+<span id="cb28-255"><a href="#cb28-255" aria-hidden="true" tabindex="-1"></a><span class="in">  # print progress</span></span>
+<span id="cb28-256"><a href="#cb28-256" aria-hidden="true" tabindex="-1"></a><span class="in">  print(paste("Processing:", taxname, sep=" "))</span></span>
+<span id="cb28-257"><a href="#cb28-257" aria-hidden="true" tabindex="-1"></a><span class="in">  </span></span>
+<span id="cb28-258"><a href="#cb28-258" aria-hidden="true" tabindex="-1"></a><span class="in">  # phyla</span></span>
+<span id="cb28-259"><a href="#cb28-259" aria-hidden="true" tabindex="-1"></a><span class="in">  phyla = c("Chordata","Arthropoda","Gastropoda", "Mollusca")</span></span>
+<span id="cb28-260"><a href="#cb28-260" aria-hidden="true" tabindex="-1"></a><span class="in">  </span></span>
+<span id="cb28-261"><a href="#cb28-261" aria-hidden="true" tabindex="-1"></a><span class="in">  # (1) resolve misspellings</span></span>
+<span id="cb28-262"><a href="#cb28-262" aria-hidden="true" tabindex="-1"></a><span class="in">  taxname_resolved = gnr_resolve(taxname, with_canonical_ranks = TRUE)$matched_name2[1]</span></span>
+<span id="cb28-263"><a href="#cb28-263" aria-hidden="true" tabindex="-1"></a><span class="in">  if(!is.null(taxname_resolved)){ if(length(strsplit(taxname_resolved, " ", fixed=TRUE)[[1]]) == 2 ){ taxa = taxname_resolved }}</span></span>
+<span id="cb28-264"><a href="#cb28-264" aria-hidden="true" tabindex="-1"></a><span class="in">  if(!is.null(taxname_resolved)){ if(length(strsplit(taxname_resolved, " ", fixed=TRUE)[[1]]) &gt; 2 ){ taxa = paste(strsplit(taxname_resolved, " ", fixed=TRUE)[[1]][1:2], collapse=" ")} }</span></span>
+<span id="cb28-265"><a href="#cb28-265" aria-hidden="true" tabindex="-1"></a><span class="in">  </span></span>
+<span id="cb28-266"><a href="#cb28-266" aria-hidden="true" tabindex="-1"></a><span class="in">  # if taxa == NA, return list with nothing defined </span></span>
+<span id="cb28-267"><a href="#cb28-267" aria-hidden="true" tabindex="-1"></a><span class="in">  if(is.na(taxa)){   if(class(syns)[1] == 'simpleError'){ return(data.frame(Original=taxname, Submitted=taxname_resolved, Accepted_name=NA, Selected_family=NA, Selected_order=NA, Selected_class=NA, Synonyms=NA))} }</span></span>
+<span id="cb28-268"><a href="#cb28-268" aria-hidden="true" tabindex="-1"></a><span class="in">  </span></span>
+<span id="cb28-269"><a href="#cb28-269" aria-hidden="true" tabindex="-1"></a><span class="in">  # (2) remove sub-species categorizations and set 'genus' and 'species' variables</span></span>
+<span id="cb28-270"><a href="#cb28-270" aria-hidden="true" tabindex="-1"></a><span class="in">  genus = NULL</span></span>
+<span id="cb28-271"><a href="#cb28-271" aria-hidden="true" tabindex="-1"></a><span class="in">  if(length(strsplit(taxa, " ", fixed=TRUE)[[1]]) %in% c(2,3)){ genus = strsplit(taxa," ",fixed=TRUE)[[1]][1]; species = strsplit(taxa," ",fixed=TRUE)[[1]][2] }</span></span>
+<span id="cb28-272"><a href="#cb28-272" aria-hidden="true" tabindex="-1"></a><span class="in">  if(length(strsplit(taxa, "_", fixed=TRUE)[[1]]) %in% c(2,3)){ genus = strsplit(taxa,"_",fixed=TRUE)[[1]][1]; species = strsplit(taxa,"_",fixed=TRUE)[[1]][2] }</span></span>
+<span id="cb28-273"><a href="#cb28-273" aria-hidden="true" tabindex="-1"></a><span class="in">  if(length(strsplit(taxa, " ", fixed=TRUE)[[1]]) &gt;3 | length(strsplit(taxa, "_" , fixed=TRUE)[[1]][1]) &gt; 3){ return("name error") }</span></span>
+<span id="cb28-274"><a href="#cb28-274" aria-hidden="true" tabindex="-1"></a><span class="in">  if(is.null(genus)){ genus = taxa; species = NA }</span></span>
+<span id="cb28-275"><a href="#cb28-275" aria-hidden="true" tabindex="-1"></a><span class="in">  </span></span>
+<span id="cb28-276"><a href="#cb28-276" aria-hidden="true" tabindex="-1"></a><span class="in">  # (3) use genus to lookup family, order, class</span></span>
+<span id="cb28-277"><a href="#cb28-277" aria-hidden="true" tabindex="-1"></a><span class="in">  syns = tryCatch( name_lookup(genus)$data, error = function(e) e)</span></span>
+<span id="cb28-278"><a href="#cb28-278" aria-hidden="true" tabindex="-1"></a><span class="in">  if(class(syns)[1] == 'simpleError'){ return(data.frame(Original=taxname, Submitted=taxa, Accepted_name=NA, Selected_family=NA, Selected_order=NA, Selected_class=NA, Synonyms=NA))}</span></span>
+<span id="cb28-279"><a href="#cb28-279" aria-hidden="true" tabindex="-1"></a><span class="in">  </span></span>
+<span id="cb28-280"><a href="#cb28-280" aria-hidden="true" tabindex="-1"></a><span class="in">  # for cases where the lookup does not find a phylum within the specified range</span></span>
+<span id="cb28-281"><a href="#cb28-281" aria-hidden="true" tabindex="-1"></a><span class="in">  if(all(! syns$phylum %in% phyla)){</span></span>
+<span id="cb28-282"><a href="#cb28-282" aria-hidden="true" tabindex="-1"></a><span class="in">    fam1 = syns$family[ !is.na(syns$family) &amp; !is.na(syns$phylum) ]</span></span>
+<span id="cb28-283"><a href="#cb28-283" aria-hidden="true" tabindex="-1"></a><span class="in">    order1 = syns$order[ !is.na(syns$family) &amp; !is.na(syns$phylum) ]</span></span>
+<span id="cb28-284"><a href="#cb28-284" aria-hidden="true" tabindex="-1"></a><span class="in">    class1 = syns$class[ !is.na(syns$family) &amp; !is.na(syns$phylum) ]</span></span>
+<span id="cb28-285"><a href="#cb28-285" aria-hidden="true" tabindex="-1"></a><span class="in">    datfam = data.frame(fam1=fam1, order=1:length(fam1), order1=order1, class1=class1)</span></span>
+<span id="cb28-286"><a href="#cb28-286" aria-hidden="true" tabindex="-1"></a><span class="in">    # select highest frequency fam/class/order combo</span></span>
+<span id="cb28-287"><a href="#cb28-287" aria-hidden="true" tabindex="-1"></a><span class="in">    fam2 = as.data.frame( table(datfam[ , c(1,3,4)]) )</span></span>
+<span id="cb28-288"><a href="#cb28-288" aria-hidden="true" tabindex="-1"></a><span class="in">    family2 = as.vector(fam2[ fam2$Freq==max(fam2$Freq, na.rm=TRUE), "fam1"] ) </span></span>
+<span id="cb28-289"><a href="#cb28-289" aria-hidden="true" tabindex="-1"></a><span class="in">    order2 = as.vector(fam2[ fam2$Freq==max(fam2$Freq, na.rm=TRUE), "order1"] )</span></span>
+<span id="cb28-290"><a href="#cb28-290" aria-hidden="true" tabindex="-1"></a><span class="in">    class2 = as.vector(fam2[ fam2$Freq==max(fam2$Freq, na.rm=TRUE), "class1"] )</span></span>
+<span id="cb28-291"><a href="#cb28-291" aria-hidden="true" tabindex="-1"></a><span class="in">    if(length(fam2) &gt; 1){</span></span>
+<span id="cb28-292"><a href="#cb28-292" aria-hidden="true" tabindex="-1"></a><span class="in">      datfam2 = datfam[datfam$fam1 %in% family2, ]</span></span>
+<span id="cb28-293"><a href="#cb28-293" aria-hidden="true" tabindex="-1"></a><span class="in">      family2 = as.vector(datfam2[datfam2$order == min(datfam2$order, na.rm=TRUE), "fam1"])</span></span>
+<span id="cb28-294"><a href="#cb28-294" aria-hidden="true" tabindex="-1"></a><span class="in">      order2 = as.vector(datfam2[datfam2$order == min(datfam2$order, na.rm=TRUE), "order1"])</span></span>
+<span id="cb28-295"><a href="#cb28-295" aria-hidden="true" tabindex="-1"></a><span class="in">      class2 = as.vector(datfam2[datfam2$order == min(datfam2$order, na.rm=TRUE), "class1"])</span></span>
+<span id="cb28-296"><a href="#cb28-296" aria-hidden="true" tabindex="-1"></a><span class="in">    }</span></span>
+<span id="cb28-297"><a href="#cb28-297" aria-hidden="true" tabindex="-1"></a><span class="in">  } else {  # for everything else</span></span>
+<span id="cb28-298"><a href="#cb28-298" aria-hidden="true" tabindex="-1"></a><span class="in">    fam1 = syns$family[ !is.na(syns$family) &amp; !is.na(syns$phylum) &amp; (syns$phylum %in% phyla) ]</span></span>
+<span id="cb28-299"><a href="#cb28-299" aria-hidden="true" tabindex="-1"></a><span class="in">    order1 = syns$order[ !is.na(syns$family) &amp; !is.na(syns$phylum) &amp; (syns$phylum %in% phyla) ]</span></span>
+<span id="cb28-300"><a href="#cb28-300" aria-hidden="true" tabindex="-1"></a><span class="in">    class1 = syns$class[ !is.na(syns$family) &amp; !is.na(syns$phylum) &amp; (syns$phylum %in% phyla) ]</span></span>
+<span id="cb28-301"><a href="#cb28-301" aria-hidden="true" tabindex="-1"></a><span class="in">    datfam = data.frame(fam1=fam1, order=1:length(fam1), order1 = order1, class1=class1)</span></span>
+<span id="cb28-302"><a href="#cb28-302" aria-hidden="true" tabindex="-1"></a><span class="in">    # select highest frequency fam/class/order combo</span></span>
+<span id="cb28-303"><a href="#cb28-303" aria-hidden="true" tabindex="-1"></a><span class="in">    fam2 = as.data.frame( table(datfam[ , c(1,3,4)]) )</span></span>
+<span id="cb28-304"><a href="#cb28-304" aria-hidden="true" tabindex="-1"></a><span class="in">    family2 = as.vector(fam2[ fam2$Freq==max(fam2$Freq, na.rm=TRUE), "fam1"] ) </span></span>
+<span id="cb28-305"><a href="#cb28-305" aria-hidden="true" tabindex="-1"></a><span class="in">    order2 = as.vector(fam2[ fam2$Freq==max(fam2$Freq, na.rm=TRUE), "order1"] )</span></span>
+<span id="cb28-306"><a href="#cb28-306" aria-hidden="true" tabindex="-1"></a><span class="in">    class2 = as.vector(fam2[ fam2$Freq==max(fam2$Freq, na.rm=TRUE), "class1"] )</span></span>
+<span id="cb28-307"><a href="#cb28-307" aria-hidden="true" tabindex="-1"></a><span class="in">    # select highest in list if more than one max</span></span>
+<span id="cb28-308"><a href="#cb28-308" aria-hidden="true" tabindex="-1"></a><span class="in">    if(length(family2) &gt; 1){</span></span>
+<span id="cb28-309"><a href="#cb28-309" aria-hidden="true" tabindex="-1"></a><span class="in">      datfam2 = datfam[datfam$fam1 %in% family2, ]</span></span>
+<span id="cb28-310"><a href="#cb28-310" aria-hidden="true" tabindex="-1"></a><span class="in">      family2 = as.vector(datfam2[datfam2$order == min(datfam2$order, na.rm=TRUE), "fam1"])</span></span>
+<span id="cb28-311"><a href="#cb28-311" aria-hidden="true" tabindex="-1"></a><span class="in">      order2 = as.vector(datfam2[datfam2$order == min(datfam2$order, na.rm</span></span>
+<span id="cb28-312"><a href="#cb28-312" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-313"><a href="#cb28-313" aria-hidden="true" tabindex="-1"></a><span class="in">=TRUE), "order1"])</span></span>
+<span id="cb28-314"><a href="#cb28-314" aria-hidden="true" tabindex="-1"></a><span class="in">      class2 = as.vector(datfam2[datfam2$order == min(datfam2$order, na.rm=TRUE), "class1"])</span></span>
+<span id="cb28-315"><a href="#cb28-315" aria-hidden="true" tabindex="-1"></a><span class="in">    } </span></span>
+<span id="cb28-316"><a href="#cb28-316" aria-hidden="true" tabindex="-1"></a><span class="in">  }</span></span>
+<span id="cb28-317"><a href="#cb28-317" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-318"><a href="#cb28-318" aria-hidden="true" tabindex="-1"></a><span class="in">  # (4) search for species synonyms in ITIS</span></span>
+<span id="cb28-319"><a href="#cb28-319" aria-hidden="true" tabindex="-1"></a><span class="in">  syns = tryCatch(suppressMessages(synonyms(taxa, db='itis')), error=function(e) e)</span></span>
+<span id="cb28-320"><a href="#cb28-320" aria-hidden="true" tabindex="-1"></a><span class="in">  if(class(syns)[1] == 'simpleError'){ return(data.frame(Original=taxname, Submitted=taxa, Accepted_name="failed", Selected_family=family2, Selected_order=order2, Selected_class=class2, Synonyms="failed"))}</span></span>
+<span id="cb28-321"><a href="#cb28-321" aria-hidden="true" tabindex="-1"></a><span class="in">  syns = as.data.frame(syns[[1]])</span></span>
+<span id="cb28-322"><a href="#cb28-322" aria-hidden="true" tabindex="-1"></a><span class="in">  </span></span>
+<span id="cb28-323"><a href="#cb28-323" aria-hidden="true" tabindex="-1"></a><span class="in">  # get info</span></span>
+<span id="cb28-324"><a href="#cb28-324" aria-hidden="true" tabindex="-1"></a><span class="in">  original = taxa</span></span>
+<span id="cb28-325"><a href="#cb28-325" aria-hidden="true" tabindex="-1"></a><span class="in">  accepted_name = taxa # save accepted name as original searched name</span></span>
+<span id="cb28-326"><a href="#cb28-326" aria-hidden="true" tabindex="-1"></a><span class="in">  if("acc_name" %in% names(syns)){ accepted_name = syns$acc_name } # unless search shows that this is not the accepted name</span></span>
+<span id="cb28-327"><a href="#cb28-327" aria-hidden="true" tabindex="-1"></a><span class="in">   if("syn_name" %in% names(syns)){ synonyms = unique(syns$syn_name) </span></span>
+<span id="cb28-328"><a href="#cb28-328" aria-hidden="true" tabindex="-1"></a><span class="in">  } else{ synonyms = NA }</span></span>
+<span id="cb28-329"><a href="#cb28-329" aria-hidden="true" tabindex="-1"></a><span class="in">  </span></span>
+<span id="cb28-330"><a href="#cb28-330" aria-hidden="true" tabindex="-1"></a><span class="in">  # combine into list and add synonyms </span></span>
+<span id="cb28-331"><a href="#cb28-331" aria-hidden="true" tabindex="-1"></a><span class="in">  result = data.frame(Original=taxname, </span></span>
+<span id="cb28-332"><a href="#cb28-332" aria-hidden="true" tabindex="-1"></a><span class="in">                      Submitted=taxa,</span></span>
+<span id="cb28-333"><a href="#cb28-333" aria-hidden="true" tabindex="-1"></a><span class="in">                      Accepted_name=accepted_name,</span></span>
+<span id="cb28-334"><a href="#cb28-334" aria-hidden="true" tabindex="-1"></a><span class="in">                      Selected_family=family2,</span></span>
+<span id="cb28-335"><a href="#cb28-335" aria-hidden="true" tabindex="-1"></a><span class="in">                      Selected_order=order2,</span></span>
+<span id="cb28-336"><a href="#cb28-336" aria-hidden="true" tabindex="-1"></a><span class="in">                      Selected_class=class2)</span></span>
+<span id="cb28-337"><a href="#cb28-337" aria-hidden="true" tabindex="-1"></a><span class="in">  result = do.call("rbind", replicate(length(synonyms), result[1, ], simplify = FALSE))</span></span>
+<span id="cb28-338"><a href="#cb28-338" aria-hidden="true" tabindex="-1"></a><span class="in">  result$Synonyms = synonyms</span></span>
+<span id="cb28-339"><a href="#cb28-339" aria-hidden="true" tabindex="-1"></a><span class="in">  return(result)</span></span>
+<span id="cb28-340"><a href="#cb28-340" aria-hidden="true" tabindex="-1"></a><span class="in">}</span></span>
+<span id="cb28-341"><a href="#cb28-341" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-342"><a href="#cb28-342" aria-hidden="true" tabindex="-1"></a><span class="in"># nest function within a tryCatch call in case of any errors</span></span>
+<span id="cb28-343"><a href="#cb28-343" aria-hidden="true" tabindex="-1"></a><span class="in">findSyns3 = function(x){</span></span>
+<span id="cb28-344"><a href="#cb28-344" aria-hidden="true" tabindex="-1"></a><span class="in">  result = tryCatch(findSyns2(x), error=function(e) NULL)</span></span>
+<span id="cb28-345"><a href="#cb28-345" aria-hidden="true" tabindex="-1"></a><span class="in">  return(result)</span></span>
+<span id="cb28-346"><a href="#cb28-346" aria-hidden="true" tabindex="-1"></a><span class="in">}</span></span>
+<span id="cb28-347"><a href="#cb28-347" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
 <span id="cb28-348"><a href="#cb28-348" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb28-349"><a href="#cb28-349" aria-hidden="true" tabindex="-1"></a>Let's see some examples from the camtrapR vignettes. We're not going to download the package because the CRAN version of 'camtrapR' is not compatible with the CRAN version of 'taxize'.</span>
+<span id="cb28-349"><a href="#cb28-349" aria-hidden="true" tabindex="-1"></a>Earlier, we saw that there's a name synonymous with *Ramphocelus sanguinolentus*. What would the function by Gibb et al. do with that?</span>
 <span id="cb28-350"><a href="#cb28-350" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb28-351"><a href="#cb28-351" aria-hidden="true" tabindex="-1"></a>&lt;p align="center"&gt;</span>
-<span id="cb28-352"><a href="#cb28-352" aria-hidden="true" tabindex="-1"></a><span class="al">![](./images/facepalm.jpg)</span>{width=50%}</span>
-<span id="cb28-353"><a href="#cb28-353" aria-hidden="true" tabindex="-1"></a>&lt;/p&gt;</span>
-<span id="cb28-354"><a href="#cb28-354" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb28-355"><a href="#cb28-355" aria-hidden="true" tabindex="-1"></a>Let's rewrite the current function updating the arguments of 'taxize'.</span>
-<span id="cb28-358"><a href="#cb28-358" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb28-359"><a href="#cb28-359" aria-hidden="true" tabindex="-1"></a>checkSpeciesNames <span class="ot">&lt;-</span> <span class="cf">function</span> (speciesNames, searchtype, <span class="at">accepted =</span> <span class="cn">TRUE</span>, <span class="at">ask =</span> <span class="cn">TRUE</span>) </span>
-<span id="cb28-360"><a href="#cb28-360" aria-hidden="true" tabindex="-1"></a>{</span>
-<span id="cb28-361"><a href="#cb28-361" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> (<span class="sc">!</span><span class="fu">requireNamespace</span>(<span class="st">"taxize"</span>, <span class="at">quietly =</span> <span class="cn">TRUE</span>)) {</span>
-<span id="cb28-362"><a href="#cb28-362" aria-hidden="true" tabindex="-1"></a>    <span class="fu">stop</span>(<span class="st">"Please install the package taxize to run this function"</span>)</span>
-<span id="cb28-363"><a href="#cb28-363" aria-hidden="true" tabindex="-1"></a>  }</span>
-<span id="cb28-364"><a href="#cb28-364" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> (<span class="sc">!</span><span class="fu">requireNamespace</span>(<span class="st">"ritis"</span>, <span class="at">quietly =</span> <span class="cn">TRUE</span>)) {</span>
-<span id="cb28-365"><a href="#cb28-365" aria-hidden="true" tabindex="-1"></a>    <span class="fu">stop</span>(<span class="st">"Please install the package ritis to run this function"</span>)</span>
-<span id="cb28-366"><a href="#cb28-366" aria-hidden="true" tabindex="-1"></a>  }</span>
-<span id="cb28-367"><a href="#cb28-367" aria-hidden="true" tabindex="-1"></a>  searchtype <span class="ot">&lt;-</span> <span class="fu">match.arg</span>(searchtype, <span class="at">choices =</span> <span class="fu">c</span>(<span class="st">"scientific"</span>, </span>
-<span id="cb28-368"><a href="#cb28-368" aria-hidden="true" tabindex="-1"></a>    <span class="st">"common"</span>))</span>
-<span id="cb28-369"><a href="#cb28-369" aria-hidden="true" tabindex="-1"></a>  <span class="fu">stopifnot</span>(<span class="fu">is.logical</span>(accepted))</span>
-<span id="cb28-370"><a href="#cb28-370" aria-hidden="true" tabindex="-1"></a>  <span class="fu">stopifnot</span>(<span class="fu">is.character</span>(speciesNames) <span class="sc">|</span> <span class="fu">is.factor</span>(speciesNames))</span>
-<span id="cb28-371"><a href="#cb28-371" aria-hidden="true" tabindex="-1"></a>  speciesNames <span class="ot">&lt;-</span> <span class="fu">unique</span>(<span class="fu">as.character</span>(speciesNames))</span>
-<span id="cb28-372"><a href="#cb28-372" aria-hidden="true" tabindex="-1"></a>  file.sep <span class="ot">&lt;-</span> .Platform<span class="sc">$</span>file.sep</span>
-<span id="cb28-373"><a href="#cb28-373" aria-hidden="true" tabindex="-1"></a>  tsns <span class="ot">&lt;-</span> <span class="fu">try</span>(taxize<span class="sc">::</span><span class="fu">get_tsn</span>(<span class="at">sci_com =</span> speciesNames, <span class="at">searchtype =</span> searchtype, </span>
-<span id="cb28-374"><a href="#cb28-374" aria-hidden="true" tabindex="-1"></a>    <span class="at">accepted =</span> accepted, <span class="at">ask =</span> ask, <span class="at">messages =</span> <span class="cn">FALSE</span>))</span>
-<span id="cb28-375"><a href="#cb28-375" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> (<span class="fu">inherits</span>(tsns, <span class="st">"try-error"</span>)) {</span>
-<span id="cb28-376"><a href="#cb28-376" aria-hidden="true" tabindex="-1"></a>    <span class="fu">message</span>(<span class="fu">paste</span>(<span class="st">"error in get_tsn. Exiting without results:</span><span class="sc">\n</span><span class="st">"</span>, </span>
-<span id="cb28-377"><a href="#cb28-377" aria-hidden="true" tabindex="-1"></a>      tsns, <span class="at">sep =</span> <span class="st">""</span>))</span>
-<span id="cb28-378"><a href="#cb28-378" aria-hidden="true" tabindex="-1"></a>    <span class="fu">return</span>(<span class="fu">invisible</span>(<span class="cn">NULL</span>))</span>
-<span id="cb28-379"><a href="#cb28-379" aria-hidden="true" tabindex="-1"></a>  }</span>
-<span id="cb28-380"><a href="#cb28-380" aria-hidden="true" tabindex="-1"></a>  tsns <span class="ot">&lt;-</span> taxize<span class="sc">::</span><span class="fu">as.tsn</span>(<span class="fu">unique</span>(tsns), <span class="at">check =</span> <span class="cn">FALSE</span>)</span>
-<span id="cb28-381"><a href="#cb28-381" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> (<span class="fu">any</span>(<span class="fu">is.na</span>(tsns))) {</span>
-<span id="cb28-382"><a href="#cb28-382" aria-hidden="true" tabindex="-1"></a>    not.matched <span class="ot">&lt;-</span> <span class="fu">which</span>(<span class="fu">is.na</span>(tsns))</span>
-<span id="cb28-383"><a href="#cb28-383" aria-hidden="true" tabindex="-1"></a>    <span class="fu">warning</span>(<span class="fu">paste</span>(<span class="st">"found no matches for"</span>, <span class="fu">length</span>(not.matched), </span>
-<span id="cb28-384"><a href="#cb28-384" aria-hidden="true" tabindex="-1"></a>      <span class="st">"name(s):</span><span class="sc">\n</span><span class="st">"</span>, <span class="fu">paste</span>(speciesNames[not.matched], <span class="at">collapse =</span> <span class="st">", "</span>)), </span>
-<span id="cb28-385"><a href="#cb28-385" aria-hidden="true" tabindex="-1"></a>      <span class="at">immediate. =</span> <span class="cn">TRUE</span>, <span class="at">call. =</span> <span class="cn">FALSE</span>)</span>
-<span id="cb28-386"><a href="#cb28-386" aria-hidden="true" tabindex="-1"></a>    tsns_worked <span class="ot">&lt;-</span> taxize<span class="sc">::</span><span class="fu">as.tsn</span>(tsns[<span class="sc">-</span>not.matched], <span class="at">check =</span> <span class="cn">FALSE</span>)</span>
-<span id="cb28-387"><a href="#cb28-387" aria-hidden="true" tabindex="-1"></a>  } <span class="cf">else</span> {</span>
-<span id="cb28-388"><a href="#cb28-388" aria-hidden="true" tabindex="-1"></a>    tsns_worked <span class="ot">&lt;-</span> tsns</span>
-<span id="cb28-389"><a href="#cb28-389" aria-hidden="true" tabindex="-1"></a>  }</span>
-<span id="cb28-390"><a href="#cb28-390" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb28-391"><a href="#cb28-391" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> (<span class="fu">length</span>(tsns_worked) <span class="sc">&gt;=</span> <span class="dv">1</span>) {</span>
-<span id="cb28-392"><a href="#cb28-392" aria-hidden="true" tabindex="-1"></a>    scientific <span class="ot">&lt;-</span> common <span class="ot">&lt;-</span> author <span class="ot">&lt;-</span> rankname <span class="ot">&lt;-</span> taxon_status <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="fu">matrix</span>(<span class="cn">NA</span>, </span>
-<span id="cb28-393"><a href="#cb28-393" aria-hidden="true" tabindex="-1"></a>      <span class="at">nrow =</span> <span class="fu">length</span>(tsns_worked), <span class="at">ncol =</span> <span class="dv">2</span>), <span class="at">stringsAsFactors =</span> <span class="cn">FALSE</span>)</span>
-<span id="cb28-394"><a href="#cb28-394" aria-hidden="true" tabindex="-1"></a>    <span class="fu">colnames</span>(scientific) <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"tsn"</span>, <span class="st">"combinedname"</span>)</span>
-<span id="cb28-395"><a href="#cb28-395" aria-hidden="true" tabindex="-1"></a>    <span class="fu">colnames</span>(common) <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"tsn"</span>, <span class="st">"commonName"</span>)</span>
-<span id="cb28-396"><a href="#cb28-396" aria-hidden="true" tabindex="-1"></a>    <span class="fu">colnames</span>(author) <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"tsn"</span>, <span class="st">"authorship"</span>)</span>
-<span id="cb28-397"><a href="#cb28-397" aria-hidden="true" tabindex="-1"></a>    <span class="fu">colnames</span>(rankname) <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"tsn"</span>, <span class="st">"rankname"</span>)</span>
-<span id="cb28-398"><a href="#cb28-398" aria-hidden="true" tabindex="-1"></a>    <span class="fu">colnames</span>(taxon_status) <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"tsn"</span>, <span class="st">"taxonUsageRating"</span>)</span>
-<span id="cb28-399"><a href="#cb28-399" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb28-400"><a href="#cb28-400" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> (i <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span><span class="fu">length</span>(tsns_worked)) {</span>
-<span id="cb28-401"><a href="#cb28-401" aria-hidden="true" tabindex="-1"></a>      </span>
-<span id="cb28-402"><a href="#cb28-402" aria-hidden="true" tabindex="-1"></a>      scientific_tmp <span class="ot">&lt;-</span> ritis<span class="sc">::</span><span class="fu">scientific_name</span>(tsns_worked[i])</span>
-<span id="cb28-403"><a href="#cb28-403" aria-hidden="true" tabindex="-1"></a>      common_tmp <span class="ot">&lt;-</span> ritis<span class="sc">::</span><span class="fu">common_names</span>(tsns_worked[i])</span>
-<span id="cb28-404"><a href="#cb28-404" aria-hidden="true" tabindex="-1"></a>      author_tmp <span class="ot">&lt;-</span> ritis<span class="sc">::</span><span class="fu">taxon_authorship</span>(tsns_worked[i])</span>
-<span id="cb28-405"><a href="#cb28-405" aria-hidden="true" tabindex="-1"></a>      rankname_tmp <span class="ot">&lt;-</span> ritis<span class="sc">::</span><span class="fu">rank_name</span>(tsns_worked[i])</span>
-<span id="cb28-406"><a href="#cb28-406" aria-hidden="true" tabindex="-1"></a>      <span class="cf">if</span> (<span class="st">"tsn"</span> <span class="sc">%in%</span> <span class="fu">colnames</span>(scientific_tmp)) {</span>
-<span id="cb28-407"><a href="#cb28-407" aria-hidden="true" tabindex="-1"></a>        scientific[i, ] <span class="ot">&lt;-</span> scientific_tmp[<span class="fu">c</span>(<span class="st">"tsn"</span>, <span class="st">"combinedname"</span>)]</span>
-<span id="cb28-408"><a href="#cb28-408" aria-hidden="true" tabindex="-1"></a>      }</span>
-<span id="cb28-409"><a href="#cb28-409" aria-hidden="true" tabindex="-1"></a>      <span class="cf">if</span> (<span class="st">"tsn"</span> <span class="sc">%in%</span> <span class="fu">colnames</span>(common_tmp)) {</span>
-<span id="cb28-410"><a href="#cb28-410" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> (<span class="fu">length</span>(<span class="fu">unique</span>(common_tmp<span class="sc">$</span>tsn)) <span class="sc">&gt;</span> <span class="dv">1</span>) {</span>
-<span id="cb28-411"><a href="#cb28-411" aria-hidden="true" tabindex="-1"></a>          common2 <span class="ot">&lt;-</span> <span class="fu">tapply</span>(common_tmp<span class="sc">$</span>commonName, <span class="at">INDEX =</span> common_tmp<span class="sc">$</span>tsn, </span>
-<span id="cb28-412"><a href="#cb28-412" aria-hidden="true" tabindex="-1"></a>            <span class="at">FUN =</span> paste, <span class="at">collapse =</span> file.sep)</span>
-<span id="cb28-413"><a href="#cb28-413" aria-hidden="true" tabindex="-1"></a>          common_tmp <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">commonName =</span> common2, </span>
-<span id="cb28-414"><a href="#cb28-414" aria-hidden="true" tabindex="-1"></a>            <span class="at">tsn =</span> <span class="fu">rownames</span>(common2), <span class="at">stringsAsFactors =</span> <span class="cn">FALSE</span>)</span>
-<span id="cb28-415"><a href="#cb28-415" aria-hidden="true" tabindex="-1"></a>        }</span>
-<span id="cb28-416"><a href="#cb28-416" aria-hidden="true" tabindex="-1"></a>        common[i, ] <span class="ot">&lt;-</span> common_tmp[, <span class="fu">c</span>(<span class="st">"tsn"</span>, <span class="st">"commonName"</span>)]</span>
-<span id="cb28-417"><a href="#cb28-417" aria-hidden="true" tabindex="-1"></a>      }</span>
-<span id="cb28-418"><a href="#cb28-418" aria-hidden="true" tabindex="-1"></a>      <span class="cf">if</span> (<span class="st">"tsn"</span> <span class="sc">%in%</span> <span class="fu">colnames</span>(author_tmp)) {</span>
-<span id="cb28-419"><a href="#cb28-419" aria-hidden="true" tabindex="-1"></a>        author[i, ] <span class="ot">&lt;-</span> author_tmp[<span class="fu">c</span>(<span class="st">"tsn"</span>, <span class="st">"authorship"</span>)]</span>
-<span id="cb28-420"><a href="#cb28-420" aria-hidden="true" tabindex="-1"></a>      }</span>
-<span id="cb28-421"><a href="#cb28-421" aria-hidden="true" tabindex="-1"></a>      <span class="cf">if</span> (<span class="st">"tsn"</span> <span class="sc">%in%</span> <span class="fu">colnames</span>(rankname_tmp)) {</span>
-<span id="cb28-422"><a href="#cb28-422" aria-hidden="true" tabindex="-1"></a>        rankname[i, ] <span class="ot">&lt;-</span> rankname_tmp[<span class="fu">c</span>(<span class="st">"tsn"</span>, <span class="st">"rankname"</span>)]</span>
-<span id="cb28-423"><a href="#cb28-423" aria-hidden="true" tabindex="-1"></a>      }</span>
-<span id="cb28-424"><a href="#cb28-424" aria-hidden="true" tabindex="-1"></a>      <span class="cf">if</span> (accepted <span class="sc">==</span> <span class="cn">FALSE</span>) {</span>
-<span id="cb28-425"><a href="#cb28-425" aria-hidden="true" tabindex="-1"></a>        taxon_status_tmp <span class="ot">&lt;-</span> ritis<span class="sc">::</span><span class="fu">core_metadata</span>(tsns_worked[i])</span>
-<span id="cb28-426"><a href="#cb28-426" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> (<span class="st">"tsn"</span> <span class="sc">%in%</span> <span class="fu">colnames</span>(taxon_status_tmp)) {</span>
-<span id="cb28-427"><a href="#cb28-427" aria-hidden="true" tabindex="-1"></a>          taxon_status[i, ] <span class="ot">&lt;-</span> taxon_status_tmp[<span class="fu">c</span>(<span class="st">"tsn"</span>, </span>
-<span id="cb28-428"><a href="#cb28-428" aria-hidden="true" tabindex="-1"></a>            <span class="st">"taxonUsageRating"</span>)]</span>
-<span id="cb28-429"><a href="#cb28-429" aria-hidden="true" tabindex="-1"></a>        }</span>
-<span id="cb28-430"><a href="#cb28-430" aria-hidden="true" tabindex="-1"></a>      }</span>
-<span id="cb28-431"><a href="#cb28-431" aria-hidden="true" tabindex="-1"></a>    }</span>
-<span id="cb28-432"><a href="#cb28-432" aria-hidden="true" tabindex="-1"></a>    dat.out <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">user_name =</span> speciesNames, <span class="at">tsn =</span> <span class="fu">as.numeric</span>(tsns))</span>
-<span id="cb28-433"><a href="#cb28-433" aria-hidden="true" tabindex="-1"></a>    dat.out <span class="ot">&lt;-</span> <span class="fu">merge</span>(<span class="at">x =</span> dat.out, <span class="at">y =</span> scientific, <span class="at">by =</span> <span class="st">"tsn"</span>, </span>
-<span id="cb28-434"><a href="#cb28-434" aria-hidden="true" tabindex="-1"></a>      <span class="at">all.x =</span> <span class="cn">TRUE</span>, <span class="at">sort =</span> <span class="cn">FALSE</span>)</span>
-<span id="cb28-435"><a href="#cb28-435" aria-hidden="true" tabindex="-1"></a>    dat.out <span class="ot">&lt;-</span> <span class="fu">merge</span>(<span class="at">x =</span> dat.out, <span class="at">y =</span> common, <span class="at">by =</span> <span class="st">"tsn"</span>, </span>
-<span id="cb28-436"><a href="#cb28-436" aria-hidden="true" tabindex="-1"></a>      <span class="at">all.x =</span> <span class="cn">TRUE</span>, <span class="at">sort =</span> <span class="cn">FALSE</span>)</span>
-<span id="cb28-437"><a href="#cb28-437" aria-hidden="true" tabindex="-1"></a>    dat.out <span class="ot">&lt;-</span> <span class="fu">merge</span>(<span class="at">x =</span> dat.out, <span class="at">y =</span> author, <span class="at">by =</span> <span class="st">"tsn"</span>, </span>
-<span id="cb28-438"><a href="#cb28-438" aria-hidden="true" tabindex="-1"></a>      <span class="at">all.x =</span> <span class="cn">TRUE</span>, <span class="at">sort =</span> <span class="cn">FALSE</span>)</span>
-<span id="cb28-439"><a href="#cb28-439" aria-hidden="true" tabindex="-1"></a>    dat.out <span class="ot">&lt;-</span> <span class="fu">merge</span>(<span class="at">x =</span> dat.out, <span class="at">y =</span> rankname, <span class="at">by =</span> <span class="st">"tsn"</span>, </span>
-<span id="cb28-440"><a href="#cb28-440" aria-hidden="true" tabindex="-1"></a>      <span class="at">all.x =</span> <span class="cn">TRUE</span>, <span class="at">sort =</span> <span class="cn">FALSE</span>)</span>
-<span id="cb28-441"><a href="#cb28-441" aria-hidden="true" tabindex="-1"></a>    dat.out<span class="sc">$</span>itis_url <span class="ot">&lt;-</span> <span class="cn">NA</span></span>
-<span id="cb28-442"><a href="#cb28-442" aria-hidden="true" tabindex="-1"></a>    dat.out<span class="sc">$</span>itis_url[<span class="fu">match</span>(tsns_worked, dat.out<span class="sc">$</span>tsn)] <span class="ot">&lt;-</span> <span class="fu">attributes</span>(tsns_worked)<span class="sc">$</span>uri</span>
-<span id="cb28-443"><a href="#cb28-443" aria-hidden="true" tabindex="-1"></a>    <span class="fu">colnames</span>(dat.out)[<span class="fu">colnames</span>(dat.out) <span class="sc">==</span> <span class="st">"combinedname"</span>] <span class="ot">&lt;-</span> <span class="st">"scientificName"</span></span>
-<span id="cb28-444"><a href="#cb28-444" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> (accepted <span class="sc">==</span> <span class="cn">FALSE</span>) {</span>
-<span id="cb28-445"><a href="#cb28-445" aria-hidden="true" tabindex="-1"></a>      dat.out <span class="ot">&lt;-</span> <span class="fu">merge</span>(<span class="at">x =</span> dat.out, <span class="at">y =</span> taxon_status, </span>
-<span id="cb28-446"><a href="#cb28-446" aria-hidden="true" tabindex="-1"></a>        <span class="at">by =</span> <span class="st">"tsn"</span>, <span class="at">all.x =</span> <span class="cn">TRUE</span>, <span class="at">sort =</span> <span class="cn">FALSE</span>)</span>
-<span id="cb28-447"><a href="#cb28-447" aria-hidden="true" tabindex="-1"></a>    }</span>
-<span id="cb28-448"><a href="#cb28-448" aria-hidden="true" tabindex="-1"></a>    <span class="cf">else</span> {</span>
-<span id="cb28-449"><a href="#cb28-449" aria-hidden="true" tabindex="-1"></a>      dat.out<span class="sc">$</span>taxon_status[<span class="sc">!</span><span class="fu">is.na</span>(dat.out<span class="sc">$</span>tsn)] <span class="ot">&lt;-</span> <span class="st">"valid"</span></span>
-<span id="cb28-450"><a href="#cb28-450" aria-hidden="true" tabindex="-1"></a>    }</span>
-<span id="cb28-451"><a href="#cb28-451" aria-hidden="true" tabindex="-1"></a>    <span class="fu">return</span>(dat.out)</span>
-<span id="cb28-452"><a href="#cb28-452" aria-hidden="true" tabindex="-1"></a>  } <span class="cf">else</span> {</span>
-<span id="cb28-453"><a href="#cb28-453" aria-hidden="true" tabindex="-1"></a>    <span class="fu">stop</span>(<span class="st">"found no TSNs for speciesNames"</span>, <span class="at">call. =</span> <span class="cn">FALSE</span>)</span>
-<span id="cb28-454"><a href="#cb28-454" aria-hidden="true" tabindex="-1"></a>  }</span>
-<span id="cb28-455"><a href="#cb28-455" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb28-456"><a href="#cb28-456" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb28-457"><a href="#cb28-457" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb28-458"><a href="#cb28-458" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb28-459"><a href="#cb28-459" aria-hidden="true" tabindex="-1"></a>Now, what can we do?</span>
-<span id="cb28-460"><a href="#cb28-460" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb28-461"><a href="#cb28-461" aria-hidden="true" tabindex="-1"></a><span class="fu">### Search information by common names</span></span>
-<span id="cb28-464"><a href="#cb28-464" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb28-465"><a href="#cb28-465" aria-hidden="true" tabindex="-1"></a>checkNames1 <span class="ot">&lt;-</span> <span class="fu">checkSpeciesNames</span>(<span class="at">speciesNames =</span> <span class="fu">c</span>(<span class="st">"Bearded Pig"</span>, <span class="st">"Malayan Civet"</span>),</span>
-<span id="cb28-466"><a href="#cb28-466" aria-hidden="true" tabindex="-1"></a>                                  <span class="at">searchtype   =</span> <span class="st">"common"</span>)</span>
-<span id="cb28-467"><a href="#cb28-467" aria-hidden="true" tabindex="-1"></a>checkNames1<span class="sc">%&gt;%</span></span>
-<span id="cb28-468"><a href="#cb28-468" aria-hidden="true" tabindex="-1"></a>  <span class="fu">kbl</span>() <span class="sc">%&gt;%</span></span>
-<span id="cb28-469"><a href="#cb28-469" aria-hidden="true" tabindex="-1"></a>  <span class="fu">kable_minimal</span>()</span>
-<span id="cb28-470"><a href="#cb28-470" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb28-471"><a href="#cb28-471" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb28-472"><a href="#cb28-472" aria-hidden="true" tabindex="-1"></a><span class="fu">### Search information by scientific names (including subspecies)</span></span>
-<span id="cb28-475"><a href="#cb28-475" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb28-476"><a href="#cb28-476" aria-hidden="true" tabindex="-1"></a>checkNames2 <span class="ot">&lt;-</span> <span class="fu">checkSpeciesNames</span> (<span class="at">speciesNames =</span> <span class="st">"Viverra tangalunga tangalunga"</span>,</span>
-<span id="cb28-477"><a href="#cb28-477" aria-hidden="true" tabindex="-1"></a>                                  <span class="at">searchtype   =</span> <span class="st">"scientific"</span>)</span>
-<span id="cb28-478"><a href="#cb28-478" aria-hidden="true" tabindex="-1"></a>checkNames2<span class="sc">%&gt;%</span></span>
-<span id="cb28-479"><a href="#cb28-479" aria-hidden="true" tabindex="-1"></a>  <span class="fu">kbl</span>() <span class="sc">%&gt;%</span></span>
-<span id="cb28-480"><a href="#cb28-480" aria-hidden="true" tabindex="-1"></a>  <span class="fu">kable_minimal</span>()</span>
-<span id="cb28-481"><a href="#cb28-481" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb28-482"><a href="#cb28-482" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb28-483"><a href="#cb28-483" aria-hidden="true" tabindex="-1"></a><span class="fu">### Search information with an incorrect name</span></span>
-<span id="cb28-486"><a href="#cb28-486" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb28-487"><a href="#cb28-487" aria-hidden="true" tabindex="-1"></a>checkNames3 <span class="ot">&lt;-</span> <span class="fu">checkSpeciesNames</span> (<span class="at">speciesNames =</span> <span class="st">"Felis bengalensis"</span>,</span>
-<span id="cb28-488"><a href="#cb28-488" aria-hidden="true" tabindex="-1"></a>                                  <span class="at">searchtype   =</span> <span class="st">"scientific"</span>,</span>
-<span id="cb28-489"><a href="#cb28-489" aria-hidden="true" tabindex="-1"></a>                                  <span class="at">accepted     =</span> <span class="cn">FALSE</span>)</span>
-<span id="cb28-490"><a href="#cb28-490" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb28-491"><a href="#cb28-491" aria-hidden="true" tabindex="-1"></a>checkNames3</span>
-<span id="cb28-492"><a href="#cb28-492" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb28-493"><a href="#cb28-493" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb28-494"><a href="#cb28-494" aria-hidden="true" tabindex="-1"></a><span class="fu">### Search information with an ambiguous name</span></span>
-<span id="cb28-495"><a href="#cb28-495" aria-hidden="true" tabindex="-1"></a><span class="in">```{r, eval = FALSE}</span></span>
-<span id="cb28-496"><a href="#cb28-496" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb28-497"><a href="#cb28-497" aria-hidden="true" tabindex="-1"></a><span class="in">checkNames4 &lt;- checkSpeciesNames (speciesNames = "Chevrotain",</span></span>
-<span id="cb28-498"><a href="#cb28-498" aria-hidden="true" tabindex="-1"></a><span class="in">                                  searchtype   = "common")</span></span>
-<span id="cb28-499"><a href="#cb28-499" aria-hidden="true" tabindex="-1"></a><span class="in"># choose from the menu</span></span>
-<span id="cb28-500"><a href="#cb28-500" aria-hidden="true" tabindex="-1"></a><span class="in">checkNames4 </span></span>
-<span id="cb28-501"><a href="#cb28-501" aria-hidden="true" tabindex="-1"></a><span class="in">  </span></span>
-<span id="cb28-502"><a href="#cb28-502" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb28-353"><a href="#cb28-353" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb28-354"><a href="#cb28-354" aria-hidden="true" tabindex="-1"></a>Ram.syn1 <span class="ot">&lt;-</span> <span class="fu">findSyns3</span>(<span class="st">"Phlogothraupis sanguinolenta"</span>)</span>
+<span id="cb28-355"><a href="#cb28-355" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-356"><a href="#cb28-356" aria-hidden="true" tabindex="-1"></a>Ram.syn1</span>
+<span id="cb28-357"><a href="#cb28-357" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-358"><a href="#cb28-358" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb28-359"><a href="#cb28-359" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-360"><a href="#cb28-360" aria-hidden="true" tabindex="-1"></a>And with one that's misspelled?</span>
+<span id="cb28-361"><a href="#cb28-361" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-364"><a href="#cb28-364" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb28-365"><a href="#cb28-365" aria-hidden="true" tabindex="-1"></a>Ram.syn2 <span class="ot">&lt;-</span> <span class="fu">findSyns3</span>(Ram.names2[<span class="dv">2</span>])</span>
+<span id="cb28-366"><a href="#cb28-366" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-367"><a href="#cb28-367" aria-hidden="true" tabindex="-1"></a>Ram.syn2</span>
+<span id="cb28-368"><a href="#cb28-368" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-369"><a href="#cb28-369" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb28-370"><a href="#cb28-370" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-371"><a href="#cb28-371" aria-hidden="true" tabindex="-1"></a><span class="fu">## Camera trap data management</span></span>
+<span id="cb28-372"><a href="#cb28-372" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-373"><a href="#cb28-373" aria-hidden="true" tabindex="-1"></a>&lt;p align="center"&gt;</span>
+<span id="cb28-374"><a href="#cb28-374" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-375"><a href="#cb28-375" aria-hidden="true" tabindex="-1"></a><span class="al">![](./images/camtrapR.png)</span></span>
+<span id="cb28-376"><a href="#cb28-376" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-377"><a href="#cb28-377" aria-hidden="true" tabindex="-1"></a>&lt;p align="center"&gt;</span>
+<span id="cb28-378"><a href="#cb28-378" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-379"><a href="#cb28-379" aria-hidden="true" tabindex="-1"></a>&lt;font size="2"&gt; Article by <span class="co">[</span><span class="ot">Niedballa et al. 2016,Methods Ecol. Evol.</span><span class="co">](https://besjournals.onlinelibrary.wiley.com/doi/pdf/10.1111/2041-210X.12600)</span></span>
+<span id="cb28-380"><a href="#cb28-380" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-381"><a href="#cb28-381" aria-hidden="true" tabindex="-1"></a>&lt;/p&gt;</span>
+<span id="cb28-382"><a href="#cb28-382" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-383"><a href="#cb28-383" aria-hidden="true" tabindex="-1"></a>**From the methods section:**</span>
+<span id="cb28-384"><a href="#cb28-384" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-385"><a href="#cb28-385" aria-hidden="true" tabindex="-1"></a>*"Users are free to use any species names (or abbreviations or codes) they wish. If scientific or common species names are used, [the function checkSpeciesNames can check them against the ITIS taxonomic database (www.itis.gov) and returns their matching counterparts (utilizing the R package taxize (Chamberlain &amp; Szöcs 2013) internally)]{style="color: #32CD32;"}, making sure species names and spelling are standardized and taxonomically sound, and thus making it easier to combine data sets from different studies."*</span>
+<span id="cb28-386"><a href="#cb28-386" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-387"><a href="#cb28-387" aria-hidden="true" tabindex="-1"></a>Let's see some examples from the camtrapR vignettes. We're not going to download the package because the CRAN version of 'camtrapR' is not compatible with the CRAN version of 'taxize'.</span>
+<span id="cb28-388"><a href="#cb28-388" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-389"><a href="#cb28-389" aria-hidden="true" tabindex="-1"></a>&lt;p align="center"&gt;</span>
+<span id="cb28-390"><a href="#cb28-390" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-391"><a href="#cb28-391" aria-hidden="true" tabindex="-1"></a><span class="al">![](./images/facepalm.jpg)</span>{width="50%"}</span>
+<span id="cb28-392"><a href="#cb28-392" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-393"><a href="#cb28-393" aria-hidden="true" tabindex="-1"></a>&lt;/p&gt;</span>
+<span id="cb28-394"><a href="#cb28-394" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-395"><a href="#cb28-395" aria-hidden="true" tabindex="-1"></a>Let's rewrite the current function updating the arguments of 'taxize'.</span>
+<span id="cb28-396"><a href="#cb28-396" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-399"><a href="#cb28-399" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb28-400"><a href="#cb28-400" aria-hidden="true" tabindex="-1"></a>checkSpeciesNames <span class="ot">&lt;-</span> <span class="cf">function</span> (speciesNames, searchtype, <span class="at">accepted =</span> <span class="cn">TRUE</span>, <span class="at">ask =</span> <span class="cn">TRUE</span>) </span>
+<span id="cb28-401"><a href="#cb28-401" aria-hidden="true" tabindex="-1"></a>{</span>
+<span id="cb28-402"><a href="#cb28-402" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> (<span class="sc">!</span><span class="fu">requireNamespace</span>(<span class="st">"taxize"</span>, <span class="at">quietly =</span> <span class="cn">TRUE</span>)) {</span>
+<span id="cb28-403"><a href="#cb28-403" aria-hidden="true" tabindex="-1"></a>    <span class="fu">stop</span>(<span class="st">"Please install the package taxize to run this function"</span>)</span>
+<span id="cb28-404"><a href="#cb28-404" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb28-405"><a href="#cb28-405" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> (<span class="sc">!</span><span class="fu">requireNamespace</span>(<span class="st">"ritis"</span>, <span class="at">quietly =</span> <span class="cn">TRUE</span>)) {</span>
+<span id="cb28-406"><a href="#cb28-406" aria-hidden="true" tabindex="-1"></a>    <span class="fu">stop</span>(<span class="st">"Please install the package ritis to run this function"</span>)</span>
+<span id="cb28-407"><a href="#cb28-407" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb28-408"><a href="#cb28-408" aria-hidden="true" tabindex="-1"></a>  searchtype <span class="ot">&lt;-</span> <span class="fu">match.arg</span>(searchtype, <span class="at">choices =</span> <span class="fu">c</span>(<span class="st">"scientific"</span>, </span>
+<span id="cb28-409"><a href="#cb28-409" aria-hidden="true" tabindex="-1"></a>    <span class="st">"common"</span>))</span>
+<span id="cb28-410"><a href="#cb28-410" aria-hidden="true" tabindex="-1"></a>  <span class="fu">stopifnot</span>(<span class="fu">is.logical</span>(accepted))</span>
+<span id="cb28-411"><a href="#cb28-411" aria-hidden="true" tabindex="-1"></a>  <span class="fu">stopifnot</span>(<span class="fu">is.character</span>(speciesNames) <span class="sc">|</span> <span class="fu">is.factor</span>(speciesNames))</span>
+<span id="cb28-412"><a href="#cb28-412" aria-hidden="true" tabindex="-1"></a>  speciesNames <span class="ot">&lt;-</span> <span class="fu">unique</span>(<span class="fu">as.character</span>(speciesNames))</span>
+<span id="cb28-413"><a href="#cb28-413" aria-hidden="true" tabindex="-1"></a>  file.sep <span class="ot">&lt;-</span> .Platform<span class="sc">$</span>file.sep</span>
+<span id="cb28-414"><a href="#cb28-414" aria-hidden="true" tabindex="-1"></a>  tsns <span class="ot">&lt;-</span> <span class="fu">try</span>(taxize<span class="sc">::</span><span class="fu">get_tsn</span>(<span class="at">sci_com =</span> speciesNames, <span class="at">searchtype =</span> searchtype, </span>
+<span id="cb28-415"><a href="#cb28-415" aria-hidden="true" tabindex="-1"></a>    <span class="at">accepted =</span> accepted, <span class="at">ask =</span> ask, <span class="at">messages =</span> <span class="cn">FALSE</span>))</span>
+<span id="cb28-416"><a href="#cb28-416" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> (<span class="fu">inherits</span>(tsns, <span class="st">"try-error"</span>)) {</span>
+<span id="cb28-417"><a href="#cb28-417" aria-hidden="true" tabindex="-1"></a>    <span class="fu">message</span>(<span class="fu">paste</span>(<span class="st">"error in get_tsn. Exiting without results:</span><span class="sc">\n</span><span class="st">"</span>, </span>
+<span id="cb28-418"><a href="#cb28-418" aria-hidden="true" tabindex="-1"></a>      tsns, <span class="at">sep =</span> <span class="st">""</span>))</span>
+<span id="cb28-419"><a href="#cb28-419" aria-hidden="true" tabindex="-1"></a>    <span class="fu">return</span>(<span class="fu">invisible</span>(<span class="cn">NULL</span>))</span>
+<span id="cb28-420"><a href="#cb28-420" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb28-421"><a href="#cb28-421" aria-hidden="true" tabindex="-1"></a>  tsns <span class="ot">&lt;-</span> taxize<span class="sc">::</span><span class="fu">as.tsn</span>(<span class="fu">unique</span>(tsns), <span class="at">check =</span> <span class="cn">FALSE</span>)</span>
+<span id="cb28-422"><a href="#cb28-422" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> (<span class="fu">any</span>(<span class="fu">is.na</span>(tsns))) {</span>
+<span id="cb28-423"><a href="#cb28-423" aria-hidden="true" tabindex="-1"></a>    not.matched <span class="ot">&lt;-</span> <span class="fu">which</span>(<span class="fu">is.na</span>(tsns))</span>
+<span id="cb28-424"><a href="#cb28-424" aria-hidden="true" tabindex="-1"></a>    <span class="fu">warning</span>(<span class="fu">paste</span>(<span class="st">"found no matches for"</span>, <span class="fu">length</span>(not.matched), </span>
+<span id="cb28-425"><a href="#cb28-425" aria-hidden="true" tabindex="-1"></a>      <span class="st">"name(s):</span><span class="sc">\n</span><span class="st">"</span>, <span class="fu">paste</span>(speciesNames[not.matched], <span class="at">collapse =</span> <span class="st">", "</span>)), </span>
+<span id="cb28-426"><a href="#cb28-426" aria-hidden="true" tabindex="-1"></a>      <span class="at">immediate. =</span> <span class="cn">TRUE</span>, <span class="at">call. =</span> <span class="cn">FALSE</span>)</span>
+<span id="cb28-427"><a href="#cb28-427" aria-hidden="true" tabindex="-1"></a>    tsns_worked <span class="ot">&lt;-</span> taxize<span class="sc">::</span><span class="fu">as.tsn</span>(tsns[<span class="sc">-</span>not.matched], <span class="at">check =</span> <span class="cn">FALSE</span>)</span>
+<span id="cb28-428"><a href="#cb28-428" aria-hidden="true" tabindex="-1"></a>  } <span class="cf">else</span> {</span>
+<span id="cb28-429"><a href="#cb28-429" aria-hidden="true" tabindex="-1"></a>    tsns_worked <span class="ot">&lt;-</span> tsns</span>
+<span id="cb28-430"><a href="#cb28-430" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb28-431"><a href="#cb28-431" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb28-432"><a href="#cb28-432" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> (<span class="fu">length</span>(tsns_worked) <span class="sc">&gt;=</span> <span class="dv">1</span>) {</span>
+<span id="cb28-433"><a href="#cb28-433" aria-hidden="true" tabindex="-1"></a>    scientific <span class="ot">&lt;-</span> common <span class="ot">&lt;-</span> author <span class="ot">&lt;-</span> rankname <span class="ot">&lt;-</span> taxon_status <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="fu">matrix</span>(<span class="cn">NA</span>, </span>
+<span id="cb28-434"><a href="#cb28-434" aria-hidden="true" tabindex="-1"></a>      <span class="at">nrow =</span> <span class="fu">length</span>(tsns_worked), <span class="at">ncol =</span> <span class="dv">2</span>), <span class="at">stringsAsFactors =</span> <span class="cn">FALSE</span>)</span>
+<span id="cb28-435"><a href="#cb28-435" aria-hidden="true" tabindex="-1"></a>    <span class="fu">colnames</span>(scientific) <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"tsn"</span>, <span class="st">"combinedname"</span>)</span>
+<span id="cb28-436"><a href="#cb28-436" aria-hidden="true" tabindex="-1"></a>    <span class="fu">colnames</span>(common) <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"tsn"</span>, <span class="st">"commonName"</span>)</span>
+<span id="cb28-437"><a href="#cb28-437" aria-hidden="true" tabindex="-1"></a>    <span class="fu">colnames</span>(author) <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"tsn"</span>, <span class="st">"authorship"</span>)</span>
+<span id="cb28-438"><a href="#cb28-438" aria-hidden="true" tabindex="-1"></a>    <span class="fu">colnames</span>(rankname) <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"tsn"</span>, <span class="st">"rankname"</span>)</span>
+<span id="cb28-439"><a href="#cb28-439" aria-hidden="true" tabindex="-1"></a>    <span class="fu">colnames</span>(taxon_status) <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"tsn"</span>, <span class="st">"taxonUsageRating"</span>)</span>
+<span id="cb28-440"><a href="#cb28-440" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb28-441"><a href="#cb28-441" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> (i <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span><span class="fu">length</span>(tsns_worked)) {</span>
+<span id="cb28-442"><a href="#cb28-442" aria-hidden="true" tabindex="-1"></a>      </span>
+<span id="cb28-443"><a href="#cb28-443" aria-hidden="true" tabindex="-1"></a>      scientific_tmp <span class="ot">&lt;-</span> ritis<span class="sc">::</span><span class="fu">scientific_name</span>(tsns_worked[i])</span>
+<span id="cb28-444"><a href="#cb28-444" aria-hidden="true" tabindex="-1"></a>      common_tmp <span class="ot">&lt;-</span> ritis<span class="sc">::</span><span class="fu">common_names</span>(tsns_worked[i])</span>
+<span id="cb28-445"><a href="#cb28-445" aria-hidden="true" tabindex="-1"></a>      author_tmp <span class="ot">&lt;-</span> ritis<span class="sc">::</span><span class="fu">taxon_authorship</span>(tsns_worked[i])</span>
+<span id="cb28-446"><a href="#cb28-446" aria-hidden="true" tabindex="-1"></a>      rankname_tmp <span class="ot">&lt;-</span> ritis<span class="sc">::</span><span class="fu">rank_name</span>(tsns_worked[i])</span>
+<span id="cb28-447"><a href="#cb28-447" aria-hidden="true" tabindex="-1"></a>      <span class="cf">if</span> (<span class="st">"tsn"</span> <span class="sc">%in%</span> <span class="fu">colnames</span>(scientific_tmp)) {</span>
+<span id="cb28-448"><a href="#cb28-448" aria-hidden="true" tabindex="-1"></a>        scientific[i, ] <span class="ot">&lt;-</span> scientific_tmp[<span class="fu">c</span>(<span class="st">"tsn"</span>, <span class="st">"combinedname"</span>)]</span>
+<span id="cb28-449"><a href="#cb28-449" aria-hidden="true" tabindex="-1"></a>      }</span>
+<span id="cb28-450"><a href="#cb28-450" aria-hidden="true" tabindex="-1"></a>      <span class="cf">if</span> (<span class="st">"tsn"</span> <span class="sc">%in%</span> <span class="fu">colnames</span>(common_tmp)) {</span>
+<span id="cb28-451"><a href="#cb28-451" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> (<span class="fu">length</span>(<span class="fu">unique</span>(common_tmp<span class="sc">$</span>tsn)) <span class="sc">&gt;</span> <span class="dv">1</span>) {</span>
+<span id="cb28-452"><a href="#cb28-452" aria-hidden="true" tabindex="-1"></a>          common2 <span class="ot">&lt;-</span> <span class="fu">tapply</span>(common_tmp<span class="sc">$</span>commonName, <span class="at">INDEX =</span> common_tmp<span class="sc">$</span>tsn, </span>
+<span id="cb28-453"><a href="#cb28-453" aria-hidden="true" tabindex="-1"></a>            <span class="at">FUN =</span> paste, <span class="at">collapse =</span> file.sep)</span>
+<span id="cb28-454"><a href="#cb28-454" aria-hidden="true" tabindex="-1"></a>          common_tmp <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">commonName =</span> common2, </span>
+<span id="cb28-455"><a href="#cb28-455" aria-hidden="true" tabindex="-1"></a>            <span class="at">tsn =</span> <span class="fu">rownames</span>(common2), <span class="at">stringsAsFactors =</span> <span class="cn">FALSE</span>)</span>
+<span id="cb28-456"><a href="#cb28-456" aria-hidden="true" tabindex="-1"></a>        }</span>
+<span id="cb28-457"><a href="#cb28-457" aria-hidden="true" tabindex="-1"></a>        common[i, ] <span class="ot">&lt;-</span> common_tmp[, <span class="fu">c</span>(<span class="st">"tsn"</span>, <span class="st">"commonName"</span>)]</span>
+<span id="cb28-458"><a href="#cb28-458" aria-hidden="true" tabindex="-1"></a>      }</span>
+<span id="cb28-459"><a href="#cb28-459" aria-hidden="true" tabindex="-1"></a>      <span class="cf">if</span> (<span class="st">"tsn"</span> <span class="sc">%in%</span> <span class="fu">colnames</span>(author_tmp)) {</span>
+<span id="cb28-460"><a href="#cb28-460" aria-hidden="true" tabindex="-1"></a>        author[i, ] <span class="ot">&lt;-</span> author_tmp[<span class="fu">c</span>(<span class="st">"tsn"</span>, <span class="st">"authorship"</span>)]</span>
+<span id="cb28-461"><a href="#cb28-461" aria-hidden="true" tabindex="-1"></a>      }</span>
+<span id="cb28-462"><a href="#cb28-462" aria-hidden="true" tabindex="-1"></a>      <span class="cf">if</span> (<span class="st">"tsn"</span> <span class="sc">%in%</span> <span class="fu">colnames</span>(rankname_tmp)) {</span>
+<span id="cb28-463"><a href="#cb28-463" aria-hidden="true" tabindex="-1"></a>        rankname[i, ] <span class="ot">&lt;-</span> rankname_tmp[<span class="fu">c</span>(<span class="st">"tsn"</span>, <span class="st">"rankname"</span>)]</span>
+<span id="cb28-464"><a href="#cb28-464" aria-hidden="true" tabindex="-1"></a>      }</span>
+<span id="cb28-465"><a href="#cb28-465" aria-hidden="true" tabindex="-1"></a>      <span class="cf">if</span> (accepted <span class="sc">==</span> <span class="cn">FALSE</span>) {</span>
+<span id="cb28-466"><a href="#cb28-466" aria-hidden="true" tabindex="-1"></a>        taxon_status_tmp <span class="ot">&lt;-</span> ritis<span class="sc">::</span><span class="fu">core_metadata</span>(tsns_worked[i])</span>
+<span id="cb28-467"><a href="#cb28-467" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> (<span class="st">"tsn"</span> <span class="sc">%in%</span> <span class="fu">colnames</span>(taxon_status_tmp)) {</span>
+<span id="cb28-468"><a href="#cb28-468" aria-hidden="true" tabindex="-1"></a>          taxon_status[i, ] <span class="ot">&lt;-</span> taxon_status_tmp[<span class="fu">c</span>(<span class="st">"tsn"</span>, </span>
+<span id="cb28-469"><a href="#cb28-469" aria-hidden="true" tabindex="-1"></a>            <span class="st">"taxonUsageRating"</span>)]</span>
+<span id="cb28-470"><a href="#cb28-470" aria-hidden="true" tabindex="-1"></a>        }</span>
+<span id="cb28-471"><a href="#cb28-471" aria-hidden="true" tabindex="-1"></a>      }</span>
+<span id="cb28-472"><a href="#cb28-472" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb28-473"><a href="#cb28-473" aria-hidden="true" tabindex="-1"></a>    dat.out <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">user_name =</span> speciesNames, <span class="at">tsn =</span> <span class="fu">as.numeric</span>(tsns))</span>
+<span id="cb28-474"><a href="#cb28-474" aria-hidden="true" tabindex="-1"></a>    dat.out <span class="ot">&lt;-</span> <span class="fu">merge</span>(<span class="at">x =</span> dat.out, <span class="at">y =</span> scientific, <span class="at">by =</span> <span class="st">"tsn"</span>, </span>
+<span id="cb28-475"><a href="#cb28-475" aria-hidden="true" tabindex="-1"></a>      <span class="at">all.x =</span> <span class="cn">TRUE</span>, <span class="at">sort =</span> <span class="cn">FALSE</span>)</span>
+<span id="cb28-476"><a href="#cb28-476" aria-hidden="true" tabindex="-1"></a>    dat.out <span class="ot">&lt;-</span> <span class="fu">merge</span>(<span class="at">x =</span> dat.out, <span class="at">y =</span> common, <span class="at">by =</span> <span class="st">"tsn"</span>, </span>
+<span id="cb28-477"><a href="#cb28-477" aria-hidden="true" tabindex="-1"></a>      <span class="at">all.x =</span> <span class="cn">TRUE</span>, <span class="at">sort =</span> <span class="cn">FALSE</span>)</span>
+<span id="cb28-478"><a href="#cb28-478" aria-hidden="true" tabindex="-1"></a>    dat.out <span class="ot">&lt;-</span> <span class="fu">merge</span>(<span class="at">x =</span> dat.out, <span class="at">y =</span> author, <span class="at">by =</span> <span class="st">"tsn"</span>, </span>
+<span id="cb28-479"><a href="#cb28-479" aria-hidden="true" tabindex="-1"></a>      <span class="at">all.x =</span> <span class="cn">TRUE</span>, <span class="at">sort =</span> <span class="cn">FALSE</span>)</span>
+<span id="cb28-480"><a href="#cb28-480" aria-hidden="true" tabindex="-1"></a>    dat.out <span class="ot">&lt;-</span> <span class="fu">merge</span>(<span class="at">x =</span> dat.out, <span class="at">y =</span> rankname, <span class="at">by =</span> <span class="st">"tsn"</span>, </span>
+<span id="cb28-481"><a href="#cb28-481" aria-hidden="true" tabindex="-1"></a>      <span class="at">all.x =</span> <span class="cn">TRUE</span>, <span class="at">sort =</span> <span class="cn">FALSE</span>)</span>
+<span id="cb28-482"><a href="#cb28-482" aria-hidden="true" tabindex="-1"></a>    dat.out<span class="sc">$</span>itis_url <span class="ot">&lt;-</span> <span class="cn">NA</span></span>
+<span id="cb28-483"><a href="#cb28-483" aria-hidden="true" tabindex="-1"></a>    dat.out<span class="sc">$</span>itis_url[<span class="fu">match</span>(tsns_worked, dat.out<span class="sc">$</span>tsn)] <span class="ot">&lt;-</span> <span class="fu">attributes</span>(tsns_worked)<span class="sc">$</span>uri</span>
+<span id="cb28-484"><a href="#cb28-484" aria-hidden="true" tabindex="-1"></a>    <span class="fu">colnames</span>(dat.out)[<span class="fu">colnames</span>(dat.out) <span class="sc">==</span> <span class="st">"combinedname"</span>] <span class="ot">&lt;-</span> <span class="st">"scientificName"</span></span>
+<span id="cb28-485"><a href="#cb28-485" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> (accepted <span class="sc">==</span> <span class="cn">FALSE</span>) {</span>
+<span id="cb28-486"><a href="#cb28-486" aria-hidden="true" tabindex="-1"></a>      dat.out <span class="ot">&lt;-</span> <span class="fu">merge</span>(<span class="at">x =</span> dat.out, <span class="at">y =</span> taxon_status, </span>
+<span id="cb28-487"><a href="#cb28-487" aria-hidden="true" tabindex="-1"></a>        <span class="at">by =</span> <span class="st">"tsn"</span>, <span class="at">all.x =</span> <span class="cn">TRUE</span>, <span class="at">sort =</span> <span class="cn">FALSE</span>)</span>
+<span id="cb28-488"><a href="#cb28-488" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb28-489"><a href="#cb28-489" aria-hidden="true" tabindex="-1"></a>    <span class="cf">else</span> {</span>
+<span id="cb28-490"><a href="#cb28-490" aria-hidden="true" tabindex="-1"></a>      dat.out<span class="sc">$</span>taxon_status[<span class="sc">!</span><span class="fu">is.na</span>(dat.out<span class="sc">$</span>tsn)] <span class="ot">&lt;-</span> <span class="st">"valid"</span></span>
+<span id="cb28-491"><a href="#cb28-491" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb28-492"><a href="#cb28-492" aria-hidden="true" tabindex="-1"></a>    <span class="fu">return</span>(dat.out)</span>
+<span id="cb28-493"><a href="#cb28-493" aria-hidden="true" tabindex="-1"></a>  } <span class="cf">else</span> {</span>
+<span id="cb28-494"><a href="#cb28-494" aria-hidden="true" tabindex="-1"></a>    <span class="fu">stop</span>(<span class="st">"found no TSNs for speciesNames"</span>, <span class="at">call. =</span> <span class="cn">FALSE</span>)</span>
+<span id="cb28-495"><a href="#cb28-495" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb28-496"><a href="#cb28-496" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb28-497"><a href="#cb28-497" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-498"><a href="#cb28-498" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb28-499"><a href="#cb28-499" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-500"><a href="#cb28-500" aria-hidden="true" tabindex="-1"></a>Now, what can we do?</span>
+<span id="cb28-501"><a href="#cb28-501" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-502"><a href="#cb28-502" aria-hidden="true" tabindex="-1"></a><span class="fu">### Search information by common names</span></span>
 <span id="cb28-503"><a href="#cb28-503" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb28-504"><a href="#cb28-504" aria-hidden="true" tabindex="-1"></a>--- </span>
-<span id="cb28-505"><a href="#cb28-505" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb28-506"><a href="#cb28-506" aria-hidden="true" tabindex="-1"></a><span class="fu"># References  {.unnumbered .unlisted}</span></span>
-<span id="cb28-507"><a href="#cb28-507" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb28-508"><a href="#cb28-508" aria-hidden="true" tabindex="-1"></a>Chamberlain, S. A., &amp; Szöcs, E. (2013). taxize: taxonomic search and retrieval in R. F1000Research, 2.</span>
-<span id="cb28-509"><a href="#cb28-509" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb28-510"><a href="#cb28-510" aria-hidden="true" tabindex="-1"></a>---</span>
-<span id="cb28-511"><a href="#cb28-511" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb28-512"><a href="#cb28-512" aria-hidden="true" tabindex="-1"></a><span class="fu"># Session Information {.unnumbered .unlisted}</span></span>
+<span id="cb28-506"><a href="#cb28-506" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb28-507"><a href="#cb28-507" aria-hidden="true" tabindex="-1"></a>checkNames1 <span class="ot">&lt;-</span> <span class="fu">checkSpeciesNames</span>(<span class="at">speciesNames =</span> <span class="fu">c</span>(<span class="st">"Bearded Pig"</span>, <span class="st">"Malayan Civet"</span>),</span>
+<span id="cb28-508"><a href="#cb28-508" aria-hidden="true" tabindex="-1"></a>                                  <span class="at">searchtype   =</span> <span class="st">"common"</span>)</span>
+<span id="cb28-509"><a href="#cb28-509" aria-hidden="true" tabindex="-1"></a>checkNames1<span class="sc">%&gt;%</span></span>
+<span id="cb28-510"><a href="#cb28-510" aria-hidden="true" tabindex="-1"></a>  <span class="fu">kbl</span>() <span class="sc">%&gt;%</span></span>
+<span id="cb28-511"><a href="#cb28-511" aria-hidden="true" tabindex="-1"></a>  <span class="fu">kable_minimal</span>()</span>
+<span id="cb28-512"><a href="#cb28-512" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
 <span id="cb28-513"><a href="#cb28-513" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb28-514"><a href="#cb28-514" aria-hidden="true" tabindex="-1"></a><span class="in">```{r session info, echo=F}</span></span>
+<span id="cb28-514"><a href="#cb28-514" aria-hidden="true" tabindex="-1"></a><span class="fu">### Search information by scientific names (including subspecies)</span></span>
 <span id="cb28-515"><a href="#cb28-515" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb28-516"><a href="#cb28-516" aria-hidden="true" tabindex="-1"></a><span class="in">sessionInfo()</span></span>
-<span id="cb28-517"><a href="#cb28-517" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb28-518"><a href="#cb28-518" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb28-518"><a href="#cb28-518" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb28-519"><a href="#cb28-519" aria-hidden="true" tabindex="-1"></a>checkNames2 <span class="ot">&lt;-</span> <span class="fu">checkSpeciesNames</span> (<span class="at">speciesNames =</span> <span class="st">"Viverra tangalunga tangalunga"</span>,</span>
+<span id="cb28-520"><a href="#cb28-520" aria-hidden="true" tabindex="-1"></a>                                  <span class="at">searchtype   =</span> <span class="st">"scientific"</span>)</span>
+<span id="cb28-521"><a href="#cb28-521" aria-hidden="true" tabindex="-1"></a>checkNames2<span class="sc">%&gt;%</span></span>
+<span id="cb28-522"><a href="#cb28-522" aria-hidden="true" tabindex="-1"></a>  <span class="fu">kbl</span>() <span class="sc">%&gt;%</span></span>
+<span id="cb28-523"><a href="#cb28-523" aria-hidden="true" tabindex="-1"></a>  <span class="fu">kable_minimal</span>()</span>
+<span id="cb28-524"><a href="#cb28-524" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb28-525"><a href="#cb28-525" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-526"><a href="#cb28-526" aria-hidden="true" tabindex="-1"></a><span class="fu">### Search information with an incorrect name</span></span>
+<span id="cb28-527"><a href="#cb28-527" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-530"><a href="#cb28-530" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb28-531"><a href="#cb28-531" aria-hidden="true" tabindex="-1"></a>checkNames3 <span class="ot">&lt;-</span> <span class="fu">checkSpeciesNames</span> (<span class="at">speciesNames =</span> <span class="st">"Felis bengalensis"</span>,</span>
+<span id="cb28-532"><a href="#cb28-532" aria-hidden="true" tabindex="-1"></a>                                  <span class="at">searchtype   =</span> <span class="st">"scientific"</span>,</span>
+<span id="cb28-533"><a href="#cb28-533" aria-hidden="true" tabindex="-1"></a>                                  <span class="at">accepted     =</span> <span class="cn">FALSE</span>)</span>
+<span id="cb28-534"><a href="#cb28-534" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-535"><a href="#cb28-535" aria-hidden="true" tabindex="-1"></a>checkNames3</span>
+<span id="cb28-536"><a href="#cb28-536" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb28-537"><a href="#cb28-537" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-538"><a href="#cb28-538" aria-hidden="true" tabindex="-1"></a><span class="fu">### Search information with an ambiguous name</span></span>
+<span id="cb28-539"><a href="#cb28-539" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-540"><a href="#cb28-540" aria-hidden="true" tabindex="-1"></a><span class="in">```{r, eval = FALSE}</span></span>
+<span id="cb28-541"><a href="#cb28-541" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-542"><a href="#cb28-542" aria-hidden="true" tabindex="-1"></a><span class="in">checkNames4 &lt;- checkSpeciesNames (speciesNames = "Chevrotain",</span></span>
+<span id="cb28-543"><a href="#cb28-543" aria-hidden="true" tabindex="-1"></a><span class="in">                                  searchtype   = "common")</span></span>
+<span id="cb28-544"><a href="#cb28-544" aria-hidden="true" tabindex="-1"></a><span class="in"># choose from the menu</span></span>
+<span id="cb28-545"><a href="#cb28-545" aria-hidden="true" tabindex="-1"></a><span class="in">checkNames4 </span></span>
+<span id="cb28-546"><a href="#cb28-546" aria-hidden="true" tabindex="-1"></a><span class="in">  </span></span>
+<span id="cb28-547"><a href="#cb28-547" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb28-548"><a href="#cb28-548" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-549"><a href="#cb28-549" aria-hidden="true" tabindex="-1"></a>------------------------------------------------------------------------</span>
+<span id="cb28-550"><a href="#cb28-550" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-551"><a href="#cb28-551" aria-hidden="true" tabindex="-1"></a><span class="fu"># References {.unnumbered .unlisted}</span></span>
+<span id="cb28-552"><a href="#cb28-552" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-553"><a href="#cb28-553" aria-hidden="true" tabindex="-1"></a>Chamberlain, S. A., &amp; Szöcs, E. (2013). taxize: taxonomic search and retrieval in R. F1000Research, 2.</span>
+<span id="cb28-554"><a href="#cb28-554" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-555"><a href="#cb28-555" aria-hidden="true" tabindex="-1"></a>------------------------------------------------------------------------</span>
+<span id="cb28-556"><a href="#cb28-556" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-557"><a href="#cb28-557" aria-hidden="true" tabindex="-1"></a><span class="fu"># Session Information {.unnumbered .unlisted}</span></span>
+<span id="cb28-558"><a href="#cb28-558" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-559"><a href="#cb28-559" aria-hidden="true" tabindex="-1"></a><span class="in">```{r session info, echo=F}</span></span>
+<span id="cb28-560"><a href="#cb28-560" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-561"><a href="#cb28-561" aria-hidden="true" tabindex="-1"></a><span class="in">sessionInfo()</span></span>
+<span id="cb28-562"><a href="#cb28-562" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-563"><a href="#cb28-563" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
 </code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div></div></div></div></div><font size="2"><font size="2"><font size="2"> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
