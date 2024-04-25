@@ -735,31 +735,17 @@ The package creates Rmarkdown files with templates for data analysis (folder "sc
 
  
 
--   Create a dynamic report that includes an interactive map of Costa Rica using the `leaflet` package
+-   Create a dynamic report that includes an interactive map of Costa Rica using the `leaflet` package (remember to add `library(leaflet)`)
 
- 
+-   Reproduce one of the examples available on the dygraphs package site (<https://rstudio.github.io/dygraphs/>) and embed it in your dynamic report (remember to add `library(dygraphs)`)
 
--   Reproduce one of the examples available on the dygraphs package site (<https://rstudio.github.io/dygraphs/>) and embed it in your dynamic report
 
- 
+-   Install the `kableExtra` package and embed in your report the example code from the documentation of the `kable_styling()` function of that package (remember to add `library(kableExtra)`)
 
--   Install the `kableExtra` package and embed in your report the example code from the documentation of the `kable_styling()` function of that package
-
- 
 
 -   Create an Rmarkdown presentation using the "Presentation" option in the creation window
 
- 
-
--   Generate a dynamic report in PDF format
-
- 
-
--   Create an Rstudio project to organize the contents of the course
-
- 
-
--   Create a research compendium with sketchy
+-   Publish your dynamic report in [Rpubs](www.rpubs.com)
 :::
 
  
