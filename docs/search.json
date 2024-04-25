@@ -541,8 +541,8 @@
   {
     "objectID": "delete.html",
     "href": "delete.html",
-    "title": "Untitled",
+    "title": "whatever",
     "section": "",
-    "text": "Code\nlibrary(leaflet)\nll_map &lt;- leaflet()\n\nll_map &lt;- addTiles(map = ll_map)\n\nll_map &lt;- setView(map = ll_map, lat = 9.7489, lng = -83.7534,\n    zoom = 13)\n\naddPopups(map = ll_map, lat = 5.527448, lng = -87.057245, popup = \"Isla del Coco\")"
+    "text": "Code\nemo::ji(\"costa_rica\")\n\n\n🇨🇷"
   }
 ]

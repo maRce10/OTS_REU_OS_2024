@@ -1,22 +1,12 @@
 ---
-title: "Untitled"
+title: "whatever"
 editor: visual
-editor_options: 
-  chunk_output_type: console
 ---
 
 
 ```{r}
 
-library(leaflet)
-ll_map <- leaflet()
+emo::ji("costa_rica")
 
-ll_map <- addTiles(map = ll_map)
-
-ll_map <- setView(map = ll_map, lat = 9.7489, lng = -83.7534,
-    zoom = 7)
-
-ll_map
-# addPopups(map = ll_map, lat = 5.527448, lng = -83.7534, popup = "Isla del Coco")
 ```
 

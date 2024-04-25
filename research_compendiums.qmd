@@ -594,7 +594,9 @@ The package comes with 13 folder structures. You can use them with the `compendi
 
 path = tempdir()
 
-make_compendium(name = "project_x", path = path, format = compendiums$basic$skeleton)
+make_compendium(name = "project_x",
+                path = path,
+                format = "basic")
 
 ```
 
@@ -612,7 +614,9 @@ You can use formats from other sources. In this case, we use the one from Wilson
 
 ```{r, eval = FALSE}
 
-make_compendium(name = "project_y", path = path, format = compendiums$wilson$skeleton)
+make_compendium(name = "project_y",
+                path = path,
+                format = "wilson")
 
 ```
 
@@ -645,15 +649,13 @@ The idea is to include functions to identify large files that cannot be uploaded
 ::: {.alert .alert-info}
 <font size="5">Exercise 3</font>
 
-</br>
 
-3.1 Create a compendium with a custom structure using `sketchy`
+- Create a compendium with `sketchy` using the 'basic'
+format
 
-</br>
+- Create a compendium with `sketchy` using the 'sketchy'
+format
 
-3.2 Add comments to each folder
-
-</br>
 :::
 
  
